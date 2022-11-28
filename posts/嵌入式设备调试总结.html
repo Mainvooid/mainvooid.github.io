@@ -1,0 +1,717 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>嵌入式设备调试总结.md · iPanda</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Mainvooid">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="CI&CD相关模块的共享方案.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../assets/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../assets/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../assets/favicon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/Mainvooid" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">杂笔</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Blog最佳实践markdown+gitbook+vscode.html">
+            
+                <a href="Blog最佳实践markdown+gitbook+vscode.html">
+            
+                    
+                    Blog最佳实践markdown+gitbook+vscode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">技术</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="C++奇淫巧计.html">
+            
+                <a href="C++奇淫巧计.html">
+            
+                    
+                    C++奇淫巧计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="C++编码规范-实用增强细节版.html">
+            
+                <a href="C++编码规范-实用增强细节版.html">
+            
+                    
+                    C++编码规范-实用增强细节版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="设计模式.html">
+            
+                <a href="设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">记录</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="GitBook简明教程.html">
+            
+                <a href="GitBook简明教程.html">
+            
+                    
+                    GitBook简明教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="基于Windows文本服务框架TSF的输入法实现.html">
+            
+                <a href="基于Windows文本服务框架TSF的输入法实现.html">
+            
+                    
+                    基于Windows文本服务框架TSF的输入法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Android-NDK-Camera双摄接入方案.html">
+            
+                <a href="Android-NDK-Camera双摄接入方案.html">
+            
+                    
+                    Android-NDK-Camera双摄接入方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="CI&CD相关模块的共享方案.html">
+            
+                <a href="CI&CD相关模块的共享方案.html">
+            
+                    
+                    CI&CD相关模块的共享方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.5" data-path="嵌入式设备调试总结.html">
+            
+                <a href="嵌入式设备调试总结.html">
+            
+                    
+                    嵌入式设备调试总结.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >嵌入式设备调试总结.md</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;"><b></b>&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;</a></li></ul></div><a href="#&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;"><a name="&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x603B;&#x7ED3;</h1>
+<p>[toc]
+<!--toc-->
+&#x5305;&#x542B;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x53CA;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;</p>
+<h4 id="&#x5DE5;&#x5177;"><a name="&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5DE5;&#x5177;" class="plugin-anchor" href="#&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5DE5;&#x5177;</h4>
+<ul>
+<li><p>&#x7F51;&#x7EDC;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;</p>
+<ul>
+<li><p><code>wiresharke</code>
+<a href="https://www.cnblogs.com/strick/p/6261463.html" target="_blank">Wireshark&#x7F51;&#x7EDC;&#x6293;&#x5305;(&#x4E00;)&#x2014;&#x2014;&#x6570;&#x636E;&#x5305;&#x3001;&#x7740;&#x8272;&#x89C4;&#x5219;&#x548C;&#x63D0;&#x793A;</a></p>
+</li>
+<li><p><code>tcpdump</code></p>
+<pre><code class="lang-bash">  chmod 777 ./tcpdump
+  <span class="hljs-comment"># -w&#x5199;&#x5165;&#x6587;&#x4EF6;cap&#x7528;&#x4E8E;&#x5206;&#x6790; ,-C&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x5927;&#x5C0F;100MB,host&#x8FC7;&#x6EE4;&#x4E3B;&#x673A;url</span>
+  ./tcpdump -w /sdcard/test.cap -C 100 host &lt;url&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>&#x4E32;&#x53E3;&#x8C03;&#x8BD5; <code>picocom</code></p>
+<pre><code class="lang-bash">  sudo apt-get install picocom
+  sudo picocom -b 115200 /dev/ttyUSB0 <span class="hljs-comment">#&#x8FDB;&#x5165;Picocom&#x7EC8;&#x7AEF;&#x6A21;&#x5F0F;</span>
+  <span class="hljs-comment"># Ctrl+a&#x8FDB;&#x5165;&#x8F6C;&#x4E49;&#x6A21;&#x5F0F;&#xFF0C;&#x7136;&#x540E;Ctrl+h &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7248;&#x672C;&#x652F;&#x6301;&#x7684;&#x547D;&#x4EE4;</span>
+</code></pre>
+</li>
+<li><p>&#x67E5;&#x770B;&#x4F9D;&#x8D56;&#x5E93; <code>objdump</code></p>
+<pre><code class="lang-bash">  objdump -x libxxx.so | grep NEEDED
+
+  NEEDED               libcurl.so.4
+  NEEDED               libz.so.1
+  NEEDED               libssl.so.1.0.0
+  NEEDED               libcrypto.so.1.0.0
+  NEEDED               libopencv_core.so.3.2
+  NEEDED               libopencv_imgproc.so.3.2
+  NEEDED               libopencv_imgcodecs.so.3.2
+  NEEDED               libturbojpeg.so.0
+  NEEDED               libstdc++.so.6
+  NEEDED               libm.so.6
+  NEEDED               libgcc_s.so.1
+  NEEDED               libc.so.6
+</code></pre>
+</li>
+<li>&#x5237;&#x673A;&#x5DE5;&#x5177;<ul>
+<li><code>pkgburn</code>
+&#x9009;&#x62E9;&#x597D;&#x56FA;&#x4EF6;&#xFF0C;&#x5173;&#x673A;&#x72B6;&#x6001;&#xFF0C;&#x6309;&#x4F4F;&#x4E32;&#x53E3;&#x7EBF;&#x7684;&#x6309;&#x94AE;,&#x7535;&#x6E90;&#x6570;&#x636E;&#x7EBF;&#x63A5;&#x5165;&#x7535;&#x8111;,&#x8BC6;&#x522B;&#x6210;&#x529F;&#x540E;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x70E7;&#x5F55;
+&#x5237;&#x5B8C;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x914D;&#x7F6E;&#x4E00;&#x904D;&#x8BBE;&#x5907;&#x73AF;&#x5883;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x6587;&#x4EF6;&#x4F20;&#x8F93;"><a name="&#x6587;&#x4EF6;&#x4F20;&#x8F93;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x4F20;&#x8F93;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6587;&#x4EF6;&#x4F20;&#x8F93;" class="plugin-anchor" href="#&#x6587;&#x4EF6;&#x4F20;&#x8F93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x4F20;&#x8F93;</h4>
+<ul>
+<li>&#x901A;&#x8FC7;TF&#x5361;&#x62F7;&#x8D1D;<pre><code class="lang-bash">  cp /mnt/&lt;src&gt; /tmp
+</code></pre>
+</li>
+<li><p>&#x901A;&#x8FC7;smb</p>
+<pre><code class="lang-bash">  smb://192.168.1.100/...
+</code></pre>
+</li>
+<li><p>&#x901A;&#x8FC7;adb</p>
+<pre><code class="lang-bash">  <span class="hljs-comment"># &#x652F;&#x6301;&#x901A;&#x914D;&#x7B26;</span>
+  adb push &lt;src&gt; &lt;dst&gt;
+  adb pull &lt;src&gt; &lt;dst&gt;
+</code></pre>
+</li>
+<li><p>&#x901A;&#x8FC7;nfs</p>
+<pre><code class="lang-bash">  1. &#x8BBE;&#x5907;&#x662F;NFS&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;PC&#x4F5C;&#x4E3A;Server&#x7AEF;&#xFF0C;PC&#x9700;&#x8981;&#x5148;&#x5B89;&#x88C5;nts-server&#x3002;
+  <span class="hljs-comment"># &#x5B89;&#x88C5;nfs-server</span>
+  sudo apt install nfs-kernel-server
+
+  2. &#x521B;&#x5EFA;PC&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x5939;(&#x4EE5;/home/dell/ez&#x4E3A;&#x4F8B;)&#x3002;
+  sudo mkdir -p /home/dell/ez
+  sudo chown nobody:nogroup /home/dell/ez
+  sudo chmod 777 /home/dell/ez
+
+  3. &#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x5C40;&#x57DF;&#x7F51;&#xFF0C;&#x67E5;&#x770B;&#x8BBE;&#x5907;&#x7684;IP&#x3002;
+  <span class="hljs-comment"># &#x4F7F;&#x7528;picocom&#x6253;&#x5F00;&#x4E32;&#x53E3;&#xFF0C;&#x8FDB;&#x5165;&#x8BBE;&#x5907;shell&#x73AF;&#x5883;</span>
+  sudo picocom -b 115200 /dev/ttyUSB0
+  <span class="hljs-comment"># &#x8BBE;&#x5907;&#x73AF;&#x5883;&#x4E0B;&#x67E5;&#x770B;&#x8BBE;&#x5907;IP</span>
+  ifconfig
+
+  4. PC&#x6DFB;&#x52A0;&#x8BBE;&#x5907;IP&#x8BBF;&#x95EE;&#x6743;&#x9650;(&#x66FF;&#x6362;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x4E2D;&#x7684;&#x5B9E;&#x9645;IP)&#x3002;
+  sudo nano /etc/exports
+  /home/dell/ez IP(rw,sync,no_subtree_check)
+  <span class="hljs-comment"># Ctrl+X, entering Y, and then hitting Enter.</span>
+
+  5. &#x542F;&#x52A8;nts-server&#x3002;
+  sudo exportfs <span class="hljs-_">-a</span>
+  sudo systemctl restart nfs-kernel-server
+
+  6. &#x5173;&#x95ED;PC&#x9632;&#x706B;&#x5899;&#x3002;
+  <span class="hljs-comment"># &#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x72B6;&#x6001;</span>
+  sudo ufw status
+  <span class="hljs-comment"># &#x5982;&#x679C;&#x662F;active&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5173;&#x95ED;&#xFF0C;&#x5426;&#x5219;&#x8DF3;&#x8FC7;&#x3002;</span>
+  sudo ufw <span class="hljs-built_in">disable</span>
+
+  7. remount&#x8BBE;&#x5907;rootfs&#x5206;&#x533A;&#x3002;
+  <span class="hljs-comment"># &#x4F7F;&#x7528;picocom&#x6253;&#x5F00;&#x4E32;&#x53E3;&#xFF0C;&#x8FDB;&#x5165;&#x8BBE;&#x5907;shell&#x73AF;&#x5883;</span>
+  sudo picocom -b 115200 /dev/ttyUSB0
+  <span class="hljs-comment"># remount rootfs</span>
+  mount -o remount, rw /
+  <span class="hljs-comment"># &#x540C;&#x6B65;PC&#x6587;&#x4EF6;&#x5939;/home/dell/ez&#x81F3;&#x8BBE;&#x5907;&#x7684;/mnt/nfs&#x6587;&#x4EF6;&#x5939;, &#x8FD9;&#x91CC;&#x7684;IP&#x4E3A;PC&#x7684;IP&#x5730;&#x5740;&#x3002;&#x5982;&#x679C;mount&#x51FA;&#x73B0;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;ping PC&#x7684;IP&#x5730;&#x5740;&#x67E5;&#x770B;&#x662F;&#x5426;&#x80FD;&#x8BBF;&#x95EE;</span>
+  mount -t nfs -o nolock 192.168.1.31:/home/dell/ez /mnt/nfs
+  <span class="hljs-built_in">export</span> LD_LIBRARY_PATH=.:<span class="hljs-variable">$PATH</span>
+
+  8. &#x5C06;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x81F3;PC&#x7684;/home/dell/ez&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x6B65;&#x5230;&#x8BBE;&#x5907;&#x7684;/mnt/nfs&#x76EE;&#x5F55;&#xFF0C;&#x53CD;&#x4E4B;&#x540C;&#x7406;
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x4E00;&#x822C;&#x547D;&#x4EE4;"><a name="&#x4E00;&#x822C;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x822C;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E00;&#x822C;&#x547D;&#x4EE4;" class="plugin-anchor" href="#&#x4E00;&#x822C;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x822C;&#x547D;&#x4EE4;</h4>
+<ul>
+<li><p>&#x65F6;&#x95F4;&#x540C;&#x6B65;</p>
+<pre><code class="lang-bash">  <span class="hljs-comment"># &#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x6E90;</span>
+  ntpd -p ntp.ntsc.ac.cn
+  <span class="hljs-comment"># &#x68C0;&#x6D4B;&#x662F;&#x5426;&#x66F4;&#x65B0;ok</span>
+  date
+  <span class="hljs-comment"># &#x6216;&#x8005;&#x624B;&#x52A8;&#x66F4;&#x65B0;, &#x628A;&#x7CFB;&#x7EDF;&#x8F6F;&#x4EF6;&#x65F6;&#x95F4;&#x540C;&#x6B65;&#x5230;&#x786C;&#x4EF6;,&#x9632;&#x6B62;&#x7CFB;&#x7EDF;&#x91CD;&#x542F;&#x540E;&#x65F6;&#x95F4;&#x88AB;&#x8FD8;&#x539F;(ntpd&#x4E0D;&#x9700;&#x8981;)</span>
+  date <span class="hljs-_">-s</span> <span class="hljs-string">&quot;2020-07-01 11:25:00&quot;</span> &amp;&amp; hwclock -w
+</code></pre>
+</li>
+<li><p>&#x4FEE;&#x6539;&#x6743;&#x9650;</p>
+<pre><code class="lang-bash">  chmod 777 /dir
+</code></pre>
+</li>
+<li><p>adb</p>
+<pre><code class="lang-bash">  adb shell
+  <span class="hljs-built_in">exit</span>
+
+  adb reboot
+</code></pre>
+</li>
+<li><p>&#x82E5;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x9519;&#x8BEF;&#x6253;&#x5370;&#x8FD4;&#x56DE;&#x503C;</p>
+<pre><code class="lang-bash">  <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;./run_cmd echo $?&apos;</span>|sh
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x7F51;&#x7EDC;&#x6A21;&#x62DF;&#x6D4B;&#x8BD5;"><a name="&#x7F51;&#x7EDC;&#x6A21;&#x62DF;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x7F51;&#x7EDC;&#x6A21;&#x62DF;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F51;&#x7EDC;&#x6A21;&#x62DF;&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#&#x7F51;&#x7EDC;&#x6A21;&#x62DF;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F51;&#x7EDC;&#x6A21;&#x62DF;&#x6D4B;&#x8BD5;</h4>
+<p><a href="https://blog.csdn.net/shelldon/article/details/54585742" target="_blank">Linux&#x6A21;&#x62DF;&#x590D;&#x6742;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x4F20;&#x8F93;(netem&#x548C;tc)</a></p>
+<p><a href="https://blog.csdn.net/u013128262/article/details/84784663" target="_blank">&#x57FA;&#x4E8E;TC&#x548C;netem&#x5B9E;&#x73B0;&#x7F51;&#x7EDC;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#x7684;&#x6A21;&#x62DF;</a></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;change&#x6539;&#x4E3A;add&#xFF0C;&#x540E;&#x9762;&#x90FD;change</span>
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;wlan0&#x7AEF;&#x53E3;&#x7684;&#x4E22;&#x5305;&#x7387;&#x4E3A;30%</span>
+tc qdisc change dev wlan0 root netem loss 30%
+
+<span class="hljs-comment"># &#x53D1;&#x9001;&#x7684;&#x62A5;&#x6587;&#x6709; 0.3% ~ 25% &#x7684;&#x4E22;&#x5305;&#x7387;</span>
+tc qdisc change dev wlan0 root netem loss 0.3% 25%
+
+<span class="hljs-comment"># &#x968F;&#x673A;&#x4EA7;&#x751F; 2% &#x635F;&#x574F;&#x7684;&#x62A5;&#x6587;&#xFF08;&#x5728;&#x62A5;&#x6587;&#x7684;&#x968F;&#x673A;&#x4F4D;&#x7F6E;&#x9020;&#x6210;&#x4E00;&#x4E2A;&#x6BD4;&#x7279;&#x7684;&#x9519;&#x8BEF;&#xFF09;</span>
+tc qdisc add dev wlan0 root netem corrupt 2%
+
+<span class="hljs-comment"># &#x7F51;&#x5361;&#x5EF6;&#x8FDF;&#x589E;&#x52A0;100ms</span>
+tc qdisc change dev wlan0 root netem delay 100ms
+
+<span class="hljs-comment"># &#x62A5;&#x6587;&#x5EF6;&#x8FDF;&#x7684;&#x65F6;&#x95F4;&#x5728; 100ms &#xB1; 20ms &#x4E4B;&#x95F4;&#xFF08;90ms - 110ms&#xFF09;</span>
+tc qdisc change dev wlan0 root netem delay 100ms 20ms
+
+<span class="hljs-comment"># &#x56E0;&#x4E3A;&#x7F51;&#x7EDC;&#x72B6;&#x51B5;&#x662F;&#x5E73;&#x6ED1;&#x53D8;&#x5316;&#x7684;&#xFF0C;&#x77ED;&#x65F6;&#x95F4;&#x91CC;&#x76F8;&#x90BB;&#x62A5;&#x6587;&#x7684;&#x5EF6;&#x8FDF;&#x5E94;&#x8BE5;&#x662F;&#x8FD1;&#x4F3C;&#x7684;&#x800C;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x968F;&#x673A;&#x7684;&#x3002;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x4E2A;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x5982;&#x679C;&#x4E3A; 100%&#xFF0C;&#x5C31;&#x9000;&#x5316;&#x5230;&#x56FA;&#x5B9A;&#x5EF6;&#x8FDF;&#x7684;&#x60C5;&#x51B5;&#xFF1B;&#x5982;&#x679C;&#x662F; 0% &#x5219;&#x9000;&#x5316;&#x5230;&#x968F;&#x673A;&#x5EF6;&#x8FDF;&#x7684;&#x60C5;&#x51B5;</span>
+tc qdisc change dev wlan0 root netem delay 100ms 20ms 50%
+
+<span class="hljs-comment"># distribution &#x53C2;&#x6570;&#x6765;&#x9650;&#x5236;&#x5B83;&#x7684;&#x5EF6;&#x8FDF;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x3002;&#x6BD4;&#x5982;&#x8BA9;&#x62A5;&#x6587;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x6EE1;&#x8DB3;&#x6B63;&#x6001;&#x5206;&#x5E03;</span>
+tc qdisc change dev wlan0 root netem delay 100ms 20ms distribution normal
+
+<span class="hljs-comment"># &#x6E05;&#x9664;wlan0&#x7AEF;&#x53E3;&#x7684;&#x6A21;&#x62DF;&#x72B6;&#x6001;</span>
+tc qdisc del dev wlan0 root
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x7AEF;&#x53E3;&#x7684;&#x9650;&#x5236;&#x72B6;&#x6001;</span>
+tc qdisc show
+</code></pre>
+<h4 id="wifi&#x914D;&#x7F6E;"><a name="wifi&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#wifi&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="wifi&#x914D;&#x7F6E;" class="plugin-anchor" href="#wifi&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>WIFI&#x914D;&#x7F6E;</h4>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4FEE;&#x6539;/&#x67E5;&#x770B;wifi&#x914D;&#x7F6E;</span>
+/home/conf/wpa_supplicant.conf
+/etc/wpa_supplicant.conf
+
+<span class="hljs-comment">##### wpa_supplicant configuration file template</span>
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+eapol_version=1
+ap_scan=1
+fast_reauth=1
+wowlan_triggers=any
+network={
+ssid=<span class="hljs-string">&quot;ssid&quot;</span>
+psk=<span class="hljs-string">&quot;password&quot;</span>
+key_mgmt=WPA-PSK
+}
+
+<span class="hljs-comment"># &#x5173;&#x95ED;</span>
+killall wpa_supplicant
+<span class="hljs-comment"># -D&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x540D;&#x79F0;(&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x4E2A;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#xFF1A;nl80211&#xFF0C;wext)</span>
+<span class="hljs-comment"># -i&#x63A5;&#x53E3;&#x540D;&#x79F0; -c&#x914D;&#x7F6E;&#x6587;&#x4EF6; -B&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;</span>
+wpa_supplicant -D nl80211 -i wlan0 -c /home/conf/wpa_supplicant.conf -B
+<span class="hljs-comment"># &#x52A8;&#x6001;&#x4E3B;&#x673A;&#x914D;&#x7F6E;(&#x53EF;&#x7701;&#x7565;)</span>
+udhcpc -i wlan0 <span class="hljs-_">-s</span> /etc/udhcpc.script
+</code></pre>
+<pre><code class="lang-bash">wpa_cli -i wlan0 scan          <span class="hljs-comment">#&#x641C;&#x7D22;&#x9644;&#x4EF6;wifi&#x70ED;&#x70B9;</span>
+wpa_cli -i wlan0 scan_result &#x3000;<span class="hljs-comment">#&#x663E;&#x793A;&#x641C;&#x7D22;wifi&#x70ED;&#x70B9;</span>
+wpa_cli -i wlan0 status        <span class="hljs-comment">#&#x5F53;&#x524D;WPA/EAPOL/EAP&#x901A;&#x8BAF;&#x72B6;&#x6001;</span>
+wpa_cli -i wlan0 ping          <span class="hljs-comment">#pings wpa_supplicant</span>
+
+wpa_cli -i wlan0 add_network   <span class="hljs-comment">#&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;,&#x4F1A;&#x8FD4;&#x56DE;&lt;network id&gt;</span>
+wpa_cli set_network 11 ssid <span class="hljs-string">&apos;&quot;iPanda-mi8&quot;&apos;</span>  <span class="hljs-comment">#ssid&#x540D;&#x79F0;</span>
+wpa_cli set_network 11 psk <span class="hljs-string">&apos;&quot;123456&quot;&apos;</span>&#x3000;&#x3000;   <span class="hljs-comment">#&#x5BC6;&#x7801;</span>
+wpa_cli set_network 11 scan_ssid 1
+wpa_cli set_network 11 priority 1           <span class="hljs-comment">#&#x4F18;&#x5148;&#x7EA7;</span>
+
+wpa_cli -i wlan0 list_network                  <span class="hljs-comment">#&#x5217;&#x4E3E;&#x4FDD;&#x5B58;&#x8FC7;&#x7684;&#x8FDE;&#x63A5;</span>
+wpa_cli -i wlan0 select_network  &lt;network id&gt;  <span class="hljs-comment">#&#x8FDE;&#x63A5;&#x6307;&#x5B9A;&#x7684;ssid</span>
+wpa_cli -i wlan0 enable_network  &lt;network id&gt;  <span class="hljs-comment">#&#x4F7F;&#x80FD;&#x5236;&#x5B9A;&#x7684;ssid</span>
+
+<span class="hljs-comment">#&#x4FDD;&#x5B58;&#x8FDE;&#x63A5;</span>
+wpa_cli -i wlan0 save_config   <span class="hljs-comment">#&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;</span>
+<span class="hljs-comment">#&#x65AD;&#x5F00;&#x8FDE;&#x63A5;</span>
+wpa_cli -i wlan0 disable_network &lt;network id&gt;
+</code></pre>
+<h4 id="&#x7F51;&#x5361;&#x914D;&#x7F6E;"><a name="&#x7F51;&#x5361;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x7F51;&#x5361;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F51;&#x5361;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x7F51;&#x5361;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F51;&#x5361;&#x914D;&#x7F6E;</h4>
+<pre><code class="lang-bash">1. &#x8BBE;&#x7F6E;&#x5F00;&#x53D1;&#x677F;&#x7684;IP(&#x914D;&#x7F6E;IP&#x5730;&#x5740;&#x3001;&#x7F51;&#x7EDC;&#x63A9;&#x7801;&#x3001;&#x5E7F;&#x64AD;&#x5730;&#x5740;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x6FC0;&#x6D3B;&#x7F51;&#x5361;eth0)
+ifconfig eth0 192.168.1.37 broadcast 192.168.1.255 netmask 255.255.255.0 up
+
+2. &#x914D;&#x7F6E;&#x7F51;&#x5173;
+route add default gw 192.168.1.1
+
+3. &#x914D;&#x7F6E;DNS&#x89E3;&#x6790;
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;nameserver 114.114.114.114&quot;</span> &gt; /etc/resolv.conf
+
+4. &#x8BBE;&#x7F6E;&#x4E00;&#x4E0B;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;
+date <span class="hljs-_">-s</span> <span class="hljs-string">&quot;2020-08-05 17:40:00&quot;</span> (&#x5F53;&#x524D;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x793A;&#x4F8B;)
+</code></pre>
+<footer class="page-footer"><span class="copyright">guobao.v@gmail.com  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x7F16;&#x8F91;&#x65F6;&#x95F4;:
+2022-11-27 03:06:36
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CI&CD相关模块的共享方案.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: CI&CD相关模块的共享方案">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"嵌入式设备调试总结.md","level":"4.5","depth":1,"previous":{"title":"CI&CD相关模块的共享方案","level":"4.4","depth":1,"path":"posts/CI&CD相关模块的共享方案.md","ref":"posts/CI&CD相关模块的共享方案.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","search-pro","highlight","livereload","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toc","tbfed-pagefooter","disqus","code","checkbox","advanced-emoji","klipse","flexible-alerts","pageview-count","accordion","hide-element","codesnippet"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"guobao.v@gmail.com ","modify_label":"最后编辑时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"ipandar"},"checkbox":{},"github":{"url":"https://github.com/Mainvooid"},"livereload":{},"splitter":{},"search-pro":{},"toc":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"./assets/donate-alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"","wechat":"./assets/donate-wechat.png","wechatText":"微信打赏"},"codesnippet":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./assets/favicon.jpg","bookmark":"./assets/favicon.jpg","appleTouch":"./assets/favicon.jpg","appleTouchMore":{"120x120":"./assets/favicon.jpg","180x180":"./assets/favicon.jpg"}},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Mainvooid","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iPanda","language":"zh-hans","links":{"sidebar":{"Github":"https://github.com/Mainvooid"}},"gitbook":"3.2.3","description":"万古长空，一朝风月"},"file":{"path":"posts/嵌入式设备调试总结.md","mtime":"2022-11-26T19:06:36.774Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-28T14:43:34.592Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
