@@ -26,7 +26,7 @@ clean_gh-pages:
     # git subtree add --squash --prefix=_book origin gh-pages
 	git subtree split --rejoin --prefix=_book --branch gh-pages
 	git subtree push --squash --prefix=_book origin gh-pages
-    # !!!需要在项目设置中重新设置部署gh-pages
+    # !!!需要在项目设置中重新设置部署gh-pages(若设置过actions则不用)
 
 clean_master:
     # make clean_all

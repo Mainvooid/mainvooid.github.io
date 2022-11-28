@@ -323,7 +323,7 @@ SELECT * FROM play;
 
 %accordion% 在gp-pages分支下新建.github/workflows/static.yml %accordion%
 
-{% codesnippet "./assets/static.yml",language="yml" %}{% endcodesnippet %}
+{% codesnippet ".github/workflows/static.yml",language="yml" %}{% endcodesnippet %}
 
 %/accordion%
 
