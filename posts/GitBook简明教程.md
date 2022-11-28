@@ -321,7 +321,7 @@ SELECT * FROM play;
 
 在`master`分支下新建`.github/workflows/static.yml`(`gitbook build`后会被自动打包到_book目录下,并在`gh-pages`分支的push事件触发时执行静态文件部署工作流.)
 
-%accordion% 在gp-pages分支下新建.github/workflows/static.yml %accordion%
+%accordion% 在gh-pages分支下新建.github/workflows/static.yml %accordion%
 
 {% codesnippet ".github/workflows/static.yml",language="yml" %}{% endcodesnippet %}
 
