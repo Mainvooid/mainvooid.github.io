@@ -184,13 +184,13 @@ GitBook默认带有 5 个插件,highlight、search、sharing、font-settings、l
       }
     }
     ```
-- `codesnippet` 从文件导入代码并显示
+- `codesnippet` 从文件导入代码并显示(url链接的文件也可以e.g. https://raw.githubusercontent.com/..cpp)
     ```
-    //@换成% 指定语言 指定显示的文件行数
+    //指定语言 指定显示的文件行数
     {@ codesnippet "./assets/test.cpp", lines="2:5",language="cpp" @}{@ endcodesnippet @}
     ```
 
-{% codesnippet "./assets/test.cpp",language="cpp" %}{% endcodesnippet %}
+{% codesnippet "./assets/GitBook简明教程/test.cpp",language="cpp" %}{% endcodesnippet %}
 
 - `checkbox`添加checkbox功能
     - [ ] write some articles
@@ -277,7 +277,8 @@ SELECT * FROM play;
 
 %/accordion%
 
-- `pageview-count` 文章左上角显示阅读量计数
+- `site-count` 文章左上角显示阅读量计数
+    
 - `accordion` 折叠模块,放最外层不可缩进。可嵌套，内部可以加代码块，引用，标题等
     ```
     %accordion%标题%accordion%
@@ -309,24 +310,32 @@ SELECT * FROM play;
 由于 gitbook 书籍可以本地构建出静态HTML格式,所以可以直接将构建好的书籍直接放到GitHub Pages中托管,之后可以通过如下地址访问书籍：
 `<username>.github.io/<project>`
 
-只需要4步即可将静态`HTML`文件发布到`gh-pages`:
+#### 原仓库子目录部署
+直接在项目设置的pages设定下面选择默认构建,并设置分支为`master`,目录为`_book`.
 1. `gitbook build` 在`_book`子目录下生成静态文件
-2. `git subtree split --rejoin --prefix=_book --branch gh-pages`拆分子目录到新的分支`gh-pages`
-3. `git subtree push --squash --prefix=_book origin gh-pages` 推送到远程仓库
-4. 在该github仓库的`settings->pages`中做下图所示修改![img1](../assets/GitBook简明教程/gh-pages.png)然后直接通过`<username>.github.io`访问就可以访问到`gh-pages`,即`_book`目录下构建的静态文件
+2. `git push origin master`推送整个项目到远程
 
 #### 使用`actions workflow`自动部署
 `github pages`的默认构建方式是`jekyll`,使用某些gitbook插件时可能会构建失败，从而导致无法继续部署.比如使用`codesnippet`时无法成功构建.这个时候可以通过自定义静态文件构建的方式完成部署.
 ![img2](../assets/GitBook简明教程/use_actions.png)
 
-在`master`分支下新建`.github/workflows/static.yml`(`gitbook build`后会被自动打包到_book目录下,并在`gh-pages`分支的push事件触发时执行静态文件部署工作流.)
+在`master`分支下新建`.github/workflows/static.yml`(在push事件触发时执行静态文件部署工作流--检出子目录_book并上传到静态页面服务器.)
+1. `gitbook build` 在`_book`子目录下生成静态文件
+2. `git push origin master`推送整个项目到远程
 
-%accordion% 在gp-pages分支下新建.github/workflows/static.yml %accordion%
+%accordion% 在gh-pages分支下新建.github/workflows/static.yml %accordion%
 
-{% codesnippet "./assets/static.yml",language="yml" %}{% endcodesnippet %}
+{% codesnippet ".github/workflows/static.yml",language="yml" %}{% endcodesnippet %}
 
 %/accordion%
 
+#### 推送到分支部署
+推送到分支意义不大,actions也可以完成推送到分支部署的任务,这边仅保留方案记录.
+只需要4步即可将静态`HTML`文件发布到`gh-pages`分支:
+1. `gitbook build` 在`_book`子目录下生成静态文件
+2. `git subtree split --rejoin --prefix=_book --branch gh-pages`拆分子目录到新的分支`gh-pages`
+3. `git subtree push --squash --prefix=_book origin gh-pages` 推送到远程仓库
+4. 在该github仓库的`settings->pages`中做下图所示修改![img1](../assets/GitBook简明教程/gh-pages.png)然后直接通过`<username>.github.io`访问就可以访问到`gh-pages`,即`_book`目录下构建的静态文件
 
 ---
 

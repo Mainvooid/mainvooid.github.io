@@ -15,7 +15,7 @@ push:
     # make push
 	git add .
 	git commit -m "update"
-	git subtree push --squash --prefix=_book origin gh-pages
+    # git subtree push --squash --prefix=_book origin gh-pages
 	git push origin master
 
 clean_gh-pages:

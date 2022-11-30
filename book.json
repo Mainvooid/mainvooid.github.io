@@ -43,12 +43,15 @@
         "advanced-emoji",
         "klipse",
         "flexible-alerts",
-        "pageview-count",
+        "site-count",
         "accordion",
         "hide-element",
         "codesnippet"
     ],
     "pluginsConfig": {
+        "site-count": {
+            "host": "https://mainvooid.github.io/"
+        },
         "hide-element": {
             "elements": [".gitbook-link"]
         },

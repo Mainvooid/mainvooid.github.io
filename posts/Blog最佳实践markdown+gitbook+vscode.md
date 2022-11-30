@@ -81,10 +81,6 @@ Github pages和Gitbook设置完成后可以通过
 
 ---
 
-gitbook和github pages(`<username>.github.io`)想要建立关联的话,需要注意的是,gitbook通过读取`SUMMARY.md`来呈现页面,而后者由于只能使用master分支构建,所以需要将gitbook生成的_book目录下的文件拷贝到该master分支,也就是说`<username>.github.io`仓库内应该有俩个分支,master分支保存最终的静态页面,用于github.io访问,另外新建一个分支保存gitbook源码,并且与gitbook.io同步。同步的意义在于,gitbook.io可以被搜索引擎良好索引。
-
----
-
 关于什么叫`md-style`,我的个人理解是:
 - 简洁但不简单
    - 语法简单,同时支持大量高级特性与富文本扩展
@@ -93,3 +89,19 @@ gitbook和github pages(`<username>.github.io`)想要建立关联的话,需要注
    - 编辑时,左编辑右预览
 - 英文符号
    - 标点符号使用英文字符,删除所有尾随空格,与md统一风格的话输入法可以设置中文时使用英文标点.
+
+---
+
+扩展:
+- 其他类似gitbook的框架: `vuepress`
+
+
+- Blog分发平台:
+   - 语雀 : 足够小白,并且个人主页有类似Github的活跃度呈现
+   - 知乎 : 对markdown的支持不够好
+   - CSDN
+   - 简书
+   - 博客园
+   - 掘金
+
+gitbook自由度高有许多文本增强插件,想要迁移分发写的东西可能需要费点心思.
