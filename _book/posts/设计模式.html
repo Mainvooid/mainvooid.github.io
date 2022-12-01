@@ -45,6 +45,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
@@ -433,52 +437,52 @@
 <p>[toc]</p>
 <!-- toc -->
 <ul>
-<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99">&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;</a><ul>
-<li><a href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99(single-responsibility-principle">&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;(Single Responsibility Principle)</a>)</li>
-<li><a href="#%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99(open/closed-principle">&#x5F00;&#x95ED;&#x539F;&#x5219;(Open/closed Principle)</a>)</li>
-<li><a href="#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99(liskov-substitution-principle">&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;(Liskov Substitution Principle)</a>)</li>
-<li><a href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99(interface-segregation-principle">&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;(Interface Segregation Principle)</a>)</li>
-<li><a href="#%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99(dependency-inversion-principle">&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;(Dependency Inversion Principle)</a>)</li>
-<li><a href="#%E5%90%88%E6%88%90%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99(composite-reuse-principle">&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;(Composite Reuse Principle)</a>)</li>
-<li><a href="#%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99(law-of-demeter">&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;(Law of Demeter)</a>)</li>
+<li><a href="#&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;">&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;</a><ul>
+<li><a href="#&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;single-responsibility-principle">&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;(Single Responsibility Principle)</a></li>
+<li><a href="#&#x5F00;&#x95ED;&#x539F;&#x5219;openclosed-principle">&#x5F00;&#x95ED;&#x539F;&#x5219;(Open/closed Principle)</a></li>
+<li><a href="#&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;liskov-substitution-principle">&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;(Liskov Substitution Principle)</a></li>
+<li><a href="#&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;interface-segregation-principle">&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;(Interface Segregation Principle)</a></li>
+<li><a href="#&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;dependency-inversion-principle">&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;(Dependency Inversion Principle)</a></li>
+<li><a href="#&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;composite-reuse-principle">&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;(Composite Reuse Principle)</a></li>
+<li><a href="#&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;law-of-demeter">&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;(Law of Demeter)</a></li>
 </ul>
 </li>
-<li><a href="#%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F">&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;</a><ul>
-<li><a href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F(singleton">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;(Singleton)</a>)</li>
-<li><a href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F(factory-method">&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;(Factory Method)</a>)</li>
-<li><a href="#%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F(abstract-factory">&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;(Abstract Factory)</a>)</li>
-<li><a href="#%E7%94%9F%E6%88%90%E5%99%A8%E6%A8%A1%E5%BC%8F(builder">&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;(Builder)</a>)</li>
-<li><a href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F(prototype">&#x539F;&#x578B;&#x6A21;&#x5F0F;(Prototype)</a>)</li>
+<li><a href="#&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;">&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#&#x5355;&#x4F8B;&#x6A21;&#x5F0F;singleton">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;(Singleton)</a></li>
+<li><a href="#&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;factory-method">&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;(Factory Method)</a></li>
+<li><a href="#&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;abstract-factory">&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;(Abstract Factory)</a></li>
+<li><a href="#&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;builder">&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;(Builder)</a></li>
+<li><a href="#&#x539F;&#x578B;&#x6A21;&#x5F0F;prototype">&#x539F;&#x578B;&#x6A21;&#x5F0F;(Prototype)</a></li>
 </ul>
 </li>
-<li><a href="#%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F">&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;</a><ul>
-<li><a href="#%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F(adapter">&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;(Adapter)</a>)</li>
-<li><a href="#%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F(bridge">&#x6865;&#x63A5;&#x6A21;&#x5F0F;(Bridge)</a>)</li>
-<li><a href="#%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F(composite">&#x7EC4;&#x5408;&#x6A21;&#x5F0F;(Composite)</a>)</li>
-<li><a href="#%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F(decorator">&#x88C5;&#x9970;&#x6A21;&#x5F0F;(Decorator)</a>)</li>
-<li><a href="#%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F(facade">&#x5916;&#x89C2;&#x6A21;&#x5F0F;(Facade)</a>)</li>
-<li><a href="#%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F(flyweight">&#x4EAB;&#x5143;&#x6A21;&#x5F0F;(Flyweight)</a>)</li>
-<li><a href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F(proxy">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;(Proxy)</a>)</li>
+<li><a href="#&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;">&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;adapter">&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;(Adapter)</a></li>
+<li><a href="#&#x6865;&#x63A5;&#x6A21;&#x5F0F;bridge">&#x6865;&#x63A5;&#x6A21;&#x5F0F;(Bridge)</a></li>
+<li><a href="#&#x7EC4;&#x5408;&#x6A21;&#x5F0F;composite">&#x7EC4;&#x5408;&#x6A21;&#x5F0F;(Composite)</a></li>
+<li><a href="#&#x88C5;&#x9970;&#x6A21;&#x5F0F;decorator">&#x88C5;&#x9970;&#x6A21;&#x5F0F;(Decorator)</a></li>
+<li><a href="#&#x5916;&#x89C2;&#x6A21;&#x5F0F;facade">&#x5916;&#x89C2;&#x6A21;&#x5F0F;(Facade)</a></li>
+<li><a href="#&#x4EAB;&#x5143;&#x6A21;&#x5F0F;flyweight">&#x4EAB;&#x5143;&#x6A21;&#x5F0F;(Flyweight)</a></li>
+<li><a href="#&#x4EE3;&#x7406;&#x6A21;&#x5F0F;proxy">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;(Proxy)</a></li>
 </ul>
 </li>
-<li><a href="#%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F">&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;</a><ul>
-<li><a href="#%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F(chain-of-responsibility">&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;(Chain of Responsibility)</a>)</li>
-<li><a href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F(command">&#x547D;&#x4EE4;&#x6A21;&#x5F0F;(Command)</a>)</li>
-<li><a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F(iterator">&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;(Iterator)</a>)</li>
-<li><a href="#%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F(mediator">&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;(Mediator)</a>)</li>
-<li><a href="#%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F(memento">&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;(Memento)</a>)</li>
-<li><a href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F(observer">&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;(Observer)</a>)</li>
-<li><a href="#%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F(state">&#x72B6;&#x6001;&#x6A21;&#x5F0F;(State)</a>)</li>
-<li><a href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F(strategy">&#x7B56;&#x7565;&#x6A21;&#x5F0F;(Strategy)</a>)</li>
-<li><a href="#%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F(template-method">&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;(Template Method)</a>)</li>
-<li><a href="#%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F(vistor">&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;(Vistor)</a>)</li>
+<li><a href="#&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;">&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;chain-of-responsibility">&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;(Chain of Responsibility)</a></li>
+<li><a href="#&#x547D;&#x4EE4;&#x6A21;&#x5F0F;command">&#x547D;&#x4EE4;&#x6A21;&#x5F0F;(Command)</a></li>
+<li><a href="#&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;iterator">&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;(Iterator)</a></li>
+<li><a href="#&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;mediator">&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;(Mediator)</a></li>
+<li><a href="#&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;memento">&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;(Memento)</a></li>
+<li><a href="#&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;observer">&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;(Observer)</a></li>
+<li><a href="#&#x72B6;&#x6001;&#x6A21;&#x5F0F;state">&#x72B6;&#x6001;&#x6A21;&#x5F0F;(State)</a></li>
+<li><a href="#&#x7B56;&#x7565;&#x6A21;&#x5F0F;strategy">&#x7B56;&#x7565;&#x6A21;&#x5F0F;(Strategy)</a></li>
+<li><a href="#&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;template-method">&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;(Template Method)</a></li>
+<li><a href="#&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;vistor">&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;(Vistor)</a></li>
 </ul>
 </li>
-<li><a href="#%E6%A8%A1%E6%9D%BF%E7%BC%96%E7%A8%8B%E7%89%B9%E6%AE%8A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</a><ul>
-<li><a href="#%E5%A5%87%E5%BC%82%E9%80%92%E5%BD%92%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F(curiously-recurring-template-pattern">&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;(Curiously Recurring Template Pattern)</a>)</li>
+<li><a href="#&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;curiously-recurring-template-pattern">&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;(Curiously Recurring Template Pattern)</a></li>
 </ul>
 </li>
-<li><a href="#%E6%89%A9%E5%B1%95">&#x6269;&#x5C55;</a></li>
+<li><a href="#&#x6269;&#x5C55;">&#x6269;&#x5C55;</a></li>
 </ul>
 <!-- tocstop -->
 <h2 id="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;"><a name="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;" class="plugin-anchor" href="#&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;</h2>
@@ -2273,7 +2277,7 @@ public:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设计模式","level":"4.3","depth":1,"next":{"title":"网络协议要点及编程方法","level":"4.4","depth":1,"path":"posts/网络协议要点及编程方法.md","ref":"posts/网络协议要点及编程方法.md","articles":[]},"previous":{"title":"C++编码规范-实用增强细节版","level":"4.2","depth":1,"path":"posts/C++编码规范-实用增强细节版.md","ref":"posts/C++编码规范-实用增强细节版.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","search-pro","highlight","livereload","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toc","tbfed-pagefooter","disqus","code","todos","advanced-emoji","klipse","flexible-alerts","site-count","accordion","hide-element","codesnippet"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"guobao.v@gmail.com ","modify_label":"最后编辑时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"ipandar"},"github":{"url":"https://github.com/Mainvooid"},"livereload":{},"splitter":{},"search-pro":{},"toc":{},"accordion":{},"site-count":{"host":"https://mainvooid.github.io/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"todos":{},"code":{"copyButtons":true},"donate":{"alipay":"./assets/donate-alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"","wechat":"./assets/donate-wechat.png","wechatText":"微信打赏"},"codesnippet":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./assets/favicon.jpg","bookmark":"./assets/favicon.jpg","appleTouch":"./assets/favicon.jpg","appleTouchMore":{"120x120":"./assets/favicon.jpg","180x180":"./assets/favicon.jpg"}},"github-buttons":{"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Mainvooid","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iPanda","language":"zh-hans","links":{"sidebar":{"Github":"https://github.com/Mainvooid"}},"gitbook":"3.2.3","description":"万古长空，一朝风月"},"file":{"path":"posts/设计模式.md","mtime":"2022-11-29T19:13:24.819Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-01T12:37:24.118Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"设计模式","level":"4.3","depth":1,"next":{"title":"网络协议要点及编程方法","level":"4.4","depth":1,"path":"posts/网络协议要点及编程方法.md","ref":"posts/网络协议要点及编程方法.md","articles":[]},"previous":{"title":"C++编码规范-实用增强细节版","level":"4.2","depth":1,"path":"posts/C++编码规范-实用增强细节版.md","ref":"posts/C++编码规范-实用增强细节版.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","search-pro","highlight","livereload","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","atoc","tbfed-pagefooter","disqus","code","todos","advanced-emoji","klipse","flexible-alerts","site-count","accordion","hide-element","codesnippet"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"guobao.v@gmail.com ","modify_label":"最后编辑时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"ipandar"},"github":{"url":"https://github.com/Mainvooid"},"livereload":{},"atoc":{},"splitter":{},"search-pro":{},"accordion":{},"site-count":{"host":"https://mainvooid.github.io/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"todos":{},"code":{"copyButtons":true},"donate":{"alipay":"./assets/donate-alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"","wechat":"./assets/donate-wechat.png","wechatText":"微信打赏"},"codesnippet":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./assets/favicon.jpg","bookmark":"./assets/favicon.jpg","appleTouch":"./assets/favicon.jpg","appleTouchMore":{"120x120":"./assets/favicon.jpg","180x180":"./assets/favicon.jpg"}},"github-buttons":{"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Mainvooid","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iPanda","language":"zh-hans","links":{"sidebar":{"Github":"https://github.com/Mainvooid"}},"gitbook":"3.2.3","description":"万古长空，一朝风月"},"file":{"path":"posts/设计模式.md","mtime":"2022-11-29T19:13:24.819Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-01T18:24:32.408Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2316,6 +2320,10 @@ public:
     
         
         <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
         
     
         

@@ -141,9 +141,9 @@ GitBook默认带有 5 个插件,highlight、search、sharing、font-settings、l
      ```
 
 - `gitbook`不支持 `[toc]`,好在有插件可以曲线救国。
-    - 在`book.json`中添加插件"toc",运行`gitbook install`
+    - 在`book.json`中添加插件`atoc`,运行`gitbook install`
     - 安装完成后，在使用`[toc]`命令的地方使用`<!-- XXX -->`代替(XXX替换为toc)。即可自动生成文档目录。
-    - 另外一种方式是安装`anchor-navigation-ex`添加Toc到侧边悬浮导航以及回到顶部按钮.
+    - 还有一种补充方式是安装`anchor-navigation-ex`添加Toc到侧边悬浮导航以及回到顶部按钮.
         ```json
         "pluginsConfig": {
             "anchor-navigation-ex": {
