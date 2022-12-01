@@ -1,0 +1,2343 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>设计模式 · iPanda</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Mainvooid">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-site-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="网络协议要点及编程方法.html" />
+    
+    
+    <link rel="prev" href="C++编码规范-实用增强细节版.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../assets/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../assets/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../assets/favicon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/Mainvooid" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">如何构建自己的被动收入</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="长期主义与成长思维.html">
+            
+                <a href="长期主义与成长思维.html">
+            
+                    
+                    长期主义与成长思维
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="知识体系管理与构建.html">
+            
+                <a href="知识体系管理与构建.html">
+            
+                    
+                    知识体系管理与构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">杂文</li>
+        
+        
+    
+
+    
+        
+        <li class="header">技术</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="C++奇淫巧计.html">
+            
+                <a href="C++奇淫巧计.html">
+            
+                    
+                    C++奇淫巧计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="C++编码规范-实用增强细节版.html">
+            
+                <a href="C++编码规范-实用增强细节版.html">
+            
+                    
+                    C++编码规范-实用增强细节版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3" data-path="设计模式.html">
+            
+                <a href="设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="网络协议要点及编程方法.html">
+            
+                <a href="网络协议要点及编程方法.html">
+            
+                    
+                    网络协议要点及编程方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">记录</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="GitBook简明教程.html">
+            
+                <a href="GitBook简明教程.html">
+            
+                    
+                    GitBook简明教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="Blog最佳实践markdown+gitbook+vscode.html">
+            
+                <a href="Blog最佳实践markdown+gitbook+vscode.html">
+            
+                    
+                    Blog最佳实践markdown+gitbook+vscode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="基于Windows文本服务框架TSF的输入法实现.html">
+            
+                <a href="基于Windows文本服务框架TSF的输入法实现.html">
+            
+                    
+                    基于Windows文本服务框架TSF的输入法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="Android-NDK-Camera双摄接入方案.html">
+            
+                <a href="Android-NDK-Camera双摄接入方案.html">
+            
+                    
+                    Android-NDK-Camera双摄接入方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="CI&CD相关模块的共享方案.html">
+            
+                <a href="CI&CD相关模块的共享方案.html">
+            
+                    
+                    CI&CD相关模块的共享方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="嵌入式设备调试总结.html">
+            
+                <a href="嵌入式设备调试总结.html">
+            
+                    
+                    嵌入式设备调试总结.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >设计模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-design-patterns"><b></b>&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F; Design patterns</a></li><ul><li><span class="title-icon "></span><a href="#&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;"><b></b>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;"><b></b>&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;"><b></b>&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;"><b></b>&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;"><b></b>&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6269;&#x5C55;"><b></b>&#x6269;&#x5C55;</a></li></ul></ul></div><a href="#&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-design-patterns" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-design-patterns"><a name="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-design-patterns" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-design-patterns"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-design-patterns" class="plugin-anchor" href="#&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-design-patterns"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F; Design patterns</h1>
+<p>[toc]</p>
+<!-- toc -->
+<ul>
+<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99">&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;</a><ul>
+<li><a href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99(single-responsibility-principle">&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;(Single Responsibility Principle)</a>)</li>
+<li><a href="#%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99(open/closed-principle">&#x5F00;&#x95ED;&#x539F;&#x5219;(Open/closed Principle)</a>)</li>
+<li><a href="#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99(liskov-substitution-principle">&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;(Liskov Substitution Principle)</a>)</li>
+<li><a href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99(interface-segregation-principle">&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;(Interface Segregation Principle)</a>)</li>
+<li><a href="#%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99(dependency-inversion-principle">&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;(Dependency Inversion Principle)</a>)</li>
+<li><a href="#%E5%90%88%E6%88%90%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99(composite-reuse-principle">&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;(Composite Reuse Principle)</a>)</li>
+<li><a href="#%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99(law-of-demeter">&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;(Law of Demeter)</a>)</li>
+</ul>
+</li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F">&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F(singleton">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;(Singleton)</a>)</li>
+<li><a href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F(factory-method">&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;(Factory Method)</a>)</li>
+<li><a href="#%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F(abstract-factory">&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;(Abstract Factory)</a>)</li>
+<li><a href="#%E7%94%9F%E6%88%90%E5%99%A8%E6%A8%A1%E5%BC%8F(builder">&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;(Builder)</a>)</li>
+<li><a href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F(prototype">&#x539F;&#x578B;&#x6A21;&#x5F0F;(Prototype)</a>)</li>
+</ul>
+</li>
+<li><a href="#%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F">&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F(adapter">&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;(Adapter)</a>)</li>
+<li><a href="#%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F(bridge">&#x6865;&#x63A5;&#x6A21;&#x5F0F;(Bridge)</a>)</li>
+<li><a href="#%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F(composite">&#x7EC4;&#x5408;&#x6A21;&#x5F0F;(Composite)</a>)</li>
+<li><a href="#%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F(decorator">&#x88C5;&#x9970;&#x6A21;&#x5F0F;(Decorator)</a>)</li>
+<li><a href="#%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F(facade">&#x5916;&#x89C2;&#x6A21;&#x5F0F;(Facade)</a>)</li>
+<li><a href="#%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F(flyweight">&#x4EAB;&#x5143;&#x6A21;&#x5F0F;(Flyweight)</a>)</li>
+<li><a href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F(proxy">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;(Proxy)</a>)</li>
+</ul>
+</li>
+<li><a href="#%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F">&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F(chain-of-responsibility">&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;(Chain of Responsibility)</a>)</li>
+<li><a href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F(command">&#x547D;&#x4EE4;&#x6A21;&#x5F0F;(Command)</a>)</li>
+<li><a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F(iterator">&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;(Iterator)</a>)</li>
+<li><a href="#%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F(mediator">&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;(Mediator)</a>)</li>
+<li><a href="#%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F(memento">&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;(Memento)</a>)</li>
+<li><a href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F(observer">&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;(Observer)</a>)</li>
+<li><a href="#%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F(state">&#x72B6;&#x6001;&#x6A21;&#x5F0F;(State)</a>)</li>
+<li><a href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F(strategy">&#x7B56;&#x7565;&#x6A21;&#x5F0F;(Strategy)</a>)</li>
+<li><a href="#%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F(template-method">&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;(Template Method)</a>)</li>
+<li><a href="#%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F(vistor">&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;(Vistor)</a>)</li>
+</ul>
+</li>
+<li><a href="#%E6%A8%A1%E6%9D%BF%E7%BC%96%E7%A8%8B%E7%89%B9%E6%AE%8A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#%E5%A5%87%E5%BC%82%E9%80%92%E5%BD%92%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F(curiously-recurring-template-pattern">&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;(Curiously Recurring Template Pattern)</a>)</li>
+</ul>
+</li>
+<li><a href="#%E6%89%A9%E5%B1%95">&#x6269;&#x5C55;</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;"><a name="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;" class="plugin-anchor" href="#&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x539F;&#x5219;</h2>
+<h4 id="&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;single-responsibility-principle"><a name="&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;single-responsibility-principle" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;single-responsibility-principle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;single-responsibility-principle" class="plugin-anchor" href="#&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;single-responsibility-principle"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;(Single Responsibility Principle)</h4>
+<p>&#x5C3D;&#x91CF;&#x8BA9;&#x6BCF;&#x4E2A;&#x7C7B;&#x53EA;&#x8D1F;&#x8D23;&#x8F6F;&#x4EF6;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x529F;&#x80FD;, &#x5E76;&#x5C06;&#x8BE5;&#x529F;&#x80FD;&#x5B8C;&#x5168;&#x5C01;&#x88C5;&#x5728;&#x8BE5;&#x7C7B;&#x4E2D;.</p>
+<h4 id="&#x5F00;&#x95ED;&#x539F;&#x5219;openclosed-principle"><a name="&#x5F00;&#x95ED;&#x539F;&#x5219;openclosed-principle" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x95ED;&#x539F;&#x5219;openclosed-principle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F00;&#x95ED;&#x539F;&#x5219;openclosed-principle" class="plugin-anchor" href="#&#x5F00;&#x95ED;&#x539F;&#x5219;openclosed-principle"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x95ED;&#x539F;&#x5219;(Open/closed Principle)</h4>
+<p>&#x5BF9;&#x4E8E;&#x6269;&#x5C55;, &#x7C7B;&#x5E94;&#x8BE5;&#x662F;&#x201C;&#x5F00;&#x653E;&#x201D;&#x7684;&#xFF1B;&#x5BF9;&#x4E8E;&#x4FEE;&#x6539;, &#x7C7B;&#x5219;&#x5E94;&#x662F;&#x201C;&#x5C01;&#x95ED;&#x201D;&#x7684;.</p>
+<h4 id="&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;liskov-substitution-principle"><a name="&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;liskov-substitution-principle" class="anchor-navigation-ex-anchor" href="#&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;liskov-substitution-principle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;liskov-substitution-principle" class="plugin-anchor" href="#&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;liskov-substitution-principle"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CC;&#x6C0F;&#x66FF;&#x6362;&#x539F;&#x5219;(Liskov Substitution Principle)</h4>
+<p>&#x6269;&#x5C55;&#x4E00;&#x4E2A;&#x7C7B;&#x65F6;, &#x8981;&#x80FD;&#x5728;&#x4E0D;&#x4FEE;&#x6539;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5C06;&#x5B50;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x7236;&#x7C7B;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4F20;&#x9012;. &#x8FD9;&#x610F;&#x5473;&#x7740;&#x5B50;&#x7C7B;&#x5FC5;&#x987B;&#x4FDD;&#x6301;&#x4E0E;&#x7236;&#x7C7B;&#x884C;&#x4E3A;&#x7684;&#x517C;&#x5BB9;.</p>
+<h4 id="&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;interface-segregation-principle"><a name="&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;interface-segregation-principle" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;interface-segregation-principle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;interface-segregation-principle" class="plugin-anchor" href="#&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;interface-segregation-principle"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;(Interface Segregation Principle)</h4>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x4E0D;&#x5E94;&#x88AB;&#x5F3A;&#x8FEB;&#x4F9D;&#x8D56;&#x4E8E;&#x5176;&#x4E0D;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;. &#x5C3D;&#x91CF;&#x7F29;&#x5C0F;&#x63A5;&#x53E3;&#x7684;&#x8303;&#x56F4;, &#x4F7F;&#x5F97;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x7C7B;&#x4E0D;&#x5FC5;&#x5B9E;&#x73B0;&#x5176;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x884C;&#x4E3A;.</p>
+<h4 id="&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;dependency-inversion-principle"><a name="&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;dependency-inversion-principle" class="anchor-navigation-ex-anchor" href="#&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;dependency-inversion-principle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;dependency-inversion-principle" class="plugin-anchor" href="#&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;dependency-inversion-principle"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;(Dependency Inversion Principle)</h4>
+<p>&#x9AD8;&#x5C42;&#x6B21;&#x7684;&#x7C7B;&#x4E0D;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4E8E;&#x4F4E;&#x5C42;&#x6B21;&#x7684;&#x7C7B;. &#x4E24;&#x8005;&#x90FD;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4E8E;&#x62BD;&#x8C61;&#x63A5;&#x53E3;. &#x62BD;&#x8C61;&#x63A5;&#x53E3;&#x4E0D;&#x5E94;&#x4F9D;&#x8D56;&#x4E8E;&#x5177;&#x4F53;&#x5B9E;&#x73B0;. &#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4E8E;&#x62BD;&#x8C61;&#x63A5;&#x53E3;.</p>
+<h4 id="&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;composite-reuse-principle"><a name="&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;composite-reuse-principle" class="anchor-navigation-ex-anchor" href="#&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;composite-reuse-principle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;composite-reuse-principle" class="plugin-anchor" href="#&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;composite-reuse-principle"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;(Composite Reuse Principle)</h4>
+<p>&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x7EC4;&#x5408;,&#x800C;&#x4E0D;&#x662F;&#x7EE7;&#x627F;&#x6765;&#x8FBE;&#x5230;&#x590D;&#x7528;&#x7684;&#x76EE;&#x7684;.</p>
+<h4 id="&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;law-of-demeter"><a name="&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;law-of-demeter" class="anchor-navigation-ex-anchor" href="#&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;law-of-demeter"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;law-of-demeter" class="plugin-anchor" href="#&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;law-of-demeter"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;(Law of Demeter)</h4>
+<p>&#x6700;&#x5C11;&#x77E5;&#x8BC6;&#x539F;&#x5219;,&#x4E00;&#x4E2A;&#x7C7B;&#x5E94;&#x5F53;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x4E0E;&#x5176;&#x4ED6;&#x7C7B;&#x53D1;&#x751F;&#x76F8;&#x4E92;&#x4F5C;&#x7528;.</p>
+<h2 id="&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;"><a name="&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;</h2>
+<p>&#x521B;&#x5EFA;&#x578B;&#x6A21;&#x5F0F;&#x9690;&#x85CF;&#x4E86;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x7684;&#x521B;&#x5EFA;&#x7EC6;&#x8282;, &#x901A;&#x8FC7;&#x9690;&#x85CF;&#x5BF9;&#x8C61;&#x5982;&#x4F55;&#x88AB;&#x521B;&#x5EFA;&#x548C;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x8FBE;&#x5230;&#x4F7F;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x72EC;&#x7ACB;&#x7684;&#x76EE;&#x7684;.</p>
+<p>&#x7B80;&#x5355;&#x5DE5;&#x5382;&#xFF1A;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;, &#x901A;&#x8FC7;&#x4EA7;&#x54C1;&#x7C7B;&#x578B;&#x521B;&#x5EFA;&#x4E0D;&#x540C;&#x4EA7;&#x54C1;
+&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#xFF1A;&#x6BCF;&#x4E2A;&#x4EA7;&#x54C1;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;
+&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#xFF1A;&#x6BCF;&#x4E2A;&#x4EA7;&#x54C1;&#x65CF;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;</p>
+<h4 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;singleton"><a name="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;singleton" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x4F8B;&#x6A21;&#x5F0F;singleton"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;singleton" class="plugin-anchor" href="#&#x5355;&#x4F8B;&#x6A21;&#x5F0F;singleton"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;(Singleton)</h4>
+<p>&#x4FDD;&#x8BC1;&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;, &#x5E76;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x8BBF;&#x95EE;&#x8BE5;&#x5B9E;&#x4F8B;&#x7684;&#x5168;&#x5C40;&#x8282;&#x70B9;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5355;&#x4F8B;&#x6A21;&#x5F0F;.cpp </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x6700;&#x7B80;&#x5355;&#x9AD8;&#x6548;&#x7684;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x6A21;&#x677F;&#x7C7B;</span>
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">singleton_t</span>{
+<span class="hljs-keyword">protected</span>:
+    <span class="hljs-keyword">singleton_t</span>() = <span class="hljs-keyword">default</span>;
+    ~<span class="hljs-keyword">singleton_t</span>() = <span class="hljs-keyword">default</span>;
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">singleton_t</span>(<span class="hljs-keyword">const</span> <span class="hljs-keyword">singleton_t</span> &amp;) = <span class="hljs-keyword">delete</span>;
+    <span class="hljs-keyword">singleton_t</span>(<span class="hljs-keyword">singleton_t</span> &amp;&amp;) = <span class="hljs-keyword">delete</span>;
+    <span class="hljs-keyword">singleton_t</span>&amp; <span class="hljs-keyword">operator</span>=(<span class="hljs-keyword">const</span> <span class="hljs-keyword">singleton_t</span> &amp;) = <span class="hljs-keyword">delete</span>;
+    <span class="hljs-keyword">singleton_t</span>&amp; <span class="hljs-keyword">operator</span>=(<span class="hljs-keyword">singleton_t</span> &amp;&amp;) =<span class="hljs-keyword">delete</span>;
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">static</span> T&amp; <span class="hljs-title">get_instance</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">static</span> T _instance; <span class="hljs-comment">// &#x9ED8;&#x8BA4;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;</span>
+        <span class="hljs-keyword">return</span> _instance;
+    }
+};
+
+<span class="hljs-keyword">namespace</span> {
+    <span class="hljs-keyword">class</span> <span class="hljs-keyword">_work_t</span>{
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name)</span></span>{
+            m_name = name;
+        }
+        <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span>&amp; <span class="hljs-title">get</span><span class="hljs-params">()</span></span>{
+            <span class="hljs-keyword">return</span> m_name;
+        }
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_name;
+    };
+} <span class="hljs-comment">// namespace </span>
+
+<span class="hljs-comment">// &#x4EC5;&#x5BFC;&#x51FA;&#x5355;&#x4F8B;&#x5B9E;&#x73B0;</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">work_t</span> = <span class="hljs-keyword">singleton_t</span>&lt;<span class="hljs-keyword">_work_t</span>&gt;;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">work_t</span>::get_instance().<span class="hljs-built_in">set</span>(<span class="hljs-string">&quot;1&quot;</span>);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-keyword">work_t</span>::get_instance().get() &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+}
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5355;&#x4F8B;&#x6A21;&#x5F0F;.go </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> singleton
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;sync&quot;</span>
+<span class="hljs-comment">// Singleton &#x662F;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x63A5;&#x53E3;&#xFF0C;&#x5BFC;&#x51FA;&#x7684;</span>
+<span class="hljs-comment">// &#x901A;&#x8FC7;&#x8BE5;&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x907F;&#x514D; GetInstance &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x79C1;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x6307;&#x9488;</span>
+<span class="hljs-keyword">type</span> Singleton <span class="hljs-keyword">interface</span> {
+    foo()
+}
+
+<span class="hljs-comment">// singleton &#x662F;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x7C7B;&#xFF0C;&#x5305;&#x79C1;&#x6709;&#x7684;</span>
+<span class="hljs-keyword">type</span> singleton <span class="hljs-keyword">struct</span>{}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(s singleton)</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span></span> {}
+
+<span class="hljs-keyword">var</span> (
+    instance *singleton
+    once     sync.Once
+)
+
+<span class="hljs-comment">// GetInstance &#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x5BF9;&#x8C61;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">GetInstance</span><span class="hljs-params">()</span> <span class="hljs-title">Singleton</span></span> {
+    once.Do(<span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+        instance = &amp;singleton{}
+    })
+    <span class="hljs-keyword">return</span> instance
+}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    ins1 := GetInstance()
+    ins2 := GetInstance()
+    <span class="hljs-keyword">if</span> ins1 != ins2 {
+        t.Fatal(<span class="hljs-string">&quot;instance is not equal&quot;</span>)
+    }
+}
+</code></pre>
+</div></div>
+<h4 id="&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;factory-method"><a name="&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;factory-method" class="anchor-navigation-ex-anchor" href="#&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;factory-method"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;factory-method" class="plugin-anchor" href="#&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;factory-method"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;(Factory Method)</h4>
+<p>&#x5728;&#x7236;&#x7C7B;&#x4E2D;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x63A5;&#x53E3;&#x4EE5;&#x5141;&#x8BB8;&#x5B50;&#x7C7B;&#x51B3;&#x5B9A;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x7C7B; &#x751F;&#x4EA7;&#x7535;&#x5F71;</span>
+<span class="hljs-keyword">class</span> factory_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;<span class="hljs-keyword">movie_t</span>&gt; get_movie() = <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x5DE5;&#x5382;&#x7C7B; &#x4E2D;&#x56FD;&#x751F;&#x4EA7;&#x8005;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">chinese_producer_t</span> : <span class="hljs-keyword">public</span> factory_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;<span class="hljs-keyword">movie_t</span>&gt; get_movie() override { <span class="hljs-keyword">return</span> <span class="hljs-built_in">std</span>::make_shared&lt;<span class="hljs-keyword">chinese_movie_t</span>&gt;(); }
+};
+
+<span class="hljs-comment">// &#x62BD;&#x8C61;&#x4EA7;&#x54C1;&#x7C7B; &#x7535;&#x5F71;</span>
+<span class="hljs-keyword">class</span> movie_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">get_a_movie</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x4EA7;&#x54C1;&#x7C7B; &#x7535;&#x5F71;::&#x56FD;&#x4EA7;&#x7535;&#x5F71;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">chinese_movie_t</span> : <span class="hljs-keyword">public</span> movie_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">get_a_movie</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x300A;&#x8BA9;&#x5B50;&#x5F39;&#x98DE;&#x300B;&quot;</span>;
+    }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;factory_i&gt; factory;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;movie_i&gt; product;
+&#x200B;
+    <span class="hljs-comment">// &#x9009;&#x62E9;&#x521B;&#x5EFA;&#x8005;&#x7684;&#x7C7B;&#x578B;</span>
+    factory = <span class="hljs-built_in">std</span>::make_shared&lt;<span class="hljs-keyword">chinese_producer_t</span>&gt;();
+
+    product = factory-&gt;get_movie();
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x83B7;&#x53D6;&#x4E00;&#x90E8;&#x7535;&#x5F71;: &quot;</span> &lt;&lt; product-&gt;get_a_movie() &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;abstract-factory"><a name="&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;abstract-factory" class="anchor-navigation-ex-anchor" href="#&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;abstract-factory"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;abstract-factory" class="plugin-anchor" href="#&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;abstract-factory"><i class="fa fa-link" aria-hidden="true"></i></a>&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;(Abstract Factory)</h4>
+<p>&#x8BA9;&#x4F60;&#x80FD;&#x521B;&#x5EFA;&#x4E00;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x7684;&#x5BF9;&#x8C61;, &#x800C;&#x65E0;&#x9700;&#x6307;&#x5B9A;&#x5176;&#x5177;&#x4F53;&#x7C7B;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x7C7B; &#x751F;&#x4EA7;&#x7535;&#x5F71;&#x548C;&#x4E66;&#x7C4D;&#x7C7B;&#x7B49;</span>
+<span class="hljs-keyword">class</span> factory_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;movie_i&gt; product_movie() = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;book_i&gt; product_book() = <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x5DE5;&#x5382;&#x7C7B; &#x4E2D;&#x56FD;&#x751F;&#x4EA7;&#x8005;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">chinese_producer_t</span> : <span class="hljs-keyword">public</span> factory_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;movie_i&gt; product_movie() override {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">std</span>::make_shared&lt;chinese_movie&gt;();
+    }
+&#x200B;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;book_i&gt; product_book() override {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">std</span>::make_shared&lt;chinese_book&gt;();
+    }
+};
+
+<span class="hljs-comment">// &#x62BD;&#x8C61;&#x4EA7;&#x54C1;&#x7C7B; &#x7535;&#x5F71;</span>
+<span class="hljs-keyword">class</span> movie_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">name</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+};
+&#x200B;
+<span class="hljs-comment">// &#x62BD;&#x8C61;&#x4EA7;&#x54C1;&#x7C7B; &#x4E66;&#x7C4D;</span>
+<span class="hljs-keyword">class</span> book_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">name</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x4EA7;&#x54C1;&#x7C7B; &#x7535;&#x5F71;::&#x56FD;&#x4EA7;&#x7535;&#x5F71;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">chinese_movie_t</span> : <span class="hljs-keyword">public</span> movie_i {
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">name</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x300A;&#x8BA9;&#x5B50;&#x5F39;&#x98DE;&#x300B;&quot;</span>;
+    }
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x4EA7;&#x54C1;&#x7C7B; &#x4E66;&#x7C4D;::&#x56FD;&#x4EA7;&#x4E66;&#x7C4D;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">chinese_book_t</span> : <span class="hljs-keyword">public</span> book_i {
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">name</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x300A;&#x4E09;&#x56FD;&#x6F14;&#x4E49;&#x300B;&quot;</span>;
+    }
+};
+&#x200B;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;factory_i&gt; factory;
+    <span class="hljs-comment">// &#x9009;&#x62E9;&#x521B;&#x5EFA;&#x8005;&#x7684;&#x7C7B;&#x578B;</span>
+    factory = <span class="hljs-built_in">std</span>::make_shared&lt;<span class="hljs-keyword">chinese_producer_t</span>&gt;();
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;movie_i&gt; movie;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">shared_ptr</span>&lt;book_i&gt; book;
+    movie = factory-&gt;product_movie();
+    book = factory-&gt;product_book();
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x83B7;&#x53D6;&#x4E00;&#x90E8;&#x7535;&#x5F71;: &quot;</span> &lt;&lt; movie-&gt;name() &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x83B7;&#x53D6;&#x4E00;&#x672C;&#x4E66;: &quot;</span> &lt;&lt; book-&gt;name() &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;builder"><a name="&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;builder" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;builder"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;builder" class="plugin-anchor" href="#&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;builder"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;(Builder)</h4>
+<p>&#x4F7F;&#x4F60;&#x80FD;&#x591F;&#x5206;&#x6B65;&#x9AA4;&#x521B;&#x5EFA;&#x590D;&#x6742;&#x5BF9;&#x8C61;. &#x8BE5;&#x6A21;&#x5F0F;&#x5141;&#x8BB8;&#x4F60;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x521B;&#x5EFA;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x548C;&#x5F62;&#x5F0F;&#x7684;&#x5BF9;&#x8C61;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x4EA7;&#x54C1;&#x7C7B; &#x8F66;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">car_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_car_tire</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> t)</span> </span>{
+        m_tire = t;
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;set tire: &quot;</span> &lt;&lt; tire_ &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_car_engine</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> e)</span> </span>{
+        m_engine = e;
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;set engine: &quot;</span> &lt;&lt; engine_ &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_tire;    <span class="hljs-comment">// &#x8F6E;&#x80CE;</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_engine;  <span class="hljs-comment">// &#x53D1;&#x52A8;&#x673A;</span>
+};
+
+<span class="hljs-comment">// &#x62BD;&#x8C61;&#x5EFA;&#x9020;&#x8005;</span>
+<span class="hljs-keyword">class</span> car_builder_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">// &#x62BD;&#x8C61;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">build_tire</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">build_engine</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">car_t</span> get_car() { <span class="hljs-keyword">return</span> m_car; }
+<span class="hljs-keyword">protected</span>:
+    <span class="hljs-keyword">car_t</span> m_car;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x5EFA;&#x9020;&#x8005; &#x5954;&#x9A70;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">benz_builder_t</span> : <span class="hljs-keyword">public</span> car_builder_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">// &#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">build_tire</span><span class="hljs-params">()</span> override </span>{
+        m_car.set_car_tire(<span class="hljs-string">&quot;benz_tire&quot;</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">build_engine</span><span class="hljs-params">()</span> override </span>{
+        car_.set_car_engine(<span class="hljs-string">&quot;benz_engine&quot;</span>);
+    }
+};
+
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">director_t</span> {
+<span class="hljs-keyword">public</span>:&#x200B;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_builder</span><span class="hljs-params">(car_builder_i *cb)</span> </span>{m_builder = cb;}
+    <span class="hljs-comment">// &#x7EC4;&#x88C5;&#x6C7D;&#x8F66;</span>
+    <span class="hljs-keyword">car_t</span> construct_car() {
+        m_builder-&gt;build_tire();
+        m_builder-&gt;build_engine();
+        <span class="hljs-keyword">return</span> m_builder-&gt;get_car();
+    }
+<span class="hljs-keyword">private</span>:
+    car_builder_i* m_builder;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &#x62BD;&#x8C61;&#x5EFA;&#x9020;&#x8005;(&#x4E00;&#x822C;&#x662F;&#x52A8;&#x6001;&#x786E;&#x5B9A;&#x7684;)</span>
+    car_builder_i* builder;
+    <span class="hljs-comment">// &#x6307;&#x6325;&#x8005;</span>
+    <span class="hljs-keyword">director_t</span>* director = <span class="hljs-keyword">new</span> <span class="hljs-keyword">director_t</span>();
+    <span class="hljs-comment">// &#x4EA7;&#x54C1;</span>
+    <span class="hljs-keyword">car_t</span> car;
+&#x200B;
+    <span class="hljs-comment">// &#x5EFA;&#x9020;&#x5954;&#x9A70;</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;==========construct benz car==========&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    builder = <span class="hljs-keyword">new</span> <span class="hljs-keyword">benz_builder_t</span>();
+    director-&gt;set_builder(builder);
+    car = director-&gt;construct_car();
+    <span class="hljs-keyword">delete</span> builder;
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;==========done==========&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    <span class="hljs-keyword">delete</span> director;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x539F;&#x578B;&#x6A21;&#x5F0F;prototype"><a name="&#x539F;&#x578B;&#x6A21;&#x5F0F;prototype" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x578B;&#x6A21;&#x5F0F;prototype"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x539F;&#x578B;&#x6A21;&#x5F0F;prototype" class="plugin-anchor" href="#&#x539F;&#x578B;&#x6A21;&#x5F0F;prototype"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x578B;&#x6A21;&#x5F0F;(Prototype)</h4>
+<p>&#x8BA9;&#x4F60;&#x80FD;&#x591F;&#x590D;&#x5236;&#x5DF2;&#x6709;&#x5BF9;&#x8C61;, &#x800C;&#x53C8;&#x65E0;&#x9700;&#x4F7F;&#x4EE3;&#x7801;&#x4F9D;&#x8D56;&#x5B83;&#x4EEC;&#x6240;&#x5C5E;&#x7684;&#x7C7B;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x539F;&#x578B;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x62BD;&#x8C61;&#x539F;&#x578B;&#x7C7B;</span>
+<span class="hljs-keyword">class</span> object_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> object_i* <span class="hljs-title">clone</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+};
+&#x200B;
+<span class="hljs-comment">// &#x90AE;&#x4EF6;&#x7684;&#x9644;&#x4EF6;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">attachment_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_content</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> content)</span> </span>{
+        m_content = content;
+    }
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">get_content</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> content;
+    }&#x200B;
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_content;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x539F;&#x578B;: &#x90AE;&#x4EF6;&#x7C7B;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">email_t</span> : <span class="hljs-keyword">public</span> object_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">email_t</span>(){}
+    <span class="hljs-keyword">email_t</span>(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> text, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> attachment_content) : m_text(text), m_attachment(<span class="hljs-keyword">new</span> <span class="hljs-keyword">attachment_t</span>()) {
+        m_attachment-&gt;set_content(attachment_content);
+    }
+    ~<span class="hljs-keyword">email_t</span>() {
+        <span class="hljs-keyword">delete</span> m_attachment;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">display</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6B63;&#x6587;: &quot;</span> &lt;&lt; m_text &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>
+        &lt;&lt; <span class="hljs-string">&quot;&#x90AE;&#x4EF6;: &quot;</span> &lt;&lt; m_attachment-&gt;get_content() &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+
+    <span class="hljs-comment">// &#x6DF1;&#x62F7;&#x8D1D;</span>
+    <span class="hljs-keyword">email_t</span>* clone() override {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">email_t</span>(<span class="hljs-keyword">this</span>-&gt;m_text, <span class="hljs-keyword">this</span>-&gt;m_attachment-&gt;get_content());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_text</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> new_text)</span> </span>{
+        m_text = new_text;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_attachment</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> content)</span> </span>{
+        m_attachment-&gt;set_content(content);
+    }
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_text;
+    <span class="hljs-keyword">attachment_t</span> *m_attachment;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">email_t</span>* email = <span class="hljs-keyword">new</span> <span class="hljs-keyword">email_t</span>(<span class="hljs-string">&quot;&#x6700;&#x521D;&#x7684;&#x6587;&#x6848;&quot;</span>, <span class="hljs-string">&quot;&#x6700;&#x521D;&#x7684;&#x9644;&#x4EF6;&quot;</span>);
+
+    <span class="hljs-keyword">email_t</span>* copy_email = email-&gt;clone();
+    copy_email-&gt;set_text(<span class="hljs-string">&quot;&#x65B0;&#x6587;&#x6848;&quot;</span>);
+    copy_email-&gt;set_attachment(<span class="hljs-string">&quot;&#x65B0;&#x9644;&#x4EF6;&quot;</span>);
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;original email:&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    email-&gt;display();
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;copy email:&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    copy_email-&gt;display();
+    <span class="hljs-keyword">delete</span> email;
+    <span class="hljs-keyword">delete</span> copy_email;
+}
+</code></pre>
+</div></div>
+<h2 id="&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;"><a name="&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;" class="plugin-anchor" href="#&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;</h2>
+<p>&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;(Structural Pattern)&#x63CF;&#x8FF0;&#x5982;&#x4F55;&#x5C06;&#x7C7B;&#x6216;&#x8005;&#x5BF9;&#x8C61;&#x7ED3;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x5F62;&#x6210;&#x66F4;&#x5927;&#x7684;&#x7ED3;&#x6784;, &#x5C31;&#x50CF;&#x642D;&#x79EF;&#x6728;, &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x79EF;&#x6728;&#x7684;&#x7EC4;&#x5408;&#x5F62;&#x6210;&#x590D;&#x6742;&#x7684;&#x3001;&#x529F;&#x80FD;&#x66F4;&#x4E3A;&#x5F3A;&#x5927;&#x7684;&#x7ED3;&#x6784;.</p>
+<p>&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x7C7B;&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;&#x548C;&#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x7C7B;&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;&#xFF1A;&#x5173;&#x5FC3;&#x7C7B;&#x7684;&#x7EC4;&#x5408;, &#x7531;&#x591A;&#x4E2A;&#x7C7B;&#x53EF;&#x4EE5;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x66F4;&#x5927;&#x7684;&#x7CFB;&#x7EDF;, &#x5728;&#x7C7B;&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;&#x4E2D;&#x4E00;&#x822C;&#x53EA;&#x5B58;&#x5728;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x548C;&#x5B9E;&#x73B0;&#x5173;&#x7CFB;.</li>
+<li>&#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;&#xFF1A;&#x5173;&#x5FC3;&#x7C7B;&#x4E0E;&#x5BF9;&#x8C61;&#x7684;&#x7EC4;&#x5408;, &#x901A;&#x8FC7;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x4F7F;&#x5F97;&#x5728;&#x4E00; &#x4E2A;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;, &#x7136;&#x540E;&#x901A;&#x8FC7;&#x8BE5;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x5176;&#x65B9;&#x6CD5;.</li>
+</ul>
+<p>&#x6839;&#x636E;&#x201C;&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;&#x201D;, &#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x6765;&#x66FF;&#x4EE3;&#x7EE7;&#x627F;&#x5173;&#x7CFB;, &#x56E0;&#x6B64;&#x5927;&#x90E8;&#x5206;&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;&#x90FD;&#x662F;&#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x578B;&#x6A21;&#x5F0F;.</p>
+<h4 id="&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;adapter"><a name="&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;adapter" class="anchor-navigation-ex-anchor" href="#&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;adapter"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;adapter" class="plugin-anchor" href="#&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;adapter"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;(Adapter)</h4>
+<p>&#x8BA9;&#x63A5;&#x53E3;&#x4E0D;&#x517C;&#x5BB9;&#x7684;&#x5BF9;&#x8C61;&#x80FD;&#x591F;&#x76F8;&#x4E92;&#x5408;&#x4F5C;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x53E3;</span>
+<span class="hljs-keyword">class</span> target_i {
+<span class="hljs-keyword">public</span>:
+  <span class="hljs-keyword">virtual</span> ~<span class="hljs-keyword">target_t</span>() = <span class="hljs-keyword">default</span>;
+  <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">request</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;default target&apos;s behavior.&quot;</span>;
+  }
+};
+<span class="hljs-comment">// &#x9002;&#x914D;&#x8005;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">adaptee_t</span> {
+<span class="hljs-keyword">public</span>:
+  <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">specific_request</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;.eetpadA eht fo roivaheb laiceps&quot;</span>;
+  }
+};
+<span class="hljs-comment">// &#x9002;&#x914D;&#x5668;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">adapter_t</span> : <span class="hljs-keyword">public</span> target_i {
+<span class="hljs-keyword">public</span>:
+  <span class="hljs-keyword">adapter_t</span>(<span class="hljs-keyword">adaptee_t</span>* adaptee) : <span class="hljs-keyword">adaptee_t</span>(adaptee) {}
+  <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">request</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> to_reverse = <span class="hljs-keyword">this</span>-&gt;adaptee_-&gt;specific_request();
+    <span class="hljs-built_in">std</span>::reverse(to_reverse.begin(), to_reverse.end());
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;adapter: (TRANSLATED) &quot;</span> + to_reverse;
+  }
+<span class="hljs-keyword">private</span>:
+  <span class="hljs-keyword">adaptee_t</span>* m_adaptee;
+};
+<span class="hljs-comment">// &#x5BA2;&#x6237;&#x7AEF;&#x65B9;&#x6CD5;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">client_code</span><span class="hljs-params">(<span class="hljs-keyword">const</span> target_i* target)</span> </span>{
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; target-&gt;request() &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+  target_i* target = <span class="hljs-keyword">new</span> target_i();
+  client_code(target);
+
+  <span class="hljs-keyword">adaptee_t</span>* adaptee = <span class="hljs-keyword">new</span> <span class="hljs-keyword">adaptee_t</span>();
+  adaptee-&gt;specific_request();
+
+  <span class="hljs-keyword">adapter_t</span>* adapter = <span class="hljs-keyword">new</span> <span class="hljs-keyword">adapter_t</span>(adaptee);
+  client_code(adapter);
+
+  <span class="hljs-keyword">delete</span> target;
+  <span class="hljs-keyword">delete</span> adaptee;
+  <span class="hljs-keyword">delete</span> adapter;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x6865;&#x63A5;&#x6A21;&#x5F0F;bridge"><a name="&#x6865;&#x63A5;&#x6A21;&#x5F0F;bridge" class="anchor-navigation-ex-anchor" href="#&#x6865;&#x63A5;&#x6A21;&#x5F0F;bridge"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6865;&#x63A5;&#x6A21;&#x5F0F;bridge" class="plugin-anchor" href="#&#x6865;&#x63A5;&#x6A21;&#x5F0F;bridge"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6865;&#x63A5;&#x6A21;&#x5F0F;(Bridge)</h4>
+<p>&#x53EF;&#x5C06;&#x4E00;&#x4E2A;&#x5927;&#x7C7B;&#x6216;&#x4E00;&#x7CFB;&#x5217;&#x7D27;&#x5BC6;&#x76F8;&#x5173;&#x7684;&#x7C7B;&#x62C6;&#x5206;&#x4E3A;&#x62BD;&#x8C61;&#x548C;&#x5B9E;&#x73B0;&#x4E24;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x5C42;&#x6B21;&#x7ED3;&#x6784;, &#x4ECE;&#x800C;&#x80FD;&#x5728;&#x5F00;&#x53D1;&#x65F6;&#x5206;&#x522B;&#x4F7F;&#x7528;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x6865;&#x63A5;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x62BD;&#x8C61;&#x7C7B;</span>
+<span class="hljs-keyword">class</span> pen_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name)</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_color</span><span class="hljs-params">(<span class="hljs-keyword">color_t</span>* color)</span> </span>{
+        m_color = color;
+    }
+&#x200B;<span class="hljs-keyword">protected</span>:
+    <span class="hljs-keyword">color_t</span>* m_color;
+};
+<span class="hljs-comment">// &#x5B9E;&#x73B0;&#x7C7B;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">big_pen_t</span> : <span class="hljs-keyword">public</span> pen_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name)</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> pen_type = <span class="hljs-string">&quot;&#x5927;&#x53F7;&#x94A2;&#x7B14;&#x7ED8;&#x5236;&quot;</span>;
+        m_color-&gt;bepaint(pen_type, name);
+    }
+};
+<span class="hljs-comment">// &#x62BD;&#x8C61;&#x7C7B;</span>
+<span class="hljs-keyword">class</span> color_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bepaint</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> pen_type, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name)</span> </span>= <span class="hljs-number">0</span>;
+};
+<span class="hljs-comment">// &#x5B9E;&#x73B0;&#x7C7B;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">red_t</span> : <span class="hljs-keyword">public</span> color_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bepaint</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> pen_type, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name)</span> override </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; pen_type &lt;&lt; <span class="hljs-string">&quot;&#x7EA2;&#x8272;&#x7684;&quot;</span> &lt;&lt; name &lt;&lt; <span class="hljs-string">&quot;.&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    color_i* color = <span class="hljs-keyword">new</span> <span class="hljs-keyword">red_t</span>();
+    pen_i* pen = <span class="hljs-keyword">new</span> <span class="hljs-keyword">big_pen_t</span>();
+&#x200B;
+    pen-&gt;set_color(color);
+    pen-&gt;draw(<span class="hljs-string">&quot;&#x592A;&#x9633;&quot;</span>);
+&#x200B;
+    <span class="hljs-keyword">delete</span> color;
+    <span class="hljs-keyword">delete</span> pen;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x7EC4;&#x5408;&#x6A21;&#x5F0F;composite"><a name="&#x7EC4;&#x5408;&#x6A21;&#x5F0F;composite" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x5408;&#x6A21;&#x5F0F;composite"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EC4;&#x5408;&#x6A21;&#x5F0F;composite" class="plugin-anchor" href="#&#x7EC4;&#x5408;&#x6A21;&#x5F0F;composite"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x5408;&#x6A21;&#x5F0F;(Composite)</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x5C06;&#x5BF9;&#x8C61;&#x7EC4;&#x5408;&#x6210;&#x6811;&#x72B6;&#x7ED3;&#x6784;, &#x5E76;&#x4E14;&#x80FD;&#x50CF;&#x4F7F;&#x7528;&#x72EC;&#x7ACB;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC4;&#x5408;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp">// &#x62BD;&#x8C61;&#x57FA;&#x7C7B;&#x58F0;&#x660E;&#x7EC4;&#x5408;&#x4E2D;&#x7684;&#x901A;&#x7528;&#x64CD;&#x4F5C;
+class graphic_i {
+public:
+    virtual void move(int x, int y) = 0;
+    virtual void draw() = 0;
+};
+// &#x70B9;
+class dot_t : public graphic_i {
+public:
+    dot_t(int x, int y) : m_x(x), m_y(y) {}
+    void move(int x, int y) override {
+        m_x += x; m_y += y;
+    }
+    void draw() override {
+        printf(&quot;&#x5728;(%d,%d)&#x5904;&#x7ED8;&#x5236;&#x70B9;\n&quot;, m_x, m_y);
+    }
+private:
+    int m_x,m_y;
+};
+// &#x5706;
+class circle_t : public graphic_i {
+public:
+    explicit circle_t(int r, int x, int y) : m_radius(r), m_x(x), m_y(y) {}
+    void move(int x, int y) override {
+        m_x += x; m_y += y;
+    }
+    void draw() override {
+        printf(&quot;&#x4EE5;(%d,%d)&#x4E3A;&#x5706;&#x5FC3;&#x7ED8;&#x5236;&#x534A;&#x5F84;&#x4E3A;%d&#x7684;&#x5706;\n&quot;,m_x,m_y,m_radius);
+    }
+&#x200B;private:
+    int m_x,m_y,m_radius;
+};
+// &#x7EC4;&#x4EF6;&#x64CD;&#x4F5C;
+class graphic_cp : public graphic_i {
+public:
+    void add(int id, graphic_i* child) {
+        m_map[id] = child;
+    }
+    void remove(int id) {
+        m_map.erase(id);
+    }
+    void move(int x, int y) override {
+        for (auto [k,v] : m_map){
+            v-&gt;move(x, y);
+        }
+    }
+    void draw() override {
+        for (auto [k,v] : m_map){
+            v-&gt;draw(x, y);
+        }
+    }
+&#x200B;private:
+    // key&#x662F;&#x56FE;&#x8868;id, value&#x662F;&#x56FE;&#x8868;&#x6307;&#x9488;
+    std::map&lt;int, graphic_i*&gt; m_map;
+};
+
+
+int main() {
+    // &#x7EC4;&#x5408;&#x56FE;
+    graphic_cp* all = new graphic_cp();
+&#x200B;
+    // &#x6DFB;&#x52A0;&#x5B50;&#x56FE;
+    dot_t* dot1 = new dot_t(1, 2);
+    circle_t *circle = new circle_t(5, 2, 2);
+    graphic_cp* child_graph = new graphic_cp();
+    dot_t* dot2 = new dot_t(4, 7);
+    dot_t* dot3 = new dot_t(3, 2);
+    child_graph-&gt;add(0, dot2);
+    child_graph-&gt;add(1, dot3);
+&#x200B;
+    // &#x5C06;&#x6240;&#x6709;&#x56FE;&#x6DFB;&#x52A0;&#x5230;&#x7EC4;&#x5408;&#x56FE;&#x4E2D;
+    all-&gt;add(0, dot1);
+    all-&gt;add(1, circle);
+    all-&gt;add(2, child_graph);
+    // &#x7ED8;&#x5236;
+    all-&gt;draw();
+&#x200B;
+    delete all;
+    delete dot1;
+    delete dot2;
+    delete dot3;
+    delete circle;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x88C5;&#x9970;&#x6A21;&#x5F0F;decorator"><a name="&#x88C5;&#x9970;&#x6A21;&#x5F0F;decorator" class="anchor-navigation-ex-anchor" href="#&#x88C5;&#x9970;&#x6A21;&#x5F0F;decorator"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x88C5;&#x9970;&#x6A21;&#x5F0F;decorator" class="plugin-anchor" href="#&#x88C5;&#x9970;&#x6A21;&#x5F0F;decorator"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88C5;&#x9970;&#x6A21;&#x5F0F;(Decorator)</h4>
+<p>&#x5141;&#x8BB8;&#x4F60;&#x5C06;&#x5BF9;&#x8C61;&#x653E;&#x5165;&#x5305;&#x542B;&#x884C;&#x4E3A;&#x7684;&#x7279;&#x6B8A;&#x5C01;&#x88C5;&#x5BF9;&#x8C61;&#x4E2D;&#x6765;&#x4E3A;&#x539F;&#x5BF9;&#x8C61;&#x7ED1;&#x5B9A;&#x65B0;&#x7684;&#x884C;&#x4E3A;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x88C5;&#x9970;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp">// &#x5177;&#x4F53;&#x7EC4;&#x4EF6;&#x548C;&#x88C5;&#x9970;&#x7C7B;&#x7684;&#x5171;&#x540C;&#x57FA;&#x7C7B;
+class data_source_i {
+public:
+    virtual void write(std::string data) = 0;
+};
+// &#x5177;&#x4F53;&#x7EC4;&#x4EF6;
+&#x200B;class file_source_t : public data_source_i {
+public:
+    explicit file_source_t(std::string file_name) : m_fname(file_name) {}
+    void write(std::string data) override {
+        printf(&quot;&#x5199;&#x5165;&#x6587;&#x4EF6;%s&#x4E2D;: %s\n&quot;, m_fname.c_str(), data.c_str());
+    }
+&#x200B;private:
+    std::string m_fname;
+};
+// &#x88C5;&#x9970;&#x7C7B;
+class data_source_decorator_cp : public data_source_i {
+public:
+    explicit data_source_decorator_cp(data_source_i* ds) : m_ds(ds) {}
+    void write(std::string data) override {
+        m_ds-&gt;write(data);
+    }
+&#x200B;protected:
+    data_source_i* m_ds;  // component
+};
+// &#x52A0;&#x5BC6;&#x88C5;&#x9970;&#x5668;
+class encryption_decorator_op : public data_source_decorator_cp {
+public:
+    using data_source_decorator_cp::data_source_decorator_cp;
+    void write(std::string data) override {
+        data = &quot;&#x5DF2;&#x52A0;&#x5BC6;(&quot; + data + &quot;)&quot;;
+        m_ds-&gt;write(data);
+    }
+};
+// &#x538B;&#x7F29;&#x88C5;&#x9970;&#x5668;
+class compression_decorator_op : public data_source_decorator_cp {
+public:
+    using data_source_decorator_cp::data_source_decorator_cp;
+    void write(std::string data) override {
+        data = &quot;&#x5DF2;&#x538B;&#x7F29;(&quot; + data + &quot;)&quot;;
+        m_ds-&gt;write(data);
+    }
+};
+
+int main() {
+    file_source_t* source1 = new file_source_t(&quot;stdout&quot;);
+    // &#x5C06;&#x660E;&#x7801;&#x6570;&#x636E;&#x5199;&#x5165;&#x76EE;&#x6807;&#x6587;&#x4EF6;
+    source1-&gt;write(&quot;testdata&quot;);
+&#x200B;
+    // &#x5C06;&#x538B;&#x7F29;&#x6570;&#x636E;&#x5199;&#x5165;&#x76EE;&#x6807;&#x6587;&#x4EF6;
+    compression_decorator_op* source2 = new compression_decorator_op(source1);
+    source2-&gt;write(&quot;testdata&quot;);
+&#x200B;
+    // &#x5C06;&#x538B;&#x7F29;&#x4E14;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x5199;&#x5165;&#x76EE;&#x6807;&#x6587;&#x4EF6;
+    encryption_decorator_op* source3 = new encryption_decorator_op(source2);
+    source3-&gt;write(&quot;testdata&quot;);
+&#x200B;
+    delete source1;
+    delete source2;
+    delete source3;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x5916;&#x89C2;&#x6A21;&#x5F0F;facade"><a name="&#x5916;&#x89C2;&#x6A21;&#x5F0F;facade" class="anchor-navigation-ex-anchor" href="#&#x5916;&#x89C2;&#x6A21;&#x5F0F;facade"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5916;&#x89C2;&#x6A21;&#x5F0F;facade" class="plugin-anchor" href="#&#x5916;&#x89C2;&#x6A21;&#x5F0F;facade"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x89C2;&#x6A21;&#x5F0F;(Facade)</h4>
+<p>&#x80FD;&#x4E3A;&#x7A0B;&#x5E8F;&#x5E93;&#x3001;&#x6846;&#x67B6;&#x6216;&#x5176;&#x4ED6;&#x590D;&#x6742;&#x7C7B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x63A5;&#x53E3;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5916;&#x89C2;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-keyword">computer_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">computer_t</span>() {
+        m_mem = <span class="hljs-keyword">new</span> <span class="hljs-keyword">memory_t</span>();
+        m_proc = <span class="hljs-keyword">new</span> <span class="hljs-keyword">processor_t</span>();
+        m_hd = <span class="hljs-keyword">new</span> <span class="hljs-keyword">hard_disk_t</span>();
+        m_os = <span class="hljs-keyword">new</span> <span class="hljs-keyword">os_t</span>();
+    }
+    ~<span class="hljs-keyword">computer_t</span>() {
+        <span class="hljs-keyword">delete</span> m_mem;
+        <span class="hljs-keyword">delete</span> m_proc;
+        <span class="hljs-keyword">delete</span> m_hd;
+        <span class="hljs-keyword">delete</span> m_os;
+        m_mem = <span class="hljs-literal">nullptr</span>;
+        m_proc = <span class="hljs-literal">nullptr</span>;
+        m_hd = <span class="hljs-literal">nullptr</span>;
+        m_os = <span class="hljs-literal">nullptr</span>;
+    }
+&#x200B;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">power_on</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6B63;&#x5728;&#x5F00;&#x673A;...&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+        m_mem-&gt;self_check();
+        m_proc-&gt;run();
+        m_hd-&gt;read();
+        m_os-&gt;load();
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x5F00;&#x673A;&#x6210;&#x529F;!&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+&#x200B;<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">memory_t</span>* m_mem;
+    <span class="hljs-keyword">processor_t</span>* m_proc;
+    <span class="hljs-keyword">hard_disk_t</span>* m_hd;
+    <span class="hljs-keyword">os_t</span>* m_os;
+};
+
+<span class="hljs-comment">// &#x5185;&#x5B58;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">memory_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">self_check</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x5185;&#x5B58;&#x81EA;&#x68C0;&#x4E2D;...&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x5185;&#x5B58;&#x81EA;&#x68C0;&#x5B8C;&#x6210;!&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+&#x200B;
+<span class="hljs-comment">// &#x5904;&#x7406;&#x5668;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">processor_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x542F;&#x52A8;CPU&#x4E2D;...&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x542F;&#x52A8;CPU&#x6210;&#x529F;!&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+&#x200B;
+<span class="hljs-comment">// &#x786C;&#x76D8;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">hard_disk_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8BFB;&#x53D6;&#x786C;&#x76D8;&#x4E2D;...&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8BFB;&#x53D6;&#x786C;&#x76D8;&#x6210;&#x529F;!&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+&#x200B;
+<span class="hljs-comment">// &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">os_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">load</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8F7D;&#x5165;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;...&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8F7D;&#x5165;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6210;&#x529F;!&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">computer_t</span>* c = <span class="hljs-keyword">new</span> <span class="hljs-keyword">computer_t</span>();
+    c-&gt;power_on();
+    <span class="hljs-keyword">delete</span> c;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x4EAB;&#x5143;&#x6A21;&#x5F0F;flyweight"><a name="&#x4EAB;&#x5143;&#x6A21;&#x5F0F;flyweight" class="anchor-navigation-ex-anchor" href="#&#x4EAB;&#x5143;&#x6A21;&#x5F0F;flyweight"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EAB;&#x5143;&#x6A21;&#x5F0F;flyweight" class="plugin-anchor" href="#&#x4EAB;&#x5143;&#x6A21;&#x5F0F;flyweight"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EAB;&#x5143;&#x6A21;&#x5F0F;(Flyweight)</h4>
+<p>&#x6452;&#x5F03;&#x4E86;&#x5728;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x4FDD;&#x5B58;&#x6240;&#x6709;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;, &#x901A;&#x8FC7;&#x5171;&#x4EAB;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x6240;&#x5171;&#x6709;&#x7684;&#x76F8;&#x540C;&#x72B6;&#x6001;, &#x8BA9;&#x4F60;&#x80FD;&#x5728;&#x4F18;&#x5148;&#x7684;&#x5185;&#x5B58;&#x5BB9;&#x91CF;&#x4E2D;&#x8F7D;&#x5165;&#x66F4;&#x591A;&#x5BF9;&#x8C61;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x4EAB;&#x5143;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x4EAB;&#x5143;&#x7C7B; &#x6811;&#x6728;&#x7C7B;&#x578B;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x9488;&#x5171;&#x4EAB;&#x7ED9;&#x5927;&#x91CF;&#x6811;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">tree_type_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">tree_type_t</span>(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> n, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> c, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> t) :
+        m_name(n), m_color(c), m_texture(t) {}
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> canvas, <span class="hljs-keyword">double</span> x, <span class="hljs-keyword">double</span> y)</span> </span>{
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#x3001;&#x989C;&#x8272;&#x548C;&#x7EB9;&#x7406;&#x7684;&#x4F4D;&#x56FE;</span>
+        <span class="hljs-comment">// &#x5728;&#x753B;&#x5E03;&#x5750;&#x6807;(x,y)&#x5904;&#x7ED8;&#x5236;&#x4F4D;&#x56FE;</span>
+    }
+&#x200B;<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_name;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_color;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_texture;
+};
+
+<span class="hljs-comment">// &#x4EAB;&#x8005; &#x5750;&#x6807;&#x968F;&#x673A;&#x72EC;&#x6709;, &#x4F46;&#x5F15;&#x7528;&#x6811;&#x7684;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x4F1A;&#x5927;&#x91CF;&#x91CD;&#x590D;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">tree_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">tree_t</span>(<span class="hljs-keyword">double</span> x, <span class="hljs-keyword">double</span> y, <span class="hljs-keyword">tree_type_t</span>* t) : m_x(x), m_y(y), <span class="hljs-keyword">m_t</span>(t) {}
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> canvas)</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">m_t</span>-&gt;draw(canvas, m_x, m_y);
+    }
+&#x200B;<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">double</span> m_x;
+    <span class="hljs-keyword">double</span> m_y;
+    <span class="hljs-keyword">tree_type_t</span>* <span class="hljs-keyword">m_t</span>;
+};
+
+<span class="hljs-comment">// &#x4EAB;&#x5143;&#x5DE5;&#x5382;: &#x5171;&#x4EAB;&#x6570;&#x636E;&#x7F13;&#x5B58;, &#x5E94;&#x8BE5;&#x662F;&#x5355;&#x4F8B;&#x7C7B;</span>
+<span class="hljs-keyword">namespace</span> detail_ns{
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">tree_factory_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">tree_type_t</span>* get_tree_type(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> color, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> texture) {
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> key = name + <span class="hljs-string">&quot;_&quot;</span> + color + <span class="hljs-string">&quot;_&quot;</span> + texture;
+        <span class="hljs-keyword">auto</span> iter = mp_tree_type.find(key);
+        <span class="hljs-keyword">if</span> (iter == mp_tree_type.end()) {
+            <span class="hljs-comment">// &#x65B0;&#x7684;tree type</span>
+            <span class="hljs-keyword">tree_type_t</span>* new_tree_type = <span class="hljs-keyword">new</span> <span class="hljs-keyword">tree_type_t</span>(name, color, texture);
+            mp_tree_type[key] = new_tree_type;
+            <span class="hljs-keyword">return</span> new_tree_type;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// &#x5DF2;&#x5B58;&#x5728;&#x7684;tree type</span>
+            <span class="hljs-keyword">return</span> iter-&gt;second;
+        }
+    }
+&#x200B;<span class="hljs-keyword">private</span>:
+    <span class="hljs-comment">// &#x5171;&#x4EAB;&#x6C60;, &#x5176;&#x4E2D;key&#x683C;&#x5F0F;&#x4E3A;name_color_texture</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">map</span>&lt;<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>, <span class="hljs-keyword">tree_type_t</span>*&gt; mp_tree_type;
+};
+} <span class="hljs-comment">// namespace detail_ns</span>
+<span class="hljs-comment">// &#x5305;&#x88C5;&#x4E3A;&#x5355;&#x4F8B;&#x7C7B;(&#x89C1;&#x6A21;&#x677F;&#x5355;&#x4F8B;&#x7C7B;)</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">tree_factory_t</span> = <span class="hljs-keyword">singleton_t</span>&lt;detail_ns::<span class="hljs-keyword">tree_factory_t</span>&gt;;
+
+<span class="hljs-comment">// forest_t&#x5305;&#x542B;&#x6570;&#x91CF;&#x53CA;&#x5176;&#x5E9E;&#x5927;&#x7684;tree_t</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">forest_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">plan_tree</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x, <span class="hljs-keyword">double</span> y, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> color, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> texture)</span> </span>{
+        <span class="hljs-keyword">tree_type_t</span>* type = <span class="hljs-keyword">tree_factory_t</span>::get_instance().get_tree_type(name, color, texture);
+        <span class="hljs-keyword">tree_t</span> tree = <span class="hljs-keyword">tree_t</span>(x, y, type);
+        m_trees.push_back(tree);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> tree : m_trees) {
+            tree.draw(<span class="hljs-string">&quot;canvas&quot;</span>);
+        }
+    }
+&#x200B;<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">tree_t</span>&gt; m_trees;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">forest_t</span>* forest = <span class="hljs-keyword">new</span> <span class="hljs-keyword">forest_t</span>();
+    <span class="hljs-comment">// &#x5728;forest&#x4E2D;&#x79CD;&#x690D;&#x5F88;&#x591A;&#x68F5;&#x6811;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">500</span>; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">500</span>; j++) {
+            <span class="hljs-keyword">double</span> x = i;
+            <span class="hljs-keyword">double</span> y = j;
+            <span class="hljs-comment">// &#x6811;&#x7C7B;&#x578B;1: &#x7EA2;&#x8272;&#x7684;&#x6749;&#x6811;</span>
+            forest-&gt;plan_tree(x, y, <span class="hljs-string">&quot;&#x6749;&#x6811;&quot;</span>, <span class="hljs-string">&quot;&#x7EA2;&#x8272;&quot;</span>, <span class="hljs-string">&quot;&quot;</span>);
+            <span class="hljs-comment">// &#x6811;&#x7C7B;&#x578B;2: &#x7EFF;&#x8272;&#x7684;&#x6995;&#x6811;</span>
+            forest-&gt;plan_tree(x, y, <span class="hljs-string">&quot;&#x6995;&#x6811;&quot;</span>, <span class="hljs-string">&quot;&#x7EFF;&#x8272;&quot;</span>, <span class="hljs-string">&quot;&quot;</span>);
+            <span class="hljs-comment">// &#x6811;&#x7C7B;&#x578B;3: &#x767D;&#x8272;&#x7684;&#x6866;&#x6811;</span>
+            forest-&gt;plan_tree(x, y, <span class="hljs-string">&quot;&#x6866;&#x6811;&quot;</span>, <span class="hljs-string">&quot;&#x767D;&#x8272;&quot;</span>, <span class="hljs-string">&quot;&quot;</span>);
+        }
+    }
+    forest-&gt;draw();
+    <span class="hljs-keyword">delete</span> forest;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;proxy"><a name="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;proxy" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7406;&#x6A21;&#x5F0F;proxy"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;proxy" class="plugin-anchor" href="#&#x4EE3;&#x7406;&#x6A21;&#x5F0F;proxy"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7406;&#x6A21;&#x5F0F;(Proxy)</h4>
+<p>&#x8BA9;&#x4F60;&#x80FD;&#x591F;&#x63D0;&#x4F9B;&#x5BF9;&#x8C61;&#x7684;&#x66FF;&#x4EE3;&#x54C1;&#x6216;&#x5176;&#x5360;&#x4F4D;&#x7B26;. &#x4EE3;&#x7406;&#x63A7;&#x5236;&#x7740;&#x5BF9;&#x4E8E;&#x539F;&#x5BF9;&#x8C61;&#x7684;&#x8BBF;&#x95EE;, &#x5E76;&#x5141;&#x8BB8;&#x5728;&#x5C06;&#x8BF7;&#x6C42;&#x63D0;&#x4EA4;&#x7ED9;&#x5BF9;&#x8C61;&#x524D;&#x540E;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x5904;&#x7406;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x4EE3;&#x7406;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp">// &#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x63A5;&#x53E3;
+class video_lib_i {
+public:
+    virtual std::string get_video_list() = 0;//&#x7565;&#x7F29;&#x56FE;&#x5217;&#x8868;
+    virtual std::string get_video_info(int id) = 0;//&#x89C6;&#x9891;&#x9875;&#x9762;
+};
+// &#x670D;&#x52A1;&#x7C7B;(&#x8BF7;&#x6C42;)
+class pull_video_t : public video_lib_i {
+public:
+    std::string get_video_list() override {
+        // &#x5411;&#x8FDC;&#x7A0B;&#x89C6;&#x9891;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x53D1;&#x9001;&#x4E00;&#x4E2A;API&#x8BF7;&#x6C42;
+        return &quot;video list&quot;;
+    }
+&#x200B;
+    std::string get_video_info(int id) override {
+        // &#x5411;&#x8FDC;&#x7A0B;&#x89C6;&#x9891;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x53D1;&#x9001;&#x4E00;&#x4E2A;API&#x8BF7;&#x6C42;
+        return &quot;video info&quot;;
+    }
+};
+// &#x4EE3;&#x7406;&#x7C7B;(&#x7F13;&#x5B58;)
+&#x200B;class video_cache_t : public video_lib_i {
+public:
+    explicit video_cache_t(video_lib_i* service) : mp_service(service), m_need_reset(false), m_list_cache(&quot;&quot;), m_video_cache(&quot;&quot;) {}
+
+    void reset() {
+        m_need_reset = true;
+    }
+&#x200B;
+    std::string get_video_list() override {
+        if (m_list_cache == &quot;&quot; || m_need_reset) {
+            m_list_cache = mp_service-&gt;get_video_list();
+        }
+        return m_list_cache;
+    }
+&#x200B;
+    std::string get_video_info(int id) override {
+        if (m_video_cache == &quot;&quot; || m_need_reset) {
+            m_video_cache = mp_service-&gt;get_video_info(id);
+        }
+        return m_video_cache;
+    }
+&#x200B;private:
+    video_lib_i* mp_service;
+    std::string m_list_cache;
+    std::string m_video_cache;
+    bool m_need_reset;
+};
+
+// &#x7BA1;&#x7406;&#x4EE3;&#x7406;&#x7C7B;(&#x6E32;&#x67D3;)
+class video_manager_t {
+public:
+    explicit video_manager_t(video_lib_i* s) : mp_service(s) {}
+    void render_video_page(int id) {
+        std::string video_info = mp_service-&gt;get_video_info(id);
+        // &#x6E32;&#x67D3;&#x89C6;&#x9891;&#x9875;&#x9762;, &#x8FD9;&#x91CC;&#x5FFD;&#x7565;&#x5B9E;&#x73B0;
+        printf(&quot;&#x6E32;&#x67D3;&#x89C6;&#x9891;&#x9875;&#x9762;: %s\n&quot;, video_info.c_str());
+    }
+    void render_list_panel() {
+        std::string video_list = mp_service-&gt;get_video_list();
+        // &#x6E32;&#x67D3;&#x89C6;&#x9891;&#x7F29;&#x7565;&#x56FE;&#x5217;&#x8868;, &#x8FD9;&#x91CC;&#x5FFD;&#x7565;&#x5B9E;&#x73B0;
+        printf(&quot;&#x6E32;&#x67D3;&#x89C6;&#x9891;&#x7F29;&#x7565;&#x56FE;&#x5217;&#x8868;: %s\n&quot;, videos.c_str());
+    }
+&#x200B;private:
+    video_lib_i* mp_service;
+};
+
+int main() {
+    pull_video_t* p_service = new pull_video_t();
+    video_cache_t* p_cache_proxy = new video_cache_t(p_service);
+    video_manager_t* p_manager = new video_manager_t(p_cache_proxy);
+&#x200B;
+    p_manager-&gt;render_video_page(1);
+    p_manager-&gt;render_list_panel();
+&#x200B;
+    delete p_service;
+    delete p_cache_proxy;
+    delete p_manager;
+}
+</code></pre>
+</div></div>
+<h2 id="&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;"><a name="&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;" class="plugin-anchor" href="#&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;</h2>
+<p>&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;(Behavioral Pattern)&#x662F;&#x5BF9;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x5212;&#x5206;&#x8D23;&#x4EFB;&#x548C;&#x7B97;&#x6CD5;&#x7684;&#x62BD;&#x8C61;&#x5316;. &#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#x4E0D;&#x4EC5;&#x4EC5;&#x5173;&#x6CE8;&#x7C7B;&#x548C;&#x5BF9;&#x8C61;&#x7684;&#x7ED3;&#x6784;, &#x800C;&#x4E14;&#x91CD;&#x70B9;&#x5173;&#x6CE8;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x4F5C;&#x7528;.</p>
+<p>&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#x5206;&#x4E3A;&#x7C7B;&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#x548C;&#x5BF9;&#x8C61;&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#x4E24;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x7C7B;&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#xFF1A;&#x7C7B;&#x7684;&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#x4F7F;&#x7528;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x5728;&#x51E0;&#x4E2A;&#x7C7B;&#x4E4B;&#x95F4;&#x5206;&#x914D;&#x884C;&#x4E3A;, &#x7C7B;&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#x4E3B;&#x8981;&#x901A;&#x8FC7;&#x591A;&#x6001;&#x7B49;&#x65B9;&#x5F0F;&#x6765;&#x5206;&#x914D;&#x7236;&#x7C7B;&#x4E0E;&#x5B50;&#x7C7B;&#x7684;&#x804C;&#x8D23;.</li>
+<li>&#x5BF9;&#x8C61;&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#xFF1A;&#x5BF9;&#x8C61;&#x7684;&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#x5219;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x7684;&#x805A;&#x5408;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x6765;&#x5206;&#x914D;&#x884C;&#x4E3A;, &#x5BF9;&#x8C61;&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x5173;&#x8054;&#x7B49;&#x65B9;&#x5F0F;&#x6765;&#x5206;&#x914D;&#x4E24;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x7C7B;&#x7684;&#x804C;&#x8D23;.
+&#x6839;&#x636E;&#x201C;&#x5408;&#x6210;&#x590D;&#x7528;&#x539F;&#x5219;&#x201D;, &#x7CFB;&#x7EDF;&#x4E2D;&#x8981;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x6765;&#x53D6;&#x4EE3;&#x7EE7;&#x627F;&#x5173;&#x7CFB;, &#x56E0;&#x6B64;&#x5927;&#x90E8;&#x5206;&#x884C;&#x4E3A;&#x578B;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x90FD;&#x5C5E;&#x4E8E;&#x5BF9;&#x8C61;&#x884C;&#x4E3A;&#x578B;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;.</li>
+</ul>
+<h4 id="&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;chain-of-responsibility"><a name="&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;chain-of-responsibility" class="anchor-navigation-ex-anchor" href="#&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;chain-of-responsibility"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;chain-of-responsibility" class="plugin-anchor" href="#&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;chain-of-responsibility"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F;(Chain of Responsibility)</h4>
+<p>&#x5141;&#x8BB8;&#x4F60;&#x5C06;&#x8BF7;&#x6C42;&#x6CBF;&#x7740;&#x5904;&#x7406;&#x8005;&#x94FE;&#x8FDB;&#x884C;&#x53D1;&#x9001;. &#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;, &#x6BCF;&#x4E2A;&#x5904;&#x7406;&#x8005;&#x53EF;&#x5BF9;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;, &#x6216;&#x5C06;&#x5176;&#x4F20;&#x9012;&#x7ED9;&#x94FE;&#x4E0A;&#x7684;&#x4E0B;&#x4E2A;&#x5904;&#x7406;&#x8005;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x8D23;&#x4EFB;&#x94FE;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp">// &#x5458;&#x5DE5;&#x7533;&#x8BF7;&#x5904;&#x7406;&#x7968;&#x636E;&#x9700;&#x8981;&#x4E0A;&#x62A5;&#x7ED9;&#x4E0A;&#x7EA7;, &#x5982;&#x679C;&#x4E0A;&#x7EA7;&#x65E0;&#x6743;&#x5904;&#x7406;&#x5C31;&#x4E0A;&#x62A5;&#x7ED9;&#x66F4;&#x9AD8;&#x7684;&#x4E0A;&#x7EA7;
+// &#x62BD;&#x8C61;&#x5904;&#x7406;&#x8005;
+class handler_i {
+public:
+    // &#x6DFB;&#x52A0;&#x4E0A;&#x7EA7;
+    virtual void set_superior(handler_i* superior) = 0;
+    // &#x5904;&#x7406;&#x7968;&#x636E;&#x7533;&#x8BF7;, &#x53C2;&#x6570;&#x662F;&#x7968;&#x636E;&#x9762;&#x989D;
+    virtual void handle_request(double amount) = 0;
+};
+
+class base_handler_t : public handler_i {
+public:
+    base_handler_t(double mpa, std::string n) : m_max_processible_amount(mpa), m_name(n), mp_superior(nullptr) {}
+    // &#x8BBE;&#x7F6E;&#x4E0A;&#x7EA7;
+    void set_superior(handler_i* superior) override {
+        m_superior = superior;
+    }
+    // &#x5904;&#x7406;&#x7968;&#x636E;
+    void handle_request(double amount) {
+        // &#x53EF;&#x5904;&#x7406;&#x65F6;&#x76F4;&#x63A5;&#x5904;&#x7406;&#x5373;&#x53EF;
+        if (amount &lt;= m_max_processible_amount) {
+            printf(&quot;%s&#x5904;&#x7406;&#x4E86;&#x8BE5;&#x7968;&#x636E;, &#x7968;&#x636E;&#x9762;&#x989D;:%f\n&quot;, m_name.c_str(), amount);
+            return;
+        }
+        // &#x65E0;&#x6CD5;&#x5904;&#x7406;&#x65F6;&#x79FB;&#x4EA4;&#x7ED9;&#x4E0A;&#x7EA7;
+        if (mp_superior != nullptr) {
+            printf(&quot;%s&#x65E0;&#x6743;&#x5904;&#x7406;, &#x8F6C;&#x4EA4;&#x4E0A;&#x7EA7;...\n&quot;, m_name.c_str());
+            mp_superior-&gt;handle_request(amount);
+            return;
+        }
+        // &#x6700;&#x4E0A;&#x7EA7;&#x4F9D;&#x7136;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x65F6;&#x62A5;&#x9519;
+        printf(&quot;&#x65E0;&#x4EBA;&#x6709;&#x6743;&#x9650;&#x5904;&#x7406;&#x8BE5;&#x7968;&#x636E;, &#x7968;&#x636E;&#x91D1;&#x989D;:%f\n&quot;, m_name.c_str(), amount);
+    }
+&#x200B;private:
+    double m_max_processible_amount;  // &#x53EF;&#x5904;&#x7406;&#x7684;&#x6700;&#x5927;&#x9762;&#x989D;
+    std::string m_name;
+    handler_i* mp_superior;
+};
+
+// &#x5177;&#x4F53;&#x5904;&#x7406;&#x8005;: &#x7EC4;&#x957F;(&#x4EC5;&#x5904;&#x7406;&#x9762;&#x989D;&lt;=10&#x7684;&#x7968;&#x636E;)
+class group_leader_t : public base_handler_t {
+public:
+    explicit group_leader_t(std::string name) : base_handler_t(10, name) {}
+};
+&#x200B;
+// &#x5177;&#x4F53;&#x5904;&#x7406;&#x8005;: &#x7ECF;&#x7406;(&#x4EC5;&#x5904;&#x7406;&#x9762;&#x989D;&lt;=100&#x7684;&#x7968;&#x636E;)
+class manager_t : public base_handler_t {
+public:
+    explicit manager_t(std::string name) : base_handler_t(100, name) {}
+};
+&#x200B;
+&#x200B;
+// &#x5177;&#x4F53;&#x5904;&#x7406;&#x8005;: &#x8001;&#x677F;(&#x4EC5;&#x5904;&#x7406;&#x9762;&#x989D;&lt;=1000&#x7684;&#x7968;&#x636E;)
+class boss_t : public base_handler_t {
+public:
+    explicit boss_t(std::string name) : base_handler_t(1000, name) {}
+};
+&#x200B;
+int main() {
+    // &#x8BF7;&#x6C42;&#x5904;&#x7406;&#x8005;: &#x7EC4;&#x957F;&#x3001;&#x7ECF;&#x7406;&#x548C;&#x8001;&#x677F;
+    group_leader_t* p_group_leader = new group_leader_t(&quot;&#x5F20;&#x7EC4;&#x957F;&quot;);
+    manager_t* p_manager = new manager_t(&quot;&#x738B;&#x7ECF;&#x7406;&quot;);
+    boss_t* p_boss = new boss_t(&quot;&#x674E;&#x8001;&#x677F;&quot;);
+&#x200B;
+    // &#x8BBE;&#x7F6E;&#x4E0A;&#x7EA7;
+    p_group_leader-&gt;set_superior(p_manager);
+    p_manager-&gt;setSuperior(p_boss);
+&#x200B;
+    // &#x4E0D;&#x540C;&#x9762;&#x989D;&#x7684;&#x7968;&#x636E;&#x7EDF;&#x4E00;&#x5148;&#x4EA4;&#x7ED9;&#x7EC4;&#x957F;&#x5BA1;&#x6279;&#xFF08;
+    p_group_leader-&gt;handle_request(8);
+    p_group_leader-&gt;handle_request(88);
+    p_group_leader-&gt;handle_request(888);
+    p_group_leader-&gt;handle_request(8888);
+&#x200B;
+    delete p_group_leader;
+    delete p_manager;
+    delete p_boss;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x547D;&#x4EE4;&#x6A21;&#x5F0F;command"><a name="&#x547D;&#x4EE4;&#x6A21;&#x5F0F;command" class="anchor-navigation-ex-anchor" href="#&#x547D;&#x4EE4;&#x6A21;&#x5F0F;command"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x547D;&#x4EE4;&#x6A21;&#x5F0F;command" class="plugin-anchor" href="#&#x547D;&#x4EE4;&#x6A21;&#x5F0F;command"><i class="fa fa-link" aria-hidden="true"></i></a>&#x547D;&#x4EE4;&#x6A21;&#x5F0F;(Command)</h4>
+<p>&#x5B83;&#x53EF;&#x5C06;&#x8BF7;&#x6C42;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E0E;&#x8BF7;&#x6C42;&#x76F8;&#x5173;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;&#x7684;&#x72EC;&#x7ACB;&#x5BF9;&#x8C61;. &#x8BE5;&#x8F6C;&#x6362;&#x8BA9;&#x4F60;&#x80FD;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#x5C06;&#x65B9;&#x6CD5;&#x53C2;&#x6570;&#x5316;&#x3001;&#x5EF6;&#x8FDF;&#x8BF7;&#x6C42;&#x6267;&#x884C;&#x6216;&#x5C06;&#x5176;&#x653E;&#x5165;&#x961F;&#x5217;&#x4E2D;, &#x4E14;&#x80FD;&#x5B9E;&#x73B0;&#x53EF;&#x64A4;&#x9500;&#x64CD;&#x4F5C;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x547D;&#x4EE4;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp">// &#x7528;&#x9065;&#x63A7;&#x5668;(Controller)&#x63A7;&#x5236;&#x7535;&#x89C6;(TV)
+
+// &#x547D;&#x4EE4;&#x63A5;&#x53E3;
+class command_t {
+public:
+    virtual void execute() = 0;
+};
+
+// &#x89E6;&#x53D1;&#x8005;: &#x9065;&#x63A7;&#x5668;
+class controller_t{
+public:
+    // &#x8BBE;&#x7F6E;&#x547D;&#x4EE4;
+    void set_command(std::shared_ptr&lt;command_t&gt; cmd) {
+        m_cmd = cmd;
+    }
+    // &#x6267;&#x884C;&#x547D;&#x4EE4;
+    void execute_command() {
+        m_cmd-&gt;execute();
+    }
+&#x200B;private:
+    std::shared_ptr&lt;command_t&gt; m_cmd;
+};
+
+&#x200B;// &#x5177;&#x4F53;&#x547D;&#x4EE4;&#x7C7B;: &#x6253;&#x5F00;&#x7535;&#x89C6;
+class cmd_tv_open_t : public command_t{
+public:
+    explicit cmd_tv_open_t(std::shared_ptr&lt;tv_t&gt; tv) : m_tv(tv) {}
+    void execute() override {
+        tv_-&gt;open();
+    }
+&#x200B;private:
+    std::shared_ptr&lt;tv_t&gt; m_tv;
+};
+
+// &#x63A5;&#x53D7;&#x8005;: &#x7535;&#x89C6;
+class tv_t{
+public:
+    void open() {
+        std::cout &lt;&lt; &quot;&#x6253;&#x5F00;&#x7535;&#x89C6;&#x673A;!&quot; &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    std::shared_ptr&lt;tv_t&gt; tv = std::make_shared&lt;tv_t&gt;();
+
+    std::shared_ptr&lt;controller_t&gt; controller = std::make_shared&lt;controller_t&gt;();
+
+    std::shared_ptr&lt;command_t&gt; open_cmd = std::make_shared&lt;cmd_tv_open_t&gt;(tv);
+&#x200B;
+    controller-&gt;setCommand(open_cmd);
+    controller-&gt;executeCommand();
+}
+</code></pre>
+</div></div>
+<h4 id="&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;iterator"><a name="&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;iterator" class="anchor-navigation-ex-anchor" href="#&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;iterator"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;iterator" class="plugin-anchor" href="#&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;iterator"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;(Iterator)</h4>
+<p>&#x8BA9;&#x4F60;&#x80FD;&#x5728;&#x4E0D;&#x66B4;&#x9732;&#x96C6;&#x5408;&#x5E95;&#x5C42;&#x8868;&#x73B0;&#x5F62;&#x5F0F;(&#x5217;&#x8868;&#x3001;&#x6808;&#x548C;&#x6811;&#x7B49;)&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x904D;&#x5386;&#x96C6;&#x5408;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp">// &#x62BD;&#x8C61;&#x8FED;&#x4EE3;&#x5668;
+class tv_iterator_i{
+public:
+    virtual void set_channel(int i) = 0;
+    virtual void next() = 0;
+    virtual void prev() = 0;
+    virtual bool is_end() = 0;
+    virtual std::string cur() = 0;
+    virtual bool is_begin() = 0;
+};
+&#x200B;
+// &#x5177;&#x4F53;&#x8FED;&#x4EE3;&#x5668;
+class abc_iter_t : public tv_iterator_i{
+public:
+    explicit abc_iter_t(std::vector&lt;std::string&gt; &amp;tvs) : m_tvs(tvs) {}
+    void next() override {
+        if (m_cur &lt; m_tvs.size()) {
+            m_cur++;
+        }
+    }
+    void prev() override {
+        if (m_cur &gt; 0) {
+            m_cur--;
+        }
+    }
+    void set_channel(int i) override {
+        m_cur = i;
+    }
+    std::string cur() override {
+        return m_tvs[m_cur];
+    }
+    bool is_end() override {
+        return m_cur == m_tvs.size();
+    }
+    bool is_begin() override {
+        return m_cur == 0;
+    }
+&#x200B;private:
+    std::vector&lt;std::string&gt; &amp;m_tvs;
+    int m_cur = 0;
+};
+
+// &#x62BD;&#x8C61;&#x7535;&#x89C6;&#x673A;
+class tv_i {
+public:
+    virtual std::shared_ptr&lt;tv_iterator_i&gt; create_iterator() = 0;
+};
+
+// &#x5177;&#x4F53;&#x7535;&#x89C6;&#x673A;
+class abc_tv_t : public tv_i {
+public:
+    std::shared_ptr&lt;tv_iterator_i&gt; create_iterator() override{
+        return std::make_shared&lt;abc_iter_t&gt;(m_tvs);
+    }
+    void add(std::string item) {
+        m_tvs.push_back(item);
+    }
+private:
+    std::vector&lt;std::string&gt; m_tvs;
+};
+
+int main() {
+    abc_tv_t abc;
+    abc.add(&quot;CCTV-1&quot;);
+    abc.add(&quot;CCTV-2&quot;);
+    abc.add(&quot;CCTV-3&quot;);
+    abc.add(&quot;CCTV-4&quot;);
+    abc.add(&quot;CCTV-5&quot;);
+&#x200B;
+    auto iter = abc.create_iterator();
+    while (!iter-&gt;is_end()) {
+        std::cout &lt;&lt; iter-&gt;cur() &lt;&lt; std::endl;
+        iter-&gt;next();
+    }
+}
+</code></pre>
+</div></div>
+<h4 id="&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;mediator"><a name="&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;mediator" class="anchor-navigation-ex-anchor" href="#&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;mediator"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;mediator" class="plugin-anchor" href="#&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;mediator"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;(Mediator)</h4>
+<p>&#x80FD;&#x8BA9;&#x4F60;&#x51CF;&#x5C11;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x6DF7;&#x4E71;&#x65E0;&#x5E8F;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;. &#x8BE5;&#x6A21;&#x5F0F;&#x4F1A;&#x9650;&#x5236;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x76F4;&#x63A5;&#x4EA4;&#x4E92;, &#x8FEB;&#x4F7F;&#x5B83;&#x4EEC;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4E2D;&#x4ECB;&#x8005;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5408;&#x4F5C;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-keyword">enum</span> person_e {
+    unknown,
+    landlord,
+    tenant,
+};
+<span class="hljs-comment">// &#x7EC4;&#x4EF6;&#x57FA;&#x7C7B;</span>
+<span class="hljs-keyword">class</span> colleague_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_mediator</span><span class="hljs-params">(<span class="hljs-keyword">mediator_t</span> *m)</span> </span>{
+        mp_mediator = m;
+    }
+    <span class="hljs-keyword">mediator_t</span>* get_mediator() {
+        <span class="hljs-keyword">return</span> mp_mediator;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_person_type</span><span class="hljs-params">(person_e pt)</span> </span>{
+        me_person_type = pt;
+    }
+    <span class="hljs-function">person_e <span class="hljs-title">get_person_type</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> me_person_type;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ask</span><span class="hljs-params">()</span></span>=<span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">answer</span><span class="hljs-params">()</span></span>=<span class="hljs-number">0</span>;
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">mediator_t</span>* mp_mediator;
+    person_e me_person_type;
+};
+&#x200B;
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x7EC4;&#x4EF6;1: &#x623F;&#x4E1C;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">landlord_t</span> : <span class="hljs-keyword">public</span> colleague_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">landlord_t</span>() {
+        m_name = <span class="hljs-string">&quot;unknown&quot;</span>;
+        m_price = <span class="hljs-number">-1</span>;
+        m_address = <span class="hljs-string">&quot;unknown&quot;</span>;
+        m_phone_number = <span class="hljs-string">&quot;unknown&quot;</span>;
+        set_person_type(person_e::unknown);
+    }
+    <span class="hljs-keyword">landlord_t</span>(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name, <span class="hljs-keyword">int</span> price, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> address, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> phone_number) {
+        m_name = name;
+        m_price = price;
+        m_address = address;
+        m_phone_number = phone_number;
+        set_person_type(person_e::landlord);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">answer</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x623F;&#x4E1C;&#x59D3;&#x540D;:%s &#x623F;&#x79DF;:%d &#x5730;&#x5740;:%s &#x7535;&#x8BDD;:%s\n&quot;</span>, m_name.c_str(), m_price, m_address.c_str(), m_phone_number.c_str());
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ask</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x623F;&#x4E1C;%s&#x67E5;&#x770B;&#x79DF;&#x5BA2;&#x4FE1;&#x606F;: \n&quot;</span>, m_name.c_str());
+        <span class="hljs-keyword">this</span>-&gt;get_mediator()-&gt;operation(<span class="hljs-keyword">this</span>);
+    }
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_name;
+    <span class="hljs-keyword">int</span> m_price;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_address;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_phone_number;
+};
+&#x200B;
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x7EC4;&#x4EF6;2: &#x79DF;&#x5BA2;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">tenant_t</span> : <span class="hljs-keyword">public</span> colleague_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">tenant_t</span>():m_name(<span class="hljs-string">&quot;unknown&quot;</span>) {}
+    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">tenant_t</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name)</span> </span>{
+        m_name = name;
+        set_person_type(person_e::tenant);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ask</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x79DF;&#x5BA2;%s&#x8BE2;&#x95EE;&#x623F;&#x4E1C;&#x4FE1;&#x606F;:\n&quot;</span>, m_name.c_str());
+        <span class="hljs-keyword">this</span>-&gt;get_mediator()-&gt;operation(<span class="hljs-keyword">this</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">answer</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x79DF;&#x5BA2;&#x59D3;&#x540D;: %s\n&quot;</span>, m_name.c_str());
+    }
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_name;
+};
+
+<span class="hljs-comment">// &#x62BD;&#x8C61;&#x4E2D;&#x4ECB;&#x8005;</span>
+<span class="hljs-keyword">class</span> mediator_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">// &#x58F0;&#x660E;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">register_method</span><span class="hljs-params">(colleague_i*)</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-comment">// &#x58F0;&#x660E;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">operation</span><span class="hljs-params">(colleague_i*)</span> </span>= <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x4E2D;&#x4ECB;&#x7C7B;: &#x623F;&#x4EA7;&#x4E2D;&#x4ECB;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">agency_t</span> : <span class="hljs-keyword">public</span> mediator_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">register_method</span><span class="hljs-params">(colleague_i* person)</span> override </span>{
+        <span class="hljs-keyword">switch</span> (person-&gt;get_person_type()) {
+            <span class="hljs-keyword">case</span> person_e::landlord:
+                m_landlords.push_back(<span class="hljs-keyword">reinterpret_cast</span>&lt;<span class="hljs-keyword">landlord_t</span>*&gt;(person));
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> person_e::tenant:
+                m_tenants.push_back(<span class="hljs-keyword">reinterpret_cast</span>&lt;<span class="hljs-keyword">tenant_t</span>*&gt;(person));
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;wrong person\n&quot;</span>);
+        }
+    }
+&#x200B;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">operation</span><span class="hljs-params">(colleague_i* person)</span> </span>{
+        <span class="hljs-keyword">switch</span> (person-&gt;get_person_type()) {
+            <span class="hljs-keyword">case</span> person_e::landlord:
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> iter : m_tenants){
+                    iter-&gt;answer();
+                }
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> person_e::tenant:
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> iter : m_landlords){
+                    iter-&gt;answer();
+                }
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+                <span class="hljs-keyword">break</span>;
+        }
+    }
+&#x200B;
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">landlord_t</span>*&gt; m_landlords;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">tenant_t</span>*&gt; m_tenants;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &#x623F;&#x4EA7;&#x4E2D;&#x4ECB;</span>
+    <span class="hljs-keyword">agency_t</span>* p_mediator = <span class="hljs-keyword">new</span> <span class="hljs-keyword">agency_t</span>();
+&#x200B;
+    <span class="hljs-keyword">landlord_t</span> *p_l1 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">landlord_t</span>(<span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>, <span class="hljs-number">1820</span>, <span class="hljs-string">&quot;&#x5929;&#x6D25;&quot;</span>, <span class="hljs-string">&quot;1333&quot;</span>);
+    <span class="hljs-keyword">tenant_t</span> *p_t1 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">tenant_t</span>(<span class="hljs-string">&quot;Zhang&quot;</span>);
+    p_mediator-&gt;register_method(p_l1);
+&#x200B;    p_mediator-&gt;register_method(p_t1);
+    l1-&gt;set_mediator(p_mediator);
+    t1-&gt;set_mediator(p_mediator);
+
+    <span class="hljs-comment">// &#x4E1A;&#x52A1;&#x903B;&#x8F91;</span>
+    t1-&gt;ask();
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    l1-&gt;ask();
+&#x200B;
+    <span class="hljs-keyword">delete</span> p_mediator;
+    <span class="hljs-keyword">delete</span> p_l1;
+    <span class="hljs-keyword">delete</span> p_t1;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;memento"><a name="&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;memento" class="anchor-navigation-ex-anchor" href="#&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;memento"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;memento" class="plugin-anchor" href="#&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;memento"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;(Memento)</h4>
+<p>&#x5141;&#x8BB8;&#x5728;&#x4E0D;&#x66B4;&#x9732;&#x5BF9;&#x8C61;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4FDD;&#x5B58;&#x548C;&#x6062;&#x590D;&#x5BF9;&#x8C61;&#x4E4B;&#x524D;&#x7684;&#x72B6;&#x6001;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp">// &#x5907;&#x5FD8;&#x5F55;&#x7C7B;&#x4FDD;&#x5B58;&#x7F16;&#x8F91;&#x5668;&#x7684;&#x8FC7;&#x5F80;&#x72B6;&#x6001;
+class snapshot_t {
+public:
+    snapshot_t(std::string text, int x, int y, double width)
+        : m_text(text), m_cur_x(x), m_cur_y(y), m_selection_width(width) {}
+    std::string&amp; get_text() {
+        return m_text;
+    }
+    int get_cur_x() {
+        return m_cur_x;
+    }
+    int get_cur_y() {
+        return m_cur_y;
+    }
+    double get_selection_width() {
+        return m_selection_width;
+    }
+private:
+    const std::string m_text;
+    const int m_cur_x;
+    const int m_cur_y;
+    const double m_selection_width;
+};
+&#x200B;
+// &#x539F;&#x53D1;&#x5668;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;&#x53EF;&#x80FD;&#x4F1A;&#x968F;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#x7684;&#x91CD;&#x8981;&#x6570;&#x636E;
+// &#x5B83;&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x5728;&#x5907;&#x5FD8;&#x5F55;&#x4E2D;&#x4FDD;&#x5B58;&#x81EA;&#x8EAB;&#x72B6;&#x6001;&#x7684;&#x65B9;&#x6CD5;, &#x4EE5;&#x53CA;&#x4ECE;&#x5907;&#x5FD8;&#x5F55;&#x4E2D;&#x6062;&#x590D;&#x72B6;&#x6001;&#x7684;&#x65B9;&#x6CD5;
+class editor_t {
+public:
+    void set_text(std::string text) {
+        m_text = text;
+    }
+    void set_cursor(int x, int y) {
+        m_cur_x = x;
+        m_cur_y = y;
+    }
+    void set_selection_width(double width) {
+        m_selection_width = width;
+    }
+    // &#x5728;&#x5907;&#x5FD8;&#x5F55;&#x4E2D;&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;
+    std::shared_ptr&lt;snapshot_t&gt; create_snapshot() {
+        // &#x5907;&#x5FD8;&#x5F55;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#x5BF9;&#x8C61;, &#x56E0;&#x6B64;&#x539F;&#x53D1;&#x5668;&#x4F1A;&#x5C06;&#x81EA;&#x8EAB;&#x72B6;&#x6001;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x5907;&#x5FD8;&#x5F55;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;
+        auto res = std::make_shared&lt;snapshot_t&gt;(m_text, m_cur_x, m_cur_y, m_selection_width);
+        printf(&quot;&#x521B;&#x5EFA;&#x7F16;&#x8F91;&#x5668;&#x5FEB;&#x7167;&#x6210;&#x529F;, text:%s x:%d y:%d width:%.2f\n&quot;,
+         m_text.c_str(), m_cur_x, m_cur_y, m_selection_width);
+        return res;
+    }
+    void resotre(std::shared_ptr&lt;snapshot_t&gt; p_snapshot) {
+        m_text = p_snapshot-&gt;get_text();
+        m_cur_x = p_snapshot-&gt;get_cur_x();
+        m_cur_y = p_snapshot-&gt;get_cur_y();
+        m_selection_width = p_snapshot-&gt;get_selection_width();
+        printf(&quot;&#x6062;&#x590D;&#x7F16;&#x8F91;&#x5668;&#x72B6;&#x6001;&#x6210;&#x529F;, text:%s x:%d y:%d width:%.2f\n&quot;,
+         m_text.c_str(), m_cur_x, m_cur_y, m_selection_width);
+    }
+private:
+    // &#x6587;&#x672C;
+    std::string m_text;
+    // &#x5149;&#x6807;&#x4F4D;&#x7F6E;
+    int m_cur_x;
+    int m_cur_y;
+    // &#x5F53;&#x524D;&#x6EDA;&#x52A8;&#x6761;&#x4F4D;&#x7F6E;
+    double m_selection_width;
+};
+
+class command_t {
+public:
+    explicit command_t(editor_t* e) : mp_editor(e) {}
+    void make_backup() {
+        mp_backup = mp_editor-&gt;create_snapshot();
+    }
+    void undo() {
+        if (mp_backup) {
+            mp_editor-&gt;resotre(mp_backup);
+        }
+    }
+&#x200B;private:
+    editor_t* mp_editor;
+    std::shared_ptr&lt;snapshot_t&gt; mp_backup;
+};
+
+int main() {
+    // &#x521B;&#x5EFA;&#x539F;&#x53D1;&#x5668;&#x548C;&#x8D1F;&#x8D23;&#x4EBA;
+    editor_t editor;
+    command_t command(&amp;editor);
+&#x200B;
+    // &#x5B9A;&#x4E49;&#x521D;&#x59CB;&#x72B6;&#x6001;
+    editor.set_text(&quot;text1&quot;);
+    editor.set_cursor(21, 34);
+    editor.set_selection_width(3.4);
+&#x200B;
+    // &#x4FDD;&#x5B58;&#x72B6;&#x6001;
+    command.make_backup();
+&#x200B;
+    // &#x66F4;&#x6539;&#x7F16;&#x8F91;&#x5668;&#x72B6;&#x6001;
+    editor.set_text(&quot;text2&quot;);
+    editor.set_cursor(111, 222);
+    editor.set_selection_width(111.222);
+&#x200B;
+    // &#x64A4;&#x9500;
+    command.undo();
+}
+</code></pre>
+</div></div>
+<h4 id="&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;observer"><a name="&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;observer" class="anchor-navigation-ex-anchor" href="#&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;observer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;observer" class="plugin-anchor" href="#&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;observer"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;(Observer)</h4>
+<p>&#x5141;&#x8BB8;&#x4F60;&#x5B9A;&#x4E49;&#x4E00;&#x79CD;&#x8BA2;&#x9605;&#x673A;&#x5236;, &#x53EF;&#x5728;&#x5BF9;&#x8C61;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x65F6;&#x901A;&#x77E5;&#x591A;&#x4E2A;&#x201C;&#x89C2;&#x5BDF;&#x201D;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x62BD;&#x8C61;&#x89C2;&#x5BDF;&#x8005;</span>
+<span class="hljs-keyword">class</span> observer_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">response</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+};
+&#x200B;
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x89C2;&#x5BDF;&#x8005;: &#x72D7;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">dog_t</span> : <span class="hljs-keyword">public</span> observer_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">response</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x72D7;&#x8FFD;&#x732B;&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+&#x200B;
+
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">cat_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">// &#x6CE8;&#x518C;&#x89C2;&#x5BDF;&#x8005;</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">attach</span><span class="hljs-params">(observer_i* observer)</span> </span>{
+        m_observers.push_back(observer);
+    }
+    <span class="hljs-comment">// &#x6CE8;&#x9500;&#x89C2;&#x5BDF;&#x8005;</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">detach</span><span class="hljs-params">(observer_i* observer)</span> </span>{
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> iter : m_observers){
+            <span class="hljs-keyword">if</span> (*it == observer) {
+                m_observers.erase(it);
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cry</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x732B;&#x53EB;!&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> ob : m_observers) {
+            ob-&gt;response();
+        }
+    }
+&#x200B;<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;observer_i*&gt; m_observers;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &#x53D1;&#x5E03;&#x8005;</span>
+    <span class="hljs-keyword">cat_t</span> cat;
+    <span class="hljs-comment">// &#x89C2;&#x5BDF;&#x8005;</span>
+    <span class="hljs-keyword">dog_t</span> dog;
+    <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x8BA2;&#x9605;&#x5173;&#x7CFB;</span>
+    cat.attach(&amp;dog);
+    <span class="hljs-comment">// &#x53D1;&#x5E03;&#x6D88;&#x606F;</span>
+    cat.cry();
+}
+</code></pre>
+</div></div>
+<h4 id="&#x72B6;&#x6001;&#x6A21;&#x5F0F;state"><a name="&#x72B6;&#x6001;&#x6A21;&#x5F0F;state" class="anchor-navigation-ex-anchor" href="#&#x72B6;&#x6001;&#x6A21;&#x5F0F;state"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x72B6;&#x6001;&#x6A21;&#x5F0F;state" class="plugin-anchor" href="#&#x72B6;&#x6001;&#x6A21;&#x5F0F;state"><i class="fa fa-link" aria-hidden="true"></i></a>&#x72B6;&#x6001;&#x6A21;&#x5F0F;(State)</h4>
+<p>&#x8BA9;&#x4F60;&#x80FD;&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x65F6;&#x6539;&#x53D8;&#x5176;&#x884C;&#x4E3A;, &#x4F7F;&#x5176;&#x770B;&#x4E0A;&#x53BB;&#x5C31;&#x50CF;&#x6539;&#x53D8;&#x4E86;&#x81EA;&#x8EAB;&#x6240;&#x5C5E;&#x7684;&#x7C7B;&#x4E00;&#x6837;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x72B6;&#x6001;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp">// &#x8BBA;&#x575B;&#x8D26;&#x53F7;
+class forum_account_t {
+public:
+    explicit forum_account_t(std::string name):m_name(name),mp_state(std::make_shared&lt;PrimaryState&gt;(this)){};
+    void set_state(std::shared_ptr&lt;state_i&gt; state) {
+        mp_state = state;
+    }
+    std::shared_ptr&lt;state_i&gt; get_state() {
+        return mp_state;
+    }
+    std::string&amp; get_name() {
+        return m_name;
+    }
+    void download_file(int score){
+        mp_state-&gt;download_file(score);
+    }
+    void write_note(int score){
+        mp_state-&gt;write_note(score);
+    }
+    void reply_note(int score){
+        mp_state-&gt;write_note(score);
+    }
+&#x200B;private:
+    std::shared_ptr&lt;state_i&gt; mp_state;
+    std::string m_name;
+};
+
+// &#x7B49;&#x7EA7;&#x72B6;&#x6001;
+class state_i {
+public:
+    virtual void check_state() = 0;
+&#x200B;
+    void set_point(int point) {
+        point_ = point;
+    }
+    int get_point() {
+        return point_;
+    }
+    void set_state_name(std::string name) {
+        m_state_name = name;
+    }
+    std::string get_state_name() {
+        return m_state_name;
+    }
+    forum_account_t* get_account() {
+        return mp_account;
+    }
+&#x200B;
+    virtual void download_file(int score) {
+        m_point -= score;
+        check_state();
+    }
+&#x200B;
+    virtual void write_note(int score) {
+        m_point += score;
+        check_state();
+    }
+&#x200B;
+    virtual void reply_note(int score) {
+        m_point += score;
+        check_state();
+    }
+&#x200B;protected:
+    forum_account_t* mp_account;
+    int m_point;
+    std::string m_state_name;
+};
+&#x200B;
+// &#x5177;&#x4F53;&#x72B6;&#x6001;&#x7C7B;: &#x65B0;&#x624B;
+class primary_state_t : public state_i {
+public:
+    explicit primary_state_t(state_i* state) {
+        mp_account = state-&gt;get_account();
+        m_point = state-&gt;get_point();
+        m_state_name = &quot;&#x65B0;&#x624B;&quot;;
+    }
+    explicit primary_state_t(forum_account_t *account) {
+        mp_account = account;
+        m_point = 0;
+        m_state_name = &quot;&#x65B0;&#x624B;&quot;;
+    }
+    void download_file(int score) override {
+        printf(&quot;&#x5BF9;&#x4E0D;&#x8D77;, %s&#x6CA1;&#x6709;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;!\n&quot;, mp_account-&gt;get_name().c_str());
+    }
+    void check_state() override{
+        if (m_point &gt;= 1000){
+            mp_account-&gt;set_state(std::make_shared&lt;high_state_t&gt;(this));
+        }
+        else if (m_point &gt;= 100){
+            mp_account-&gt;set_state(std::make_shared&lt;middle_state_t&gt;(this));
+        }
+    };
+};
+// &#x5177;&#x4F53;&#x72B6;&#x6001;&#x7C7B;: &#x9AD8;&#x624B;
+// &#x5177;&#x4F53;&#x72B6;&#x6001;&#x7C7B;: &#x4E13;&#x5BB6;
+
+&#x200B;int main() {
+    forum_account_t account(&quot;test&quot;);
+    account.write_note(20);
+    account.download_file(20);
+    account.reply_note(100);
+}
+</code></pre>
+</div></div>
+<h4 id="&#x7B56;&#x7565;&#x6A21;&#x5F0F;strategy"><a name="&#x7B56;&#x7565;&#x6A21;&#x5F0F;strategy" class="anchor-navigation-ex-anchor" href="#&#x7B56;&#x7565;&#x6A21;&#x5F0F;strategy"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B56;&#x7565;&#x6A21;&#x5F0F;strategy" class="plugin-anchor" href="#&#x7B56;&#x7565;&#x6A21;&#x5F0F;strategy"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B56;&#x7565;&#x6A21;&#x5F0F;(Strategy)</h4>
+<p>&#x80FD;&#x8BA9;&#x4F60;&#x5B9A;&#x4E49;&#x4E00;&#x7CFB;&#x5217;&#x7B97;&#x6CD5;, &#x5E76;&#x5C06;&#x6BCF;&#x79CD;&#x7B97;&#x6CD5;&#x5206;&#x522B;&#x653E;&#x5165;&#x72EC;&#x7ACB;&#x7684;&#x7C7B;&#x4E2D;, &#x4EE5;&#x4F7F;&#x7B97;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#x80FD;&#x591F;&#x76F8;&#x4E92;&#x66FF;&#x6362;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7B56;&#x7565;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x62BD;&#x8C61;&#x7B56;&#x7565;&#x7C7B;: &#x6392;&#x5E8F;</span>
+<span class="hljs-keyword">class</span> sort_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort_vector</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; &amp;arr)</span> </span>= <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x7B56;&#x7565;&#x7C7B;: &#x5192;&#x6CE1;&#x6392;&#x5E8F;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">bubble_sort_t</span> : <span class="hljs-keyword">public</span> sort_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sort_vector</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; &amp;vi)</span> override </span>{
+        <span class="hljs-comment">// sort</span>
+    }
+};
+
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">array_handler_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sort_vector</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; &amp;arr)</span> </span>{
+        <span class="hljs-keyword">return</span> mp_sort-&gt;sort_vector(arr);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_sort_strategy</span><span class="hljs-params">(sort_i* sort)</span> </span>{
+        mp_sort = sort;
+    }
+&#x200B;<span class="hljs-keyword">private</span>:
+    sort_i* mp_sort;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; arr;
+    <span class="hljs-keyword">array_handler_t</span> ah;
+    <span class="hljs-keyword">bubble_sort_t</span>* p_bs = <span class="hljs-keyword">new</span> <span class="hljs-keyword">bubble_sort_t</span>();
+
+    ah.set_sort_strategy(p_bs);
+    ah.sort_vector(arr);
+    <span class="hljs-keyword">delete</span> p_bs;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;template-method"><a name="&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;template-method" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;template-method"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;template-method" class="plugin-anchor" href="#&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;template-method"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;(Template Method)</h4>
+<p>&#x5728;&#x8D85;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x7684;&#x6846;&#x67B6;, &#x5141;&#x8BB8;&#x5B50;&#x7C7B;&#x5728;&#x4E0D;&#x4FEE;&#x6539;&#x7ED3;&#x6784;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x91CD;&#x5199;&#x7B97;&#x6CD5;&#x7684;&#x7279;&#x5B9A;&#x6B65;&#x9AA4;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x62BD;&#x8C61;&#x7C7B;: &#x94F6;&#x884C;&#x4E1A;&#x52A1;&#x529E;&#x7406;&#x6D41;&#x7A0B;</span>
+<span class="hljs-keyword">class</span> bank_op_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">take_number</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6392;&#x961F;&#x53D6;&#x53F7;. &quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">transact</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">evalute</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x53CD;&#x9988;&#x8BC4;&#x5206;. &quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">()</span> </span>{
+        take_number();
+        transact();
+        evalute();
+    }
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x7C7B;: &#x5B58;&#x6B3E;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">deposit_t</span> : <span class="hljs-keyword">public</span> bank_op_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">transact</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x5B58;&#x6B3E;...&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+&#x200B;
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x7C7B;: &#x53D6;&#x6B3E;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">withdraw_t</span> : <span class="hljs-keyword">public</span> bank_op_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">transact</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x53D6;&#x6B3E;...&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+&#x200B;
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x7C7B;: &#x8F6C;&#x8D26;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">transfer_t</span> : <span class="hljs-keyword">public</span> bank_op_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">transact</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8F6C;&#x8D26;...&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &#x5B58;&#x6B3E;</span>
+    bank_op_i* deposit = <span class="hljs-keyword">new</span> <span class="hljs-keyword">deposit_t</span>();
+    deposit-&gt;process();
+    <span class="hljs-keyword">delete</span> deposit;
+&#x200B;
+    <span class="hljs-comment">// &#x53D6;&#x6B3E;</span>
+    bank_op_i* withdraw = <span class="hljs-keyword">new</span> <span class="hljs-keyword">withdraw_t</span>();
+    withdraw-&gt;process();
+    <span class="hljs-keyword">delete</span> withdraw;
+&#x200B;
+    <span class="hljs-comment">// &#x8F6C;&#x8D26;</span>
+    bank_op_i* transfer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">transfer_t</span>();
+    transfer-&gt;process();
+    <span class="hljs-keyword">delete</span> transfer;
+}
+</code></pre>
+</div></div>
+<h4 id="&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;vistor"><a name="&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;vistor" class="anchor-navigation-ex-anchor" href="#&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;vistor"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;vistor" class="plugin-anchor" href="#&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;vistor"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;(Vistor)</h4>
+<p>&#x5C06;&#x7B97;&#x6CD5;&#x4E0E;&#x5176;&#x6240;&#x4F5C;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x9694;&#x79BB;&#x5F00;&#x6765;.</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x62BD;&#x8C61;&#x8BBF;&#x95EE;&#x8005;</span>
+<span class="hljs-keyword">class</span> vistor_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_name</span><span class="hljs-params">(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name)</span> </span>{
+        m_name = name;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">visit</span><span class="hljs-params">(<span class="hljs-keyword">apple_t</span> *apple)</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">visit</span><span class="hljs-params">(<span class="hljs-keyword">book_t</span> *book)</span> </span>= <span class="hljs-number">0</span>;
+<span class="hljs-keyword">protected</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_name;
+};
+
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x8BBF;&#x95EE;&#x8005;&#x7C7B;: &#x987E;&#x5BA2;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">customer_t</span> : <span class="hljs-keyword">public</span> vistor_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">visit</span><span class="hljs-params">(<span class="hljs-keyword">apple_t</span> *apple)</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x987E;&#x5BA2;&quot;</span> &lt;&lt; m_name &lt;&lt; <span class="hljs-string">&quot;&#x6311;&#x9009;&#x82F9;&#x679C;. &quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+&#x200B;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">visit</span><span class="hljs-params">(<span class="hljs-keyword">book_t</span> *book)</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x987E;&#x5BA2;&quot;</span> &lt;&lt; m_name &lt;&lt; <span class="hljs-string">&quot;&#x4E70;&#x4E66;. &quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+&#x200B;
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x8BBF;&#x95EE;&#x8005;&#x7C7B;&#xFF1A; &#x6536;&#x94F6;&#x5458;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">saler_t</span> : <span class="hljs-keyword">public</span> vistor_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">visit</span><span class="hljs-params">(<span class="hljs-keyword">apple_t</span> *apple)</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6536;&#x94F6;&#x5458;&quot;</span> &lt;&lt; m_name &lt;&lt; <span class="hljs-string">&quot;&#x7ED9;&#x82F9;&#x679C;&#x8FC7;&#x79F0;, &#x7136;&#x540E;&#x8BA1;&#x7B97;&#x4EF7;&#x683C;. &quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+&#x200B;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">visit</span><span class="hljs-params">(<span class="hljs-keyword">book_t</span> *book)</span> </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6536;&#x94F6;&#x5458;&quot;</span> &lt;&lt; m_name &lt;&lt; <span class="hljs-string">&quot;&#x8BA1;&#x7B97;&#x4E66;&#x7684;&#x4EF7;&#x683C;. &quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+
+<span class="hljs-comment">// &#x62BD;&#x8C61;&#x5143;&#x7D20;&#x7C7B;</span>
+<span class="hljs-keyword">class</span> product_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(vistor_i *vistor)</span> </span>= <span class="hljs-number">0</span>;
+};
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x4EA7;&#x54C1;&#x7C7B;: &#x82F9;&#x679C;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">apple_t</span> : <span class="hljs-keyword">public</span> product_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(vistor_i *vistor)</span> override </span>{
+        vistor-&gt;visit(<span class="hljs-keyword">this</span>);
+    }
+};
+<span class="hljs-comment">// &#x5177;&#x4F53;&#x4EA7;&#x54C1;&#x7C7B;: &#x4E66;&#x7C4D;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">book_t</span> : <span class="hljs-keyword">public</span> product_i {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(vistor_i *vistor)</span> override </span>{
+        vistor-&gt;visit(<span class="hljs-keyword">this</span>);
+    }
+};
+&#x200B;<span class="hljs-comment">// &#x8D2D;&#x7269;&#x8F66;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">shopping_cart_t</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(vistor_i *vistor)</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> prd : m_product_list) {
+            prd-&gt;accept(vistor);
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add_product</span><span class="hljs-params">(product_i *product)</span> </span>{
+        m_product_list.push_back(product);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">remove_product</span><span class="hljs-params">(product_i *product)</span> </span>{
+        m_product_list.remove(product);
+    }
+&#x200B;<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">list</span>&lt;product_i*&gt; m_product_list;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">book_t</span> book;
+    <span class="hljs-keyword">apple_t</span> apple;
+    <span class="hljs-keyword">shopping_cart_t</span> basket;
+&#x200B;
+    basket.add_product(&amp;book);
+    basket.add_product(&amp;apple);
+&#x200B;
+    <span class="hljs-keyword">customer_t</span> customer;
+    customer.set_name(<span class="hljs-string">&quot;&#x5C0F;&#x5F20;&quot;</span>);
+    basket.accept(&amp;customer);
+&#x200B;
+    <span class="hljs-keyword">saler_t</span> saler;
+    saler.set_name(<span class="hljs-string">&quot;&#x5C0F;&#x6768;&quot;</span>);
+    basket.accept(&amp;saler);
+}
+</code></pre>
+</div></div>
+<h2 id="&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;"><a name="&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;" class="plugin-anchor" href="#&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x677F;&#x7F16;&#x7A0B;&#x7279;&#x6B8A;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h2>
+<h4 id="&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;curiously-recurring-template-pattern"><a name="&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;curiously-recurring-template-pattern" class="anchor-navigation-ex-anchor" href="#&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;curiously-recurring-template-pattern"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;curiously-recurring-template-pattern" class="plugin-anchor" href="#&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;curiously-recurring-template-pattern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F;(Curiously Recurring Template Pattern)</h4>
+<p>CRTP &#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x5F80;&#x5F80;&#x662F;&#x57FA;&#x7C7B;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x4E00;&#x4E9B;&#x6D3E;&#x751F;&#x7C7B;&#x4FE1;&#x606F;&#xFF0C;&#x6216;&#x8BB8;&#x662F;&#x6210;&#x5458;&#xFF0C;&#x6216;&#x8BB8;&#x662F;&#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8BB8;&#x662F;&#x7C7B;&#x578B;&#x672C;&#x8EAB;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x5728;&#x57FA;&#x7C7B;&#x4E2D;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x7EE7;&#x627F;&#x6765;&#x6269;&#x5C55;&#x6D3E;&#x751F;&#x7C7B;&#x672C;&#x8EAB;&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x865A;&#x51FD;&#x6570;&#x3001;&#x52A8;&#x6001;&#x5206;&#x6D3E;&#x5E26;&#x6765;&#x7684;&#x989D;&#x5916;&#x8FD0;&#x884C;&#x65F6;&#x4EE3;&#x4EF7;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6BD4;&#x5982; <code>std::enable_shared_from_this</code> &#x5C31;&#x662F;&#x83B7;&#x53D6;&#x6D3E;&#x751F;&#x7C7B;&#x7C7B;&#x578B;&#x672C;&#x8EAB;&#x6765;&#x7ED9;&#x6D3E;&#x751F;&#x7C7B;&#x751F;&#x6210; <code>shared_from_this</code> &#x65B9;&#x6CD5;&#xFF1B;&#x800C; <code>boost::less_than_comparable</code> &#x5C31;&#x662F;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x6D3E;&#x751F;&#x7C7B;&#x65B9;&#x6CD5; <code>operator&lt;</code> &#x6765;&#x7ED9;&#x6D3E;&#x751F;&#x7C7B;&#x751F;&#x6210;&#x5176;&#x5B83;&#x7684;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x3002;</p>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5947;&#x5F02;&#x9012;&#x5F52;&#x6A21;&#x677F;&#x6A21;&#x5F0F; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> ...&gt; <span class="hljs-keyword">class</span> ...base_i&gt;
+<span class="hljs-keyword">struct</span> cat_cp: <span class="hljs-keyword">public</span> base_i&lt;cat_cp&lt;base_i...&gt;&gt;... {
+  cat_cp(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> name)
+      : m_name{<span class="hljs-built_in">std</span>::move(name)}, base_i&lt;cat_cp&lt;base_i...&gt;&gt;{*<span class="hljs-keyword">this</span>}... {
+  }
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> m_name;
+};
+
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> derive_tn&gt;
+<span class="hljs-keyword">struct</span> eat_op {
+  eat_op(<span class="hljs-keyword">const</span> derive_tn &amp;self)
+      : m_self{self} {
+  }
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; m_self.m_name &lt;&lt; <span class="hljs-string">&quot; eat!&quot;</span>&lt;&lt;<span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+  }
+  <span class="hljs-keyword">const</span> derive_tn &amp;m_self;
+};
+
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> derive_tn&gt;
+<span class="hljs-keyword">struct</span> sleep_op {
+  sleep_op(<span class="hljs-keyword">const</span> derive_tn &amp;self)
+      : m_self{self} {
+  }
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; m_self.m_name &lt;&lt; <span class="hljs-string">&quot; sleep!&quot;</span>&lt;&lt;<span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+  }
+  <span class="hljs-keyword">const</span> derive_tn &amp;m_self;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+  cat_cp&lt;eat_op,sleep_op&gt; cat1(<span class="hljs-string">&quot;cat1&quot;</span>);
+  cat1.eat();
+  cat1.sleep();
+}
+</code></pre>
+</div></div>
+<h2 id="&#x6269;&#x5C55;"><a name="&#x6269;&#x5C55;" class="anchor-navigation-ex-anchor" href="#&#x6269;&#x5C55;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6269;&#x5C55;" class="plugin-anchor" href="#&#x6269;&#x5C55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6269;&#x5C55;</h2>
+<p><a href="https://github.com/DovAmir/awesome-design-patterns" target="_blank">awesome-design-patterns</a>
+<a href="https://xr1s.me/2022/10/18/brief-introduction-to-crtp/" target="_blank">C++ CRTP&#x7B80;&#x4ECB;</a></p>
+<footer class="page-footer"><span class="copyright">guobao.v@gmail.com  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x7F16;&#x8F91;&#x65F6;&#x95F4;:
+2022-11-30 03:13:24
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="C++编码规范-实用增强细节版.html" class="navigation navigation-prev " aria-label="Previous page: C++编码规范-实用增强细节版">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="网络协议要点及编程方法.html" class="navigation navigation-next " aria-label="Next page: 网络协议要点及编程方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"设计模式","level":"4.3","depth":1,"next":{"title":"网络协议要点及编程方法","level":"4.4","depth":1,"path":"posts/网络协议要点及编程方法.md","ref":"posts/网络协议要点及编程方法.md","articles":[]},"previous":{"title":"C++编码规范-实用增强细节版","level":"4.2","depth":1,"path":"posts/C++编码规范-实用增强细节版.md","ref":"posts/C++编码规范-实用增强细节版.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","search-pro","highlight","livereload","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toc","tbfed-pagefooter","disqus","code","todos","advanced-emoji","klipse","flexible-alerts","site-count","accordion","hide-element","codesnippet","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"guobao.v@gmail.com ","modify_label":"最后编辑时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"ipandar"},"github":{"url":"https://github.com/Mainvooid"},"livereload":{},"splitter":{},"search-pro":{},"toc":{},"accordion":{},"site-count":{"host":"https://mainvooid.github.io/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"todos":{},"code":{"copyButtons":true},"donate":{"alipay":"./assets/donate-alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"","wechat":"./assets/donate-wechat.png","wechatText":"微信打赏"},"codesnippet":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./assets/favicon.jpg","bookmark":"./assets/favicon.jpg","appleTouch":"./assets/favicon.jpg","appleTouchMore":{"120x120":"./assets/favicon.jpg","180x180":"./assets/favicon.jpg"}},"github-buttons":{"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Mainvooid","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iPanda","language":"zh-hans","links":{"sidebar":{"Github":"https://github.com/Mainvooid"}},"gitbook":"3.2.3","description":"万古长空，一朝风月"},"file":{"path":"posts/设计模式.md","mtime":"2022-11-29T19:13:24.819Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-01T09:02:31.962Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-site-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
