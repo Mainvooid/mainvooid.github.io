@@ -28,7 +28,7 @@ clean_gh-pages:
 	git subtree push --squash --prefix=_book origin gh-pages
     # !!!需要在项目设置中重新设置部署gh-pages(若设置过actions则不用)
 
-clean_master:
+clean:
     # make clean_all
     # 清除所有历史提交记录,使其为历史干净的库
     # blog对版本控制没什么要求,维护静态文件记录很占空间,必要时清理可以大大降低空间占用

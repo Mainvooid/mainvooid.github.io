@@ -316,7 +316,7 @@ SELECT * FROM play;
 2. `git push origin master`推送整个项目到远程
 
 #### 使用`actions workflow`自动部署
-`github pages`的默认构建方式是`jekyll`,使用某些gitbook插件时可能会构建失败，从而导致无法继续部署.比如使用`codesnippet`时无法成功构建.这个时候可以通过自定义静态文件构建的方式完成部署.
+`github pages`的默认构建方式是`jekyll`,使用某些gitbook插件时可能会构建失败，从而导致无法继续部署.比如使用`codesnippet`时无法成功构建.这个时候可以通过自定义静态文件构建的方式完成部署.[actions文档](https://docs.github.com/en/actions)
 ![img2](../assets/GitBook简明教程/use_actions.png)
 
 在`master`分支下新建`.github/workflows/static.yml`(在push事件触发时执行静态文件部署工作流--检出子目录_book并上传到静态页面服务器.)

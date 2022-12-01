@@ -32,16 +32,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
-      - name: ls
-        run: ls -a
-      - name: install gitbook
-        run: npm install gitbook-cli -g
-      - name: npm audit fix
-        run: npm audit fix
-      - name: gitbook install
-        run: gitbook install
-      - name: gitbook build
-        run: gitbook build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
