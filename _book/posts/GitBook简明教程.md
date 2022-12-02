@@ -323,7 +323,8 @@ SELECT * FROM play;
 1. `gitbook build` 在`_book`子目录下生成静态文件
 2. `git push origin master`推送整个项目到远程
 
-%accordion% 在gh-pages分支下新建.github/workflows/static.yml %accordion%
+
+%accordion%.github/workflows/static.yml%accordion%
 
 {% codesnippet ".github/workflows/static.yml",language="yml" %}{% endcodesnippet %}
 
