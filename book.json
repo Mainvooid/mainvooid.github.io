@@ -35,7 +35,6 @@
         "sharing-plus",
         "anchor-navigation-ex",
         "favicon",
-        "atoc",
         "tbfed-pagefooter",
         "disqus",
         "code",
@@ -46,7 +45,8 @@
         "site-count",
         "accordion",
         "hide-element",
-        "codesnippet"
+        "codesnippet",
+        "atoc"
     ],
     "pluginsConfig": {
         "site-count": {
