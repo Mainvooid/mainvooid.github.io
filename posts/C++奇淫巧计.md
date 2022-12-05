@@ -116,7 +116,7 @@
     {cout << "Monday | Wednesday" << endl;}
     ```
 
-- `delete this` 当初知道类成员函数内可以这么写给我看懵了，有点反直觉，我杀我自己
+- `delete this` 有点反直觉，我杀我自己
     - 确保对象是new出来的
     - 确保delete完后不能访问对象的任何部分
     - 确保delete完后this指针不会被访问
