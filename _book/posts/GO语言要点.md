@@ -218,22 +218,22 @@
     - `net/rpc`包(进一步包装更安全高效)
     - RPC规则:方法必须公开,只能有2个可序列化的参数,第二个参数是指针类型,且返回error类型,
     - `rpc.RegisterName()`注册对象类型(服务)下所有符合RPC规则的方法
-    ```go
-    type HelloService struct{}
-    func (p *HelloService)Hello(request string,reply *string)error{
-        *reply = "hello:"+request
-        return nil
-    }
-    //服务端
-    rpc.RegisterName("HelloService",new(HelloService))
-    listener,err:=net.Listen("tcp",":1234")
-    conn,err:=listener.Accept()
-    rpc.ServeConn(conn)
-    //客户端
-    client,err:=rpc.Dial("tcp","localhost:1234")
-    var reply string
-    err = client.Call("HelloService.Hello","hello",&reply)
-    ```
+        ```go
+        type HelloService struct{}
+        func (p *HelloService)Hello(request string,reply *string)error{
+            *reply = "hello:"+request
+            return nil
+        }
+        //服务端
+        rpc.RegisterName("HelloService",new(HelloService))
+        listener,err:=net.Listen("tcp",":1234")
+        conn,err:=listener.Accept()
+        rpc.ServeConn(conn)
+        //客户端
+        client,err:=rpc.Dial("tcp","localhost:1234")
+        var reply string
+        err = client.Call("HelloService.Hello","hello",&reply)
+        ```
     - RPC接口规范
         - 服务名字
         - 服务提供的方法列表
