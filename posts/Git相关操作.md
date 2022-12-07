@@ -1,7 +1,12 @@
 # git相关操作
 
+[toc]
+<!--toc-->
+
 ## submodule
+
 - 表示一种依赖关系,项目push到远程仓库不会重复push子模块的文件,而是以引用的形式链接到远程仓库.
+
 - 第三方库不受本项目管理,更新时可以随时拉取更新.更改时也不影响本地项目的记录.
 
 ```bash
@@ -12,8 +17,11 @@ git submodule update --init --recursive
 ```
 
 ## subtree
+
 - 表示一种子目录分支关系,子目录可以单独成为一个分支(可用于部署,测试等等)
+
 - 子目录受本项目管理,项目push到远程仓库包含子目录的文件
+
 ```bash
 # 添加子目录 仅第一次调用
 git subtree add --squash --prefix=要拆分的目录 origin 子分支名
@@ -31,6 +39,7 @@ git push origin --delete 子分支名
 ```
 
 ## pull & push
+
 ```bash
 # 配置当前fork的仓库的原仓库地址
 git remote add upstream <原仓库github地址>
@@ -55,6 +64,7 @@ git push origin master
 ```
 
 ## merge & rebase
+
 ```bash
 # 合并分支commit到主分支
 git merge dev --squash # 如遇冲突就解决冲突
@@ -67,6 +77,7 @@ git rebase –continue
 ```
 
 ## vscode的cmd终端内增加配置git
+
 ```bash
 # 查看本地配置邮箱
 git config --global --list
@@ -116,6 +127,7 @@ git config --global --unset https.proxy
 ```
 
 ## 清除所有历史提交记录,使其为历史干净的库
+
 ```bash
 # 比如静态blog对版本控制没什么要求,维护静态文件记录很占空间,必要时清理可以大大降低空间占用
 
