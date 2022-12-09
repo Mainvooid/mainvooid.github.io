@@ -3,6 +3,7 @@
 [toc]
 <!--toc-->
 
+更多操作教程: [git-scm](https://git-scm.com/book/zh/v2/)
 ## submodule
 
 - 表示一种依赖关系,项目push到远程仓库不会重复push子模块的文件,而是以引用的形式链接到远程仓库.
