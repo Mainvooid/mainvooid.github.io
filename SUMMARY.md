@@ -19,7 +19,7 @@
 
 ## 记录
 - [信息节点备忘录](posts/信息节点备忘录.md)
-- [面试遇到的一些问题](posts/面试遇到的一些问题.md)
+- [面试问题总结](posts/面试问题总结.md)
 - [GitBook简明教程](posts/GitBook简明教程.md)
 - [Blog实践markdown+gitbook+vscode](posts/Blog实践markdown+gitbook+vscode.md)
 - [基于Windows文本服务框架TSF的输入法实现](posts/基于Windows文本服务框架TSF的输入法实现.md)
