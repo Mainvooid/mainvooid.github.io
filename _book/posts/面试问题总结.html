@@ -526,39 +526,46 @@
 <span class="hljs-keyword">class</span> Stu2{ <span class="hljs-keyword">char</span> a; };
 
 <span class="hljs-comment">// &#x975E;&#x7A7A;&#x7C7B;,&#x5305;&#x542B;&#x51FD;&#x6570;&#x4E0D;&#x5360;&#x7528;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</span>
-<span class="hljs-comment">// &#x7C7B;&#x7684;&#x5927;&#x5C0F;&#x4E0E;&#x5B83;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3001;&#x6790;&#x6784;&#x51FD;&#x6570;&#x548C;&#x5176;&#x4ED6;&#x6210;&#x5458;&#x51FD;&#x6570;&#x65E0;&#x5173;, &#x53EA;&#x5DF2;&#x5B83;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x6709;&#x5173; = 1</span>
+<span class="hljs-comment">// &#x7C7B;&#x7684;&#x5927;&#x5C0F;&#x4E0E;&#x5B83;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3001;&#x6790;&#x6784;&#x51FD;&#x6570;&#x548C;&#x5176;&#x4ED6;&#x6210;&#x5458;&#x51FD;&#x6570;&#x65E0;&#x5173;, &#x53EA;&#x5DF2;&#x5B83;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x6709;&#x5173;</span>
+<span class="hljs-comment">// &#x6570;&#x636E;&#x6210;&#x5458;&#x4F1A;&#x81EA;&#x52A8;&#x4E0E;&#x6700;&#x5927;&#x5BBD;&#x5EA6;&#x7684;&#x6210;&#x5458;&#x5BF9;&#x9F50;,4+2+2(&#x8865;)+8+1+7(&#x8865;)=24</span>
 <span class="hljs-keyword">class</span> Stu3{
 <span class="hljs-keyword">public</span>:
     ~Stu3(){};
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span></span>{};
-    <span class="hljs-keyword">char</span> a;
+    <span class="hljs-keyword">int</span> a;    <span class="hljs-comment">//4</span>
+    <span class="hljs-keyword">short</span> b;  <span class="hljs-comment">//2</span>
+    <span class="hljs-keyword">double</span> c; <span class="hljs-comment">//8</span>
+    <span class="hljs-keyword">char</span> d;   <span class="hljs-comment">//1</span>
 };
 
 <span class="hljs-comment">// &#x975E;&#x7A7A;&#x7C7B;,&#x5305;&#x542B;&#x865A;&#x51FD;&#x6570;, &#x4F1A;&#x56E0;&#x4E3A;&#x591A;&#x4E00;&#x4E2A;&#x865A;&#x51FD;&#x6570;&#x6307;&#x9488;(vptr)&#x6307;&#x5411;&#x865A;&#x51FD;&#x6570;&#x8868;</span>
-<span class="hljs-comment">// &#x800C;&#x4E14;&#x4F1A;&#x81EA;&#x52A8;&#x5BF9;&#x9F50;,&#x6240;&#x4EE5;&#x5B58;&#x50A8;&#x662F;4(vptr&#x6307;&#x9488;) + 1(char) + 3(&#x8865;&#x9F50;)=8</span>
+<span class="hljs-comment">// 4(vptr&#x6307;&#x9488;)+4+2+6(&#x8865;)+8+1+7(&#x8865;)=32</span>
 <span class="hljs-keyword">class</span> Stu4{
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-keyword">virtual</span> ~Stu4(){};
-    <span class="hljs-keyword">char</span> a;
+    <span class="hljs-keyword">virtual</span> ~Stu4(){};<span class="hljs-comment">//4</span>
+    <span class="hljs-keyword">int</span> a;    <span class="hljs-comment">//4</span>
+    <span class="hljs-keyword">short</span> b;  <span class="hljs-comment">//2</span>
+    <span class="hljs-keyword">double</span> c; <span class="hljs-comment">//8</span>
+    <span class="hljs-keyword">char</span> d;   <span class="hljs-comment">//1</span>
 };
 
-<span class="hljs-comment">// 4(vptr&#x6307;&#x9488;) + 4(int) + 1(char) + 3(&#x8865;&#x9F50;) =12</span>
+<span class="hljs-comment">// 4(vptr&#x6307;&#x9488;) +4(int) +1(char)+3(&#x8865;&#x9F50;) =12</span>
 <span class="hljs-keyword">class</span> Stu5{
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-keyword">virtual</span> ~Stu5(){};
-    <span class="hljs-keyword">int</span> a;
-    <span class="hljs-keyword">char</span> b;
+    <span class="hljs-keyword">virtual</span> ~Stu5(){};<span class="hljs-comment">//4</span>
+    <span class="hljs-keyword">int</span> a;  <span class="hljs-comment">//4</span>
+    <span class="hljs-keyword">char</span> b; <span class="hljs-comment">//1</span>
 };
 
 <span class="hljs-comment">// &#x6709;&#x865A;&#x51FD;&#x6570;&#x7684;&#x7EE7;&#x627F;, &#x5B50;&#x7C7B;&#x7684;&#x5B58;&#x50A8;&#x662F;&#x7236;&#x7C7B;&#x7684;&#x5B58;&#x50A8;+&#x5B50;&#x7C7B;&#x7684;&#x5B58;&#x50A8;</span>
-<span class="hljs-comment">// &#x6240;&#x4EE5;&#x5B58;&#x50A8;&#x662F;4(vptr&#x6307;&#x9488;) + 1(&#x7236;&#x6210;&#x5458;char)  + 1(char) + 2 (&#x8865;&#x9F50;)= 8</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x5B58;&#x50A8;&#x662F;4(vptr&#x6307;&#x9488;)+4 +2+6(&#x8865;) +8 +1+1(char)+6(&#x8865;)=32</span>
 <span class="hljs-keyword">class</span> Stu6 :<span class="hljs-keyword">public</span> Stu4 {
 <span class="hljs-keyword">public</span>:
     <span class="hljs-keyword">virtual</span> ~Stu6(){};
     <span class="hljs-keyword">char</span> c;
 };
 
-<span class="hljs-comment">// &#x5B58;&#x50A8;&#x662F;4(vptr&#x6307;&#x9488;) + 1(&#x7236;&#x6210;&#x5458;char) + 4(int) + 1(char) + 6(&#x8865;&#x9F50;) =16</span>
+<span class="hljs-comment">// &#x5B58;&#x50A8;&#x662F;4(vptr&#x6307;&#x9488;)+4 +2+6(&#x8865;) +8 +1+7(&#x8865;) +4(int)+1(char)+3(&#x8865;)=40</span>
 <span class="hljs-keyword">class</span> Stu7 :<span class="hljs-keyword">public</span> Stu4 {
 <span class="hljs-keyword">public</span>:
     <span class="hljs-keyword">virtual</span> ~Stu7(){};
@@ -566,8 +573,16 @@
     <span class="hljs-keyword">char</span> d;
 };
 
+<span class="hljs-comment">// &#x5B58;&#x50A8;&#x662F;4(vptr&#x6307;&#x9488;)+4 +2+6(&#x8865;) +8 +1(char)+1(char)+4(int)+2(&#x8865;)=32</span>
+<span class="hljs-keyword">class</span> Stu8 :<span class="hljs-keyword">public</span> Stu4 {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> ~Stu8(){};
+    <span class="hljs-keyword">char</span> d;
+    <span class="hljs-keyword">int</span> c;
+};
+
 <span class="hljs-comment">// &#x9759;&#x6001;&#x53D8;&#x91CF;&#x4E0D;&#x5360;&#x7528;&#x5B9E;&#x4F8B;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4; = 4(int)</span>
-<span class="hljs-keyword">class</span> Stu8{
+<span class="hljs-keyword">class</span> Stu9{
 <span class="hljs-keyword">public</span>:
     <span class="hljs-keyword">int</span> a;
     <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> b;
@@ -576,19 +591,21 @@
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
     <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;1:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu1) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//1</span>
     <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;2:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu2) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//1</span>
-    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;3:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu3) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//1</span>
-    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;4:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu4) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//8</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;3:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu3) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//24</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;4:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu4) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//32</span>
     <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;5:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu5) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//12</span>
-    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;6:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu6) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//8</span>
-    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;7:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu7) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//16</span>
-    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;8:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu8) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//4</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;6:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu6) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//32</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;7:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu7) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//40</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;8:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu8) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//32</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt;<span class="hljs-string">&quot;9:&quot;</span>&lt;&lt; <span class="hljs-keyword">sizeof</span>(Stu9) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//4</span>
 }
 </code></pre>
 <ul>
 <li>&#x603B;&#x7ED3;<ul>
 <li>&#x7C7B;&#x5927;&#x5C0F;&#x53EA;&#x8DDF;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x6709;&#x5173;,&#x7A7A;&#x7C7B;&#x5927;&#x5C0F;=1</li>
 <li>&#x9759;&#x6001;&#x53D8;&#x91CF;&#x7A7A;&#x95F4;&#x4E0D;&#x8BA1;&#x7B97;&#x5728;&#x5B9E;&#x4F8B;&#x7A7A;&#x95F4;&#x5185;</li>
-<li>&#x7EE7;&#x627F;&#x65F6;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;: &#x8BA1;&#x7B97;&#x5B50;&#x7C7B;&#x548C;&#x7236;&#x7C7B;&#x7A7A;&#x95F4;,&#x865A;&#x51FD;&#x6570;&#x6307;&#x9488;&#x53EA;&#x6709;&#x4E00;&#x4E2A;,&#x8865;&#x9F50;&#x53EA;&#x9700;&#x8981;&#x6700;&#x540E;&#x8865;&#x9F50;</li>
+<li>&#x7EE7;&#x627F;&#x65F6;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;: &#x8BA1;&#x7B97;&#x5B50;&#x7C7B;&#x548C;&#x7236;&#x7C7B;&#x7A7A;&#x95F4;,&#x865A;&#x51FD;&#x6570;&#x6307;&#x9488;&#x53EA;&#x6709;&#x4E00;&#x4E2A;</li>
+<li>&#x81EA;&#x52A8;&#x8865;&#x9F50;:&#x4E0E;&#x6700;&#x5927;&#x5BBD;&#x5EA6;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x4F9D;&#x6B21;&#x5BF9;&#x9F50;(&#x6CE8;&#x610F;stu7&#x548C;stu8&#x7684;&#x7279;&#x6B8A;&#x533A;&#x522B;,&#x6709;&#x70B9;&#x4E0D;&#x5408;&#x5E38;&#x89C4;,&#x53EF;&#x80FD;&#x662F;&#x7F16;&#x8BD1;&#x5668;&#x5B9E;&#x73B0;&#x4E0D;&#x4E00;&#x6837;)</li>
 </ul>
 </li>
 </ul>
@@ -630,6 +647,71 @@
 </ul>
 </li>
 </ul>
+<h4 id="&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x865A;&#x51FD;&#x6570;"><a name="&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x865A;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x865A;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x865A;&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x865A;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x865A;&#x51FD;&#x6570;</h4>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;iostream&quot;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-keyword">class</span> Base{
+<span class="hljs-keyword">public</span>:
+    Base(){
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Base::Base()\n&quot;</span>;
+        fun();
+    }
+    <span class="hljs-keyword">virtual</span> ~Base(){
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Base::~Base()\n&quot;</span>;
+        fun();
+    }
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;  Base::fun() virtual\n&quot;</span>;
+    }
+};
+<span class="hljs-keyword">class</span> Derive: <span class="hljs-keyword">public</span> Base{
+<span class="hljs-keyword">public</span>:
+    Derive(){
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Derive::Derive()\n&quot;</span>;
+        fun();
+    }
+    ~Derive(){
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Derive::~Derive()\n&quot;</span>;
+        fun();
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fun</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;  Derive::fun() virtual\n&quot;</span>;
+    }
+};
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;-----------------------------------\n&quot;</span>;
+    Derive *d = <span class="hljs-keyword">new</span> Derive();
+    <span class="hljs-keyword">delete</span> d;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;-----------------------------------\n&quot;</span>;
+    Base *bd = <span class="hljs-keyword">new</span> Derive();
+    <span class="hljs-keyword">delete</span> bd;
+}
+<span class="hljs-comment">//&#x8F93;&#x51FA;&#x76F8;&#x540C;</span>
+-----------------------------------
+Base::Base()
+  Base::fun() <span class="hljs-keyword">virtual</span>   <span class="hljs-comment">//&#x6D3E;&#x751F;&#x7C7B;&#x8FD8;&#x672A;&#x6784;&#x9020;,&#x8C03;&#x7528;&#x57FA;&#x7C7B;&#x81EA;&#x8EAB;&#x65B9;&#x6CD5;</span>
+Derive::Derive()
+  Derive::fun() <span class="hljs-keyword">virtual</span> <span class="hljs-comment">//&#x6D3E;&#x751F;&#x7C7B;&#x6B63;&#x5728;&#x6784;&#x9020;,&#x6210;&#x529F;&#x8C03;&#x7528;&#x6D3E;&#x751F;&#x7C7B;&#x81EA;&#x8EAB;&#x65B9;&#x6CD5;</span>
+Derive::~Derive()
+  Derive::fun() <span class="hljs-keyword">virtual</span> <span class="hljs-comment">//&#x6D3E;&#x751F;&#x7C7B;&#x6B63;&#x5728;&#x6790;&#x6784;,&#x6210;&#x529F;&#x8C03;&#x7528;&#x6D3E;&#x751F;&#x7C7B;&#x81EA;&#x8EAB;&#x65B9;&#x6CD5;</span>
+Base::~Base()
+  Base::fun() <span class="hljs-keyword">virtual</span>   <span class="hljs-comment">//&#x6D3E;&#x751F;&#x7C7B;&#x5DF2;&#x88AB;&#x6790;&#x6784;,&#x8C03;&#x7528;&#x57FA;&#x7C7B;&#x81EA;&#x8EAB;&#x65B9;&#x6CD5;</span>
+-----------------------------------
+Base::Base()
+  Base::fun() <span class="hljs-keyword">virtual</span>
+Derive::Derive()
+  Derive::fun() <span class="hljs-keyword">virtual</span>
+Derive::~Derive()
+  Derive::fun() <span class="hljs-keyword">virtual</span> <span class="hljs-comment">//delete&#x57FA;&#x7C7B;&#x6307;&#x9488;&#x65F6;&#x80FD;&#x6B63;&#x786E;&#x8C03;&#x7528;&#x5B50;&#x7C7B;&#x8986;&#x76D6;&#x65B9;&#x6CD5;</span>
+Base::~Base()
+  Base::fun() <span class="hljs-keyword">virtual</span>
+</code></pre>
+<p>&#x5728;<a href="C++&#x7F16;&#x7801;&#x89C4;&#x8303;-&#x5B9E;&#x7528;&#x589E;&#x5F3A;&#x7EC6;&#x8282;&#x7248;.html">C++&#x7F16;&#x7801;&#x89C4;&#x8303;-&#x5B9E;&#x7528;&#x589E;&#x5F3A;&#x7EC6;&#x8282;&#x7248;</a> &#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x6709;&#x4E2A;&#x5EFA;&#x8BAE;&#x662F;&#x6784;&#x9020;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x53EA;&#x5904;&#x7406;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x76F8;&#x5173;&#x7684;&#x5DE5;&#x4F5C;,&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x8BB0;&#x5FC6;&#x8D1F;&#x62C5;&#x7ECF;&#x5E38;&#x4F1A;&#x6709;&#x8BB8;&#x591A;&#x7ECF;&#x9A8C;&#x603B;&#x7ED3;,&#x4F46;&#x4E5F;&#x56E0;&#x6B64;&#x4F1A;&#x5FFD;&#x7565;&#x6389;&#x80CC;&#x540E;&#x7684;&#x8BB8;&#x591A;&#x7EC6;&#x8282;,&#x4F1A;&#x5BFC;&#x81F4;&#x4F60;&#x5927;&#x6982;&#x77E5;&#x9053;&#x662F;&#x4EC0;&#x4E48;&#x539F;&#x56E0;,&#x4F46;&#x662F;&#x53C8;&#x8BB2;&#x4E0D;&#x5B8C;&#x6574;.</p>
+<p><strong>&#x603B;&#x7ED3;</strong>: 
+&#x770B;&#x5176;&#x4ED6;&#x6587;&#x7AE0;&#x7684;&#x7406;&#x7531;&#x8BF4;:&#x7531;&#x4E8E;&#x6784;&#x9020;/&#x6790;&#x6784;&#x65F6;&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x5B8C;&#x6574;/&#x4E0D;&#x5B89;&#x5168;&#x7684;,&#x6545;&#x800C;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x52A8;&#x6001;&#x8054;&#x7F16;&#x4F1A;&#x4E27;&#x5931;&#x591A;&#x6001;&#x6027;.</p>
+<p>&#x5176;&#x5B9E;&#x591A;&#x6001;&#x6027;&#x5E76;&#x6CA1;&#x6709;&#x6D88;&#x5931;,&#x4F9D;&#x7136;&#x4F1A;&#x52A8;&#x6001;&#x8054;&#x7F16;,&#x53EA;&#x4E0D;&#x8FC7;&#x627E;&#x4E0D;&#x5230;&#x8FD8;&#x672A;&#x6784;&#x9020;&#x6216;&#x5DF2;&#x7ECF;&#x88AB;&#x6790;&#x6784;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#x8C03;&#x7528;&#x4E86;&#x81EA;&#x8EAB;&#x65B9;&#x6CD5;&#x800C;&#x5DF2;,&#x57FA;&#x7C7B;/&#x6D3E;&#x751F;&#x7C7B;&#x5728;&#x6784;&#x9020;/&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x865A;&#x65B9;&#x6CD5;&#x4F1A;&#x8C03;&#x7528;&#x81EA;&#x8EAB;&#x5B9E;&#x73B0;,delete&#x57FA;&#x7C7B;&#x6307;&#x9488;&#x65F6;&#x4E5F;&#x80FD;&#x6B63;&#x786E;&#x8C03;&#x7528;&#x5B50;&#x7C7B;&#x7684;&#x8986;&#x76D6;&#x65B9;&#x6CD5;,<strong>&#x884C;&#x4E3A;&#x4E00;&#x81F4;&#x6027;&#x5E76;&#x672A;&#x88AB;&#x7834;&#x574F;</strong>.
+&#x6BD5;&#x7ADF;&#x9664;&#x975E;&#x4F7F;&#x7528;&#x5947;&#x5F02;&#x6A21;&#x677F;&#x9012;&#x5F52;&#x6A21;&#x5F0F;,&#x57FA;&#x7C7B;&#x5185;&#x662F;&#x64CD;&#x4F5C;&#x4E0D;&#x5230;&#x4E5F;&#x4E0D;&#x5E94;&#x8BE5;&#x64CD;&#x4F5C;&#x5230;&#x6D3E;&#x751F;&#x7C7B;&#x7684;.
+&#x5982;&#x679C;&#x6E05;&#x695A;&#x6784;&#x9020;/&#x6790;&#x6784;&#x987A;&#x5E8F;,&#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5E76;&#x4E0D;&#x5B58;&#x5728;.&#x5982;&#x679C;&#x9762;&#x8BD5;&#x5B98;&#x4EE5;&#x8FD9;&#x4E2A;&#x89D2;&#x5EA6;&#x63D0;&#x95EE;&#x5927;&#x6982;&#x7387;&#x53EA;&#x662F;&#x60F3;&#x8003;&#x5BDF;&#x6784;&#x9020;&#x548C;&#x6790;&#x6784;&#x987A;&#x5E8F;&#x7F62;&#x4E86;.</p>
 <h2 id="&#x901A;&#x8BC6;&#x7C7B;"><a name="&#x901A;&#x8BC6;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x8BC6;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x8BC6;&#x7C7B;" class="plugin-anchor" href="#&#x901A;&#x8BC6;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x8BC6;&#x7C7B;</h2>
 <h4 id="ai&#x76F8;&#x5173;"><a name="ai&#x76F8;&#x5173;" class="anchor-navigation-ex-anchor" href="#ai&#x76F8;&#x5173;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ai&#x76F8;&#x5173;" class="plugin-anchor" href="#ai&#x76F8;&#x5173;"><i class="fa fa-link" aria-hidden="true"></i></a>AI&#x76F8;&#x5173;</h4>
 <ul>
@@ -678,7 +760,7 @@
 </ul>
 </li>
 <li>&#x5206;&#x6761;/&#x5206;&#x5757;<ul>
-<li>&#x4F7F;&#x7528;CUDA&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x9700;&#x8981;&#x5C06;&#x95EE;&#x9898;&#x5206;&#x6761;&#x5206;&#x5757;(CUDA&#x63D0;&#x9AD8;&#x7684;&#x662F;&#x7B80;&#x5355;&#x4E8C;&#x7EF4;&#x7F51;&#x683C;&#x6A21;&#x578B;)</li>
+<li>&#x4F7F;&#x7528;CUDA&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x9700;&#x8981;&#x5C06;&#x95EE;&#x9898;&#x5206;&#x6761;&#x5206;&#x5757;(CUDA&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x7B80;&#x5355;&#x4E8C;&#x7EF4;&#x7F51;&#x683C;&#x6A21;&#x578B;)</li>
 </ul>
 </li>
 <li>&#x5206;&#x800C;&#x6CBB;&#x4E4B;</li>
@@ -686,10 +768,10 @@
 </li>
 <li><p>&#x4F53;&#x7CFB;&#x7ED3;&#x6784;</p>
 <ul>
-<li>GPU&#x8BBE;&#x5907;&#x5305;&#x62EC;&#x4E00;&#x7EC4;SM&#xFF0C;&#x6BCF;&#x4E2A;SM&#x7531;&#x5305;&#x62EC;&#x4E00;&#x7EC4;SP&#x6216;CUDA&#x6838;(&#x5E76;&#x884C;)</li>
-<li>GPU&#x6027;&#x80FD;&#x7531;SP&#x6570;&#x91CF;&#xFF0C;&#x5168;&#x5C40;&#x5185;&#x5B58;&#x5E26;&#x5BBD;&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x5229;&#x7528;&#x5E76;&#x884C;&#x67B6;&#x6784;&#x7684;&#x5145;&#x5206;&#x7A0B;&#x5EA6;</li>
+<li>GPU&#x8BBE;&#x5907;&#x5305;&#x62EC;&#x4E00;&#x7EC4;SM, &#x6BCF;&#x4E2A;SM&#x7531;&#x5305;&#x62EC;&#x4E00;&#x7EC4;SP&#x6216;CUDA&#x6838;(&#x5E76;&#x884C;)</li>
+<li>GPU&#x6027;&#x80FD;&#x7531;SP&#x6570;&#x91CF;, &#x5168;&#x5C40;&#x5185;&#x5B58;&#x5E26;&#x5BBD;, &#x7A0B;&#x5E8F;&#x5458;&#x5229;&#x7528;&#x5E76;&#x884C;&#x67B6;&#x6784;&#x7684;&#x5145;&#x5206;&#x7A0B;&#x5EA6;</li>
 <li>&#x89E3;&#x51B3;&#x65F6;&#x7A7A;&#x5C40;&#x90E8;&#x6027;&#x95EE;&#x9898;-&gt; &#x591A;&#x7EA7;&#x7F13;&#x5B58;:&#x4E00;&#x7EA7;&#x7F13;&#x5B58; &#x4E8C;&#x7EA7;&#x7F13;&#x5B58; &#x5168;&#x5C40;&#x5185;&#x5B58;</li>
-<li>&#x7F13;&#x5B58;&#x4E00;&#x81F4;&#x6027; &#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x5904;&#x7406;&#x6838;&#x7684;&#x5185;&#x5B58;&#x89C6;&#x56FE;&#x4E00;&#x6837;(CPU&#x8981;&#x6C42;&#xFF0C;GPU&#x4E0D;&#x8981;&#x6C42;)</li>
+<li>&#x7F13;&#x5B58;&#x4E00;&#x81F4;&#x6027; &#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x5904;&#x7406;&#x6838;&#x7684;&#x5185;&#x5B58;&#x89C6;&#x56FE;&#x4E00;&#x6837;(CPU&#x8981;&#x6C42;, GPU&#x4E0D;&#x8981;&#x6C42;)</li>
 <li>GPU&#x901A;&#x8FC7;PCI-E&#x603B;&#x7EBF;&#x4E0E;CPU&#x6216;&#x5176;&#x4ED6;GPU&#x8FDE;&#x63A5;</li>
 <li>&#x7EB9;&#x7406;&#x5185;&#x5B58;&#x548C;&#x5E38;&#x91CF;&#x5185;&#x5B58;&#x662F;&#x5168;&#x5C40;&#x5185;&#x5B58;&#x7684;&#x7279;&#x6B8A;&#x89C6;&#x56FE;,&#x6BCF;&#x4E2A;SM&#x90FD;&#x8BBE;&#x7F6E;&#x72EC;&#x7ACB;&#x8BBF;&#x95EE;&#x5B83;&#x4EEC;&#x7684;&#x603B;&#x7EBF;,&#x7EB9;&#x7406;&#x5185;&#x5B58;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x63D2;&#x503C;&#x8BA1;&#x7B97;&#x6240;&#x9700;&#x7684;&#x6570;&#x636E;,&#x5E38;&#x91CF;&#x5185;&#x5B58;&#x7F13;&#x5B58;&#x53EA;&#x8BFB;&#x6570;&#x636E;.</li>
 </ul>
@@ -722,7 +804,7 @@ thraad_idx=((gridDim.x*blockDim.x)*idy)+idx;
 </li>
 </ul>
 <h4 id="&#x7F51;&#x7EDC;&#x76F8;&#x5173;"><a name="&#x7F51;&#x7EDC;&#x76F8;&#x5173;" class="anchor-navigation-ex-anchor" href="#&#x7F51;&#x7EDC;&#x76F8;&#x5173;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F51;&#x7EDC;&#x76F8;&#x5173;" class="plugin-anchor" href="#&#x7F51;&#x7EDC;&#x76F8;&#x5173;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F51;&#x7EDC;&#x76F8;&#x5173;</h4>
-<p><a href="posts/&#x7F51;&#x7EDC;&#x534F;&#x8BAE;&#x8981;&#x70B9;&#x53CA;&#x7F16;&#x7A0B;&#x65B9;&#x6CD5;.md">&#x7F51;&#x7EDC;&#x534F;&#x8BAE;&#x8981;&#x70B9;&#x53CA;&#x7F16;&#x7A0B;&#x65B9;&#x6CD5;</a></p>
+<p><a href="&#x7F51;&#x7EDC;&#x534F;&#x8BAE;&#x8981;&#x70B9;&#x53CA;&#x7F16;&#x7A0B;&#x65B9;&#x6CD5;.html">&#x7F51;&#x7EDC;&#x534F;&#x8BAE;&#x8981;&#x70B9;&#x53CA;&#x7F16;&#x7A0B;&#x65B9;&#x6CD5;</a></p>
 <h2 id="&#x5C0F;&#x6D4B;&#x9A8C;"><a name="&#x5C0F;&#x6D4B;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x6D4B;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5C0F;&#x6D4B;&#x9A8C;" class="plugin-anchor" href="#&#x5C0F;&#x6D4B;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x6D4B;&#x9A8C;</h2>
 <ul>
 <li><p>&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;</p>
@@ -1010,7 +1092,7 @@ shared_mutex mu;
 </li>
 </ul>
 <footer class="page-footer"><span class="copyright">guobao.v@gmail.com  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x7F16;&#x8F91;&#x65F6;&#x95F4;:
-2022-12-10 03:03:13
+2022-12-11 00:38:52
 </span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -1054,7 +1136,7 @@ shared_mutex mu;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"面试问题总结","level":"5.2","depth":1,"next":{"title":"GitBook简明教程","level":"5.3","depth":1,"path":"posts/GitBook简明教程.md","ref":"posts/GitBook简明教程.md","articles":[]},"previous":{"title":"信息节点备忘录","level":"5.1","depth":1,"path":"posts/信息节点备忘录.md","ref":"posts/信息节点备忘录.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","search-pro","highlight","livereload","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","disqus","code","todos","advanced-emoji","klipse","flexible-alerts","site-count","accordion","hide-element","codesnippet","atoc"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"guobao.v@gmail.com ","modify_label":"最后编辑时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"ipandar"},"github":{"url":"https://github.com/Mainvooid"},"livereload":{},"atoc":{},"splitter":{},"search-pro":{},"accordion":{},"site-count":{"host":"https://mainvooid.github.io/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"todos":{},"code":{"copyButtons":true},"donate":{"alipay":"./assets/donate-alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"","wechat":"./assets/donate-wechat.png","wechatText":"微信打赏"},"codesnippet":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./assets/favicon.jpg","bookmark":"./assets/favicon.jpg","appleTouch":"./assets/favicon.jpg","appleTouchMore":{"120x120":"./assets/favicon.jpg","180x180":"./assets/favicon.jpg"}},"github-buttons":{"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Mainvooid","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iPanda","language":"zh-hans","links":{"sidebar":{"Github":"https://github.com/Mainvooid"}},"gitbook":"3.2.3","description":"万古长空，一朝风月"},"file":{"path":"posts/面试问题总结.md","mtime":"2022-12-09T19:03:13.631Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-09T19:03:38.395Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"面试问题总结","level":"5.2","depth":1,"next":{"title":"GitBook简明教程","level":"5.3","depth":1,"path":"posts/GitBook简明教程.md","ref":"posts/GitBook简明教程.md","articles":[]},"previous":{"title":"信息节点备忘录","level":"5.1","depth":1,"path":"posts/信息节点备忘录.md","ref":"posts/信息节点备忘录.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","search-pro","highlight","livereload","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","disqus","code","todos","advanced-emoji","klipse","flexible-alerts","site-count","accordion","hide-element","codesnippet","atoc"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"guobao.v@gmail.com ","modify_label":"最后编辑时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"ipandar"},"github":{"url":"https://github.com/Mainvooid"},"livereload":{},"atoc":{},"splitter":{},"search-pro":{},"accordion":{},"site-count":{"host":"https://mainvooid.github.io/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"todos":{},"code":{"copyButtons":true},"donate":{"alipay":"./assets/donate-alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"","wechat":"./assets/donate-wechat.png","wechatText":"微信打赏"},"codesnippet":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./assets/favicon.jpg","bookmark":"./assets/favicon.jpg","appleTouch":"./assets/favicon.jpg","appleTouchMore":{"120x120":"./assets/favicon.jpg","180x180":"./assets/favicon.jpg"}},"github-buttons":{"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Mainvooid","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iPanda","language":"zh-hans","links":{"sidebar":{"Github":"https://github.com/Mainvooid"}},"gitbook":"3.2.3","description":"万古长空，一朝风月"},"file":{"path":"posts/面试问题总结.md","mtime":"2022-12-10T16:38:52.266Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-11T12:52:58.825Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
