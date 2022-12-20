@@ -16,45 +16,71 @@
 - `until|u <行号>` 单步跳过(快速执行循环体) 缩写u
     - 不带参数的`until`命令, 当执行至循环体尾部(最后一行代码)时可以使 GDB调试器快速运行完当前的循环体, 并运行至循环体外停止. 反之,`until`命令和`next`命令的功能一样, 只是单步执行程序.
 
->(gdb) help info
->info address -- Describe where symbol SYM is stored
->info all-registers -- List of all registers and their contents
->info args -- All argument variables of current stack frame or those matching REGEXPs
->info auto-load -- Print current status of auto-loaded files
->info auxv -- Display the inferior's auxiliary vector
->info bookmarks -- Status of user-settable bookmarks
->info breakpoints -- Status of specified breakpoints (all user-s<to quit, c to continue without paging--c
-ettable breakpoints if no argument)
->info classes -- All Objective-C classes
->info common -- Print out the values contained in a Fortran COMMON block
->info copying -- Conditions for redistributing copies of GDB
->info dcache -- Print information on the dcache performance
->info display -- Expressions to display when program stops
->info exceptions -- List all Ada exception names
->info extensions -- All filename extensions associated with a source language
->info skip -- Display the status of skips
->info source -- Information about the current source file
->info sources -- Source files in the program
->info stack -- Backtrace of the stack
->info static-tracepoint-markers -- List target static tracepoints markers
->info symbol -- Describe what symbol is at location ADDR
->info target -- Names of targets and files being debugged
->info tasks -- Provide information about all known Ada tasks
->info terminal -- Print inferior's saved terminal status
->info threads -- Display currently known threads
->info tracepoints -- Status of specified tracepoints (all tracepoints if no argument)
->info tvariables -- Status of trace state variables and their values
->info type-printers -- GDB command to list all registered type-printers
->info types -- All type names
->info unwinder -- GDB command to list unwinders
->info variables -- All global and static variable names or those matching REGEXPs
->info vector -- Print the status of the vector unit
->info vtbl -- Show the virtual function table for a C++ object
->info w32 -- Print information specific to Win32 debugging
->info warranty -- Various kinds of warranty you do not have
->info watchpoints -- Status of specified watchpoints (all watchpoints if no argument)
->info win -- List of all displayed windows
->info xmethod -- GDB command to list registered xmethod matchers
+```bash
+(gdb) help info
+info address -- Describe where symbol SYM is stored
+info all-registers -- List of all registers and their contents
+info args -- All argument variables of current stack frame or those matching REGEXPs
+info auto-load -- Print current status of auto-loaded files
+info auxv -- Display the inferiors auxiliary vector
+info bookmarks -- Status of user-settable bookmarks
+info breakpoints -- Status of specified breakpoints (all user-settable breakpoints if no argument)
+info classes -- All Objective-C classes
+info common -- Print out the values contained in a Fortran COMMON block
+info copying -- Conditions for redistributing copies of GDB
+info dcache -- Print information on the dcache performance
+info display -- Expressions to display when program stops
+info exceptions -- List all Ada exception names
+info extensions -- All filename extensions associated with a source language
+info files -- Names of targets and files being debugged
+info float -- Print the status of the floating point unit
+info frame -- All about the selected stack frame
+info frame-filter -- List all registered Python frame-filters
+info functions -- All function names or those matching REGEXPs
+info guile -- Prefix command for Guile info displays
+info handle -- What debugger does when program gets various signals
+info inferiors -- Print a list of inferiors being managed
+info line -- Core addresses of the code for a source line
+info locals -- All local variables of current stack frame or those matching REGEXPs
+info macro -- Show the definition of MACRO
+info macros -- Show the definitions of all macros at LINESPEC
+info mem -- Memory region attributes
+info os -- Show OS data ARG
+info pretty-printer -- GDB command to list all registered pretty-printers
+info probes -- Show available static probes
+info proc -- Show additional information about a process
+info program -- Execution status of the program
+info record -- Info record options
+info registers -- List of integer registers and their contents
+info scope -- List the variables local to a scope
+info selectors -- All Objective-C selectors
+info set -- Show all GDB settings
+info sharedlibrary -- Status of loaded shared object libraries
+info signals -- What debugger does when program gets various signals
+info skip -- Display the status of skips
+info source -- Information about the current source file
+info sources -- Source files in the program
+info stack -- Backtrace of the stack
+info static-tracepoint-markers -- List target static tracepoints markers
+info symbol -- Describe what symbol is at location ADDR
+info target -- Names of targets and files being debugged
+info tasks -- Provide information about all known Ada tasks
+info terminal -- Print inferiors saved terminal status
+info threads -- Display currently known threads
+info tracepoints -- Status of specified tracepoints (all tracepoints if no argument)
+info tvariables -- Status of trace state variables and their values
+info type-printers -- GDB command to list all registered type-printers
+info types -- All type names
+info unwinder -- GDB command to list unwinders
+info variables -- All global and static variable names or those matching REGEXPs
+info vector -- Print the status of the vector unit
+info vtbl -- Show the virtual function table for a C++ object
+info w32 -- Print information specific to Win32 debugging
+info warranty -- Various kinds of warranty you do not have
+info watchpoints -- Status of specified watchpoints (all watchpoints if no argument)
+info win -- List of all displayed windows
+info xmethod -- GDB command to list registered xmethod matchers
+```
 
 ## 查看内存布局
 
@@ -169,13 +195,13 @@ int main(){
 }
 ```
 
-- 使用`-g`选项编译:
+使用`-g`选项编译:
 `g++ -g -std=c++17 d:\code\vscode-cpp\test.cpp -o test.exe`
 
-- gdp分析调试程序
+gdp分析调试程序
 `gdb test test.exe`
 
-- 进入GDB环境
+进入GDB环境
 ```bash
 # 开启打印选项
 (gdb) set print object on
@@ -219,7 +245,9 @@ vtable for 'base' @ 0x4045ec (subobject @ 0x266fe28):
 [1]: 0x402ba0 <base::~base()>
 [2]: 0x402e5c <base::print() const>
 ## 为什么会有两个虚析构函数?
-## g++里虚析构函数在虚表里是一对;一个叫complete object destructor, 另一个叫deleting destructor, 区别在于前者只执行析构函数不执行delete(), 后者在析构之后执行deleting操作. 应该是gc++想把non-detele的析构函数轮一遍后, 然后用delete直接就清理掉整个内存.
+## g++里虚析构函数在虚表里是一对;一个叫complete object destructor, 另一个叫deleting destructor
+## 区别在于前者只执行析构函数不执行delete(), 后者在析构之后执行deleting操作. 
+## 应该是g++想把non-detele的析构函数轮一遍后, 然后用delete直接就清理掉整个内存.
 
 (gdb) info symbol 0x4045ec
 vtable for base + 8 in section .rdata of D:\code\vscode-cpp\test.exe
@@ -311,7 +339,6 @@ $8 = {<derived_v1> = {<base> = {
     m_derived_v2 = 4200208}, m_derived_last = 40304076}
 ## 对象由中间类的vptr, 数据成员和虚基类的vptr, 数据成员顺序构成,仅第一个中间类包含虚基类对象.
 
-
 (gdb) info vtbl derived_last_
 vtable for 'derived_last' @ 0x404574 (subobject @ 0x266fdd0):
 [0]: 0x402a3c <derived_last::~derived_last()>
@@ -329,7 +356,6 @@ vtable for 'base' @ 0x4045ac (subobject @ 0x266fde4):
 [1]: 0x402f4c <virtual thunk to derived_last::~derived_last()>       
 [2]: 0x402e5c <base::print() const>
 ## 虚基类和中间类拥有虚函数表，派生类的虚函数表放在第一个中间类的虚函数表中.
-
 ```
 
 ## 基于g++编译器的结论
