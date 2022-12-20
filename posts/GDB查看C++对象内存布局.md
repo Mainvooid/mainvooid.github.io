@@ -4,6 +4,7 @@
 <!---toc--->
 
 ## GDB常用命令
+
 - `ctrl+d` quit
 - `file <文件名>` 加载执行文件/符号
 - `b <行号>` 打断点
@@ -16,46 +17,47 @@
     - 不带参数的`until`命令, 当执行至循环体尾部(最后一行代码)时可以使 GDB调试器快速运行完当前的循环体, 并运行至循环体外停止. 反之,`until`命令和`next`命令的功能一样, 只是单步执行程序.
 
 >(gdb) help info
-info address -- Describe where symbol SYM is stored
-info all-registers -- List of all registers and their contents
-info args -- All argument variables of current stack frame or those matching REGEXPs
-info auto-load -- Print current status of auto-loaded files
-info auxv -- Display the inferior's auxiliary vector
-info bookmarks -- Status of user-settable bookmarks
-info breakpoints -- Status of specified breakpoints (all user-s<to quit, c to continue without paging--c
+>info address -- Describe where symbol SYM is stored
+>info all-registers -- List of all registers and their contents
+>info args -- All argument variables of current stack frame or those matching REGEXPs
+>info auto-load -- Print current status of auto-loaded files
+>info auxv -- Display the inferior's auxiliary vector
+>info bookmarks -- Status of user-settable bookmarks
+>info breakpoints -- Status of specified breakpoints (all user-s<to quit, c to continue without paging--c
 ettable breakpoints if no argument)
-info classes -- All Objective-C classes
-info common -- Print out the values contained in a Fortran COMMON block
-info copying -- Conditions for redistributing copies of GDB
-info dcache -- Print information on the dcache performance
-info display -- Expressions to display when program stops
-info exceptions -- List all Ada exception names
-info extensions -- All filename extensions associated with a source language
-info skip -- Display the status of skips
-info source -- Information about the current source file
-info sources -- Source files in the program
-info stack -- Backtrace of the stack
-info static-tracepoint-markers -- List target static tracepoints markers
-info symbol -- Describe what symbol is at location ADDR
-info target -- Names of targets and files being debugged
-info tasks -- Provide information about all known Ada tasks
-info terminal -- Print inferior's saved terminal status
-info threads -- Display currently known threads
-info tracepoints -- Status of specified tracepoints (all tracepoints if no argument)
-info tvariables -- Status of trace state variables and their values
-info type-printers -- GDB command to list all registered type-printers
-info types -- All type names
-info unwinder -- GDB command to list unwinders
-info variables -- All global and static variable names or those matching REGEXPs
-info vector -- Print the status of the vector unit
-info vtbl -- Show the virtual function table for a C++ object
-info w32 -- Print information specific to Win32 debugging
-info warranty -- Various kinds of warranty you do not have
-info watchpoints -- Status of specified watchpoints (all watchpoints if no argument)
-info win -- List of all displayed windows
-info xmethod -- GDB command to list registered xmethod matchers
+>info classes -- All Objective-C classes
+>info common -- Print out the values contained in a Fortran COMMON block
+>info copying -- Conditions for redistributing copies of GDB
+>info dcache -- Print information on the dcache performance
+>info display -- Expressions to display when program stops
+>info exceptions -- List all Ada exception names
+>info extensions -- All filename extensions associated with a source language
+>info skip -- Display the status of skips
+>info source -- Information about the current source file
+>info sources -- Source files in the program
+>info stack -- Backtrace of the stack
+>info static-tracepoint-markers -- List target static tracepoints markers
+>info symbol -- Describe what symbol is at location ADDR
+>info target -- Names of targets and files being debugged
+>info tasks -- Provide information about all known Ada tasks
+>info terminal -- Print inferior's saved terminal status
+>info threads -- Display currently known threads
+>info tracepoints -- Status of specified tracepoints (all tracepoints if no argument)
+>info tvariables -- Status of trace state variables and their values
+>info type-printers -- GDB command to list all registered type-printers
+>info types -- All type names
+>info unwinder -- GDB command to list unwinders
+>info variables -- All global and static variable names or those matching REGEXPs
+>info vector -- Print the status of the vector unit
+>info vtbl -- Show the virtual function table for a C++ object
+>info w32 -- Print information specific to Win32 debugging
+>info warranty -- Various kinds of warranty you do not have
+>info watchpoints -- Status of specified watchpoints (all watchpoints if no argument)
+>info win -- List of all displayed windows
+>info xmethod -- GDB command to list registered xmethod matchers
 
 ## 查看内存布局
+
 test.cpp:
 ```cpp
 #include <iostream>
@@ -166,6 +168,7 @@ int main(){
     return 0;
 }
 ```
+
 - 使用`-g`选项编译:
 `g++ -g -std=c++17 d:\code\vscode-cpp\test.cpp -o test.exe`
 
