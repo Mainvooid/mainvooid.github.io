@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>知识体系管理与构建 · iPanda</title>
+        <title>CUDA基础与实践 · iPanda</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -109,10 +109,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="项目实施与运营.html" />
+    <link rel="next" href="C++奇淫巧计.html" />
     
     
-    <link rel="prev" href="目标规划与管理.html" />
+    <link rel="prev" href="项目实施与运营.html" />
     
 
     
@@ -224,7 +224,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="知识体系管理与构建.html">
+        <li class="chapter " data-level="2.3" data-path="知识体系管理与构建.html">
             
                 <a href="知识体系管理与构建.html">
             
@@ -264,7 +264,7 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="CUDA基础与实践.html">
+        <li class="chapter active" data-level="4.1" data-path="CUDA基础与实践.html">
             
                 <a href="CUDA基础与实践.html">
             
@@ -516,7 +516,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >知识体系管理与构建</a>
+        <a href=".." >CUDA基础与实践</a>
     </h1>
 </div>
 
@@ -531,22 +531,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;"><b></b>&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;</a></li></ul></div><a href="#&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;"><a name="&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;" class="plugin-anchor" href="#&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7BA1;&#x7406;&#x4E0E;&#x6784;&#x5EFA;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#cuda&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;"><b></b>CUDA&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x8FF0;&#x6700;&#x65B0;cuda-120"><b></b>&#x7B80;&#x8FF0;&#x6700;&#x65B0;CUDA 12.0</a></li><li><span class="title-icon "></span><a href="#gpu&#x52A0;&#x901F;&#x5E93;"><b></b>GPU&#x52A0;&#x901F;&#x5E93;</a></li></ul></ul></div><a href="#cuda&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="cuda&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;"><a name="cuda&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;" class="anchor-navigation-ex-anchor" href="#cuda&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="cuda&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;" class="plugin-anchor" href="#cuda&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>CUDA&#x57FA;&#x7840;&#x4E0E;&#x5B9E;&#x8DF5;</h1>
 <p>[toc]
 <!--toc--></p>
-<h4 id="&#x4E2A;&#x4EBA;&#x77E5;&#x8BC6;&#x5E93;&#x548C;&#x4E2A;&#x4EBA;&#x641C;&#x7D22;&#x5F15;&#x64CE;"><a name="&#x4E2A;&#x4EBA;&#x77E5;&#x8BC6;&#x5E93;&#x548C;&#x4E2A;&#x4EBA;&#x641C;&#x7D22;&#x5F15;&#x64CE;" class="anchor-navigation-ex-anchor" href="#&#x4E2A;&#x4EBA;&#x77E5;&#x8BC6;&#x5E93;&#x548C;&#x4E2A;&#x4EBA;&#x641C;&#x7D22;&#x5F15;&#x64CE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E2A;&#x4EBA;&#x77E5;&#x8BC6;&#x5E93;&#x548C;&#x4E2A;&#x4EBA;&#x641C;&#x7D22;&#x5F15;&#x64CE;" class="plugin-anchor" href="#&#x4E2A;&#x4EBA;&#x77E5;&#x8BC6;&#x5E93;&#x548C;&#x4E2A;&#x4EBA;&#x641C;&#x7D22;&#x5F15;&#x64CE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E2A;&#x4EBA;&#x77E5;&#x8BC6;&#x5E93;&#x548C;&#x4E2A;&#x4EBA;&#x641C;&#x7D22;&#x5F15;&#x64CE;</h4>
+<p>&#x51C6;&#x5907;&#x8FDB;&#x884C;GPU&#x5F00;&#x53D1;&#xFF0C;&#x9700;&#x8981;&#x9605;&#x8BFB;&#x76F8;&#x5173;&#x4E66;&#x7C4D;&#xFF0C;&#x719F;&#x6089;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF0C;&#x76F8;&#x5173;&#x52A0;&#x901F;&#x5E93;&#x5185;&#x5BB9;&#x7B49;&#x7B49;
+&#x6545;&#x800C;&#x5BF9;&#x5B66;&#x4E60;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;/&#x4FE1;&#x606F;&#x70B9;&#x8FDB;&#x884C;&#x6458;&#x8981;&#x3002;</p>
+<h2 id="&#x7B80;&#x8FF0;&#x6700;&#x65B0;cuda-120"><a name="&#x7B80;&#x8FF0;&#x6700;&#x65B0;cuda-120" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x8FF0;&#x6700;&#x65B0;cuda-120"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x8FF0;&#x6700;&#x65B0;cuda-120" class="plugin-anchor" href="#&#x7B80;&#x8FF0;&#x6700;&#x65B0;cuda-120"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x8FF0;&#x6700;&#x65B0;CUDA 12.0</h2>
 <ul>
-<li>&#x788E;&#x7247;&#x4FE1;&#x606F;&#x6536;&#x96C6;</li>
-<li>&#x4E2A;&#x4EBA;&#x77E5;&#x8BC6;/&#x8D44;&#x6599;&#x5E93;</li>
-<li>&#x4E2A;&#x4EBA;&#x79C1;&#x6709;&#x4E91;&#x76D8;</li>
-<li>&#x5168;&#x5C40;&#x641C;&#x7D22;</li>
+<li>&#x652F;&#x6301;&#x6539;&#x8FDB;&#x540E;&#x7684;CUDA&#x52A8;&#x6001;&#x5E76;&#x884C;API</li>
+<li>CUDA&#x56FE;&#x5F62;API&#x589E;&#x5F3A;</li>
+<li>&#x901A;&#x8FC7;<code>nvJitLink</code>&#x6B63;&#x5F0F;&#x652F;&#x6301;&#x5373;&#x65F6;&#x94FE;&#x63A5;&#x4F18;&#x5316;(JIT LTO)</li>
+<li>&#x652F;&#x6301;GCC 12&#x4E3B;&#x673A;&#x7F16;&#x8BD1;&#x5668;</li>
+<li>&#x4E0D;&#x5B8C;&#x5168;&#x652F;&#x6301;C++20<ul>
+<li>&#x6682;&#x4E0D;&#x652F;&#x6301;module</li>
+<li>&#x534F;&#x7A0B;&#x4EC5;&#x5728;&#x4E3B;&#x673A;&#x4EE3;&#x7801;&#x4E2D;&#x53D7;&#x652F;&#x6301;</li>
+<li>&#x4E09;&#x5411;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;<code>&lt;=&gt;</code>&#x9700;&#x8981;&#x663E;&#x793A;&#x8C03;&#x7528;</li>
+<li>&#x652F;&#x6301;C++20&#x7684;&#x4E3B;&#x673A;&#x7F16;&#x8BD1;&#x5668;&#xFF1A;GCC 10+&#xFF0C;Clang 11+, MSVC 2022</li>
 </ul>
-<h4 id="&#x5199;&#x4F5C;&#x8F93;&#x51FA;-&#x4EE5;&#x7EC8;&#x4E3A;&#x59CB;"><a name="&#x5199;&#x4F5C;&#x8F93;&#x51FA;-&#x4EE5;&#x7EC8;&#x4E3A;&#x59CB;" class="anchor-navigation-ex-anchor" href="#&#x5199;&#x4F5C;&#x8F93;&#x51FA;-&#x4EE5;&#x7EC8;&#x4E3A;&#x59CB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5199;&#x4F5C;&#x8F93;&#x51FA;-&#x4EE5;&#x7EC8;&#x4E3A;&#x59CB;" class="plugin-anchor" href="#&#x5199;&#x4F5C;&#x8F93;&#x51FA;-&#x4EE5;&#x7EC8;&#x4E3A;&#x59CB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5199;&#x4F5C;&#x8F93;&#x51FA; &#x4EE5;&#x7EC8;&#x4E3A;&#x59CB;</h4>
+</li>
+<li>CUDA&#x5806;&#x6808;&#x9ED8;&#x8BA4;&#x4E0D;&#x5F00;&#x542F;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5F00;&#x542F;<code>CUDA_MODULE_LOADING=LAZY</code></li>
+<li></li>
+</ul>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://developer.nvidia.com/blog/cuda-toolkit-12-0-released-for-general-availability/" target="_blank">CUDA12.0&#x7248;&#x672C;&#x4ECB;&#x7ECD;</a></p>
+<h2 id="gpu&#x52A0;&#x901F;&#x5E93;"><a name="gpu&#x52A0;&#x901F;&#x5E93;" class="anchor-navigation-ex-anchor" href="#gpu&#x52A0;&#x901F;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="gpu&#x52A0;&#x901F;&#x5E93;" class="plugin-anchor" href="#gpu&#x52A0;&#x901F;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>GPU&#x52A0;&#x901F;&#x5E93;</h2>
 <ul>
-<li>&#x521B;&#x4F5C;&#x5206;&#x4EAB;&#x5448;&#x73B0; </li>
+<li><strong>cuBLAS</strong> :&#x57FA;&#x672C;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x5E93;</li>
+<li><strong>cuBLASLt</strong> :&#x8F7B;&#x91CF;&#x7EA7;cuBLAS</li>
+<li><strong>cuFFT</strong> :&#x5FEB;&#x901F;&#x5085;&#x91CC;&#x53F6;&#x53D8;&#x6362;&#x5E93;</li>
+<li><strong>cuFFTMp</strong> :multi-process&#x7248;cuFFT</li>
+<li><strong>cuRAND</strong> :&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x5668;</li>
+<li><strong>MathDx</strong> :&#x6807;&#x51C6;&#x6570;&#x5B66;&#x51FD;&#x6570;&#x5E93; <code>#include math.h</code></li>
+<li><strong>cuSOLVER</strong> :&#x5BC6;&#x96C6;&#x548C;&#x7A00;&#x758F;&#x76F4;&#x63A5;&#x6C42;&#x89E3;&#x5668;</li>
+<li><strong>cuSOLVERMp</strong> :multi-process&#x7248;cuSOLVER</li>
+<li><strong>cuSPARSE</strong> :&#x7528;&#x4E8E;&#x7A00;&#x758F;&#x77E9;&#x9635;&#x7684;BLAS</li>
+<li><strong>cuSPARSELt</strong>  :&#x8F7B;&#x91CF;&#x7EA7;cuSPARSE</li>
+<li><strong>cuTENSOR</strong> :&#x5F20;&#x91CF;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x5E93;</li>
+<li><strong>cuTENSORMg</strong> :multi-gpu&#x7248;cuTENSOR</li>
+<li><strong>NPP</strong> :&#x56FE;&#x50CF;&#xFF0C;&#x89C6;&#x9891;&#x548C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5E93;</li>
+<li><strong>nvJPEG</strong> :JPEG&#x7F16;&#x89E3;&#x7801;&#x5668;</li>
+<li><strong>nvJPEG2000</strong> :JPEG2000&#x7F16;&#x89E3;&#x7801;&#x5668;</li>
+<li><strong>nvTIFF</strong> :TIFF&#x7F16;&#x89E3;&#x7801;&#x5668;</li>
+<li><strong>AmgX</strong> :&#x7528;&#x4E8E;&#x6A21;&#x62DF;&#x548C;&#x9690;&#x5F0F;&#x975E;&#x7ED3;&#x6784;&#x5316;&#x65B9;&#x6CD5;&#x7684;&#x7EBF;&#x6027;&#x6C42;&#x89E3;&#x5668;</li>
+<li><strong>Thrust</strong> :&#x5E76;&#x884C;&#x7B97;&#x6CD5;&#x5E93;</li>
+<li><strong>Video Codec</strong> :&#x89C6;&#x9891;&#x7F16;&#x89E3;&#x7801;&#x5668;</li>
+<li><strong>Optival Flow</strong> :&#x5149;&#x6D41;&#x8BA1;&#x7B97;</li>
+<li><strong>nvSHMEM</strong> :&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5668; &#x591A;GPU&#x7EDF;&#x4E00;&#x5168;&#x5C40;&#x5185;&#x5B58;</li>
+<li><strong>cuDNN</strong> :DNN&#x52A0;&#x901F;&#x539F;&#x8BED;&#x5E93;</li>
+<li><strong>TensorRT</strong> :&#x7528;&#x4E8E;&#x751F;&#x4EA7;&#x90E8;&#x7F72;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x63A8;&#x7406;&#x4F18;&#x5316;&#x5668;&#x548C;&#x8FD0;&#x884C;&#x65F6;</li>
+<li><strong>Riva</strong> :AI&#x8BED;&#x97F3;SDK</li>
+<li><strong>DeepStream</strong> :AI&#x89C6;&#x9891;&#x7406;&#x89E3;&#x548C;&#x591A;&#x4F20;&#x611F;&#x5668;&#x5904;&#x7406;&#x7684;&#x5B9E;&#x65F6;&#x6D41;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x5305;</li>
+<li><strong>DALI</strong> :&#x7528;&#x4E8E;&#x89E3;&#x7801;&#x548C;&#x589E;&#x5F3A;&#x56FE;&#x50CF;&#x548C;&#x89C6;&#x9891;&#x4EE5;&#x52A0;&#x901F;AI&#x6A21;&#x578B;&#x8BAD;&#x7EC3;</li>
+<li>...</li>
 </ul>
+<p>&#x53C2;&#x8003;&#xFF1A; 
+<a href="https://docs.nvidia.com/" target="_blank">https://docs.nvidia.com/</a>
+<a href="https://docs.nvidia.com/cuda-libraries/" target="_blank">CUDA&#x5E93;&#x6587;&#x6863;</a></p>
 <footer class="page-footer"><span class="copyright">guobao.v@gmail.com  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x7F16;&#x8F91;&#x65F6;&#x95F4;:
-2022-12-02 14:10:42
+2023-02-27 00:33:53
 </span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -574,12 +615,12 @@
 
             
                 
-                <a href="目标规划与管理.html" class="navigation navigation-prev " aria-label="Previous page: 目标规划与管理">
+                <a href="项目实施与运营.html" class="navigation navigation-prev " aria-label="Previous page: 项目实施与运营">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="项目实施与运营.html" class="navigation navigation-next " aria-label="Next page: 项目实施与运营">
+                <a href="C++奇淫巧计.html" class="navigation navigation-next " aria-label="Next page: C++奇淫巧计">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -590,7 +631,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"知识体系管理与构建","level":"2.3","depth":1,"next":{"title":"项目实施与运营","level":"2.4","depth":1,"path":"posts/项目实施与运营.md","ref":"posts/项目实施与运营.md","articles":[]},"previous":{"title":"目标规划与管理","level":"2.2","depth":1,"path":"posts/目标规划与管理.md","ref":"posts/目标规划与管理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","search-pro","highlight","livereload","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","disqus","code","todos","advanced-emoji","klipse","flexible-alerts","site-count","accordion","hide-element","codesnippet","atoc","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"guobao.v@gmail.com ","modify_label":"最后编辑时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"ipandar"},"github":{"url":"https://github.com/Mainvooid"},"livereload":{},"atoc":{},"splitter":{},"search-pro":{},"accordion":{},"site-count":{"host":"https://mainvooid.github.io/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"todos":{},"code":{"copyButtons":true},"donate":{"alipay":"./assets/donate-alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"","wechat":"./assets/donate-wechat.png","wechatText":"微信打赏"},"codesnippet":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./assets/favicon.jpg","bookmark":"./assets/favicon.jpg","appleTouch":"./assets/favicon.jpg","appleTouchMore":{"120x120":"./assets/favicon.jpg","180x180":"./assets/favicon.jpg"}},"github-buttons":{"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Mainvooid","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iPanda","language":"zh-hans","links":{"sidebar":{"Github":"https://github.com/Mainvooid"}},"gitbook":"3.2.3","description":"万古长空，一朝风月"},"file":{"path":"posts/知识体系管理与构建.md","mtime":"2022-12-02T06:10:42.709Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-26T16:46:03.916Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CUDA基础与实践","level":"4.1","depth":1,"next":{"title":"C++奇淫巧计","level":"5.1","depth":1,"path":"posts/C++奇淫巧计.md","ref":"posts/C++奇淫巧计.md","articles":[]},"previous":{"title":"项目实施与运营","level":"2.4","depth":1,"path":"posts/项目实施与运营.md","ref":"posts/项目实施与运营.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","search-pro","highlight","livereload","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","disqus","code","todos","advanced-emoji","klipse","flexible-alerts","site-count","accordion","hide-element","codesnippet","atoc","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"guobao.v@gmail.com ","modify_label":"最后编辑时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"ipandar"},"github":{"url":"https://github.com/Mainvooid"},"livereload":{},"atoc":{},"splitter":{},"search-pro":{},"accordion":{},"site-count":{"host":"https://mainvooid.github.io/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"todos":{},"code":{"copyButtons":true},"donate":{"alipay":"./assets/donate-alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"","wechat":"./assets/donate-wechat.png","wechatText":"微信打赏"},"codesnippet":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./assets/favicon.jpg","bookmark":"./assets/favicon.jpg","appleTouch":"./assets/favicon.jpg","appleTouchMore":{"120x120":"./assets/favicon.jpg","180x180":"./assets/favicon.jpg"}},"github-buttons":{"buttons":[{"user":"Mainvooid","repo":"Mainvooid.github.io","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Mainvooid","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iPanda","language":"zh-hans","links":{"sidebar":{"Github":"https://github.com/Mainvooid"}},"gitbook":"3.2.3","description":"万古长空，一朝风月"},"file":{"path":"posts/CUDA基础与实践.md","mtime":"2023-02-26T16:33:53.425Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-26T16:46:03.916Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
